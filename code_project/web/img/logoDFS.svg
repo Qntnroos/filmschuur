@@ -11,9 +11,10 @@
 	.st5{font-size:250px;}
 	.st6{fill:#FFFFFF;}
 	.st7{font-size:251.5408px;}
-	.st8{font-family:'Roboto-Black';}
-	.st9{font-size:49.6439px;}
-	.st10{font-size:50px;}
+	.st8{display:none;fill:#683C11;}
+	.st9{font-family:'Roboto-Black';}
+	.st10{font-size:49.6439px;}
+	.st11{font-size:50px;}
 </style>
 <g>
 	<path class="st0" d="M866,155.31v-24.56H326v5.51h11v12h-11v7.3h115v83.38H326v7.32h10v12h-10v5.49h540v-25.06h-14v-83.38H866z
@@ -3608,7 +3609,7 @@ AAAAAL/8HwEGAJNulSuTiK3GAAAAAElFTkSuQmCC" transform="matrix(0.24 0 0 0.24 138.83
 		<text transform="matrix(0.9939 0 0 1 150.2707 262.7041)" class="st6 st4 st7">F</text>
 	</g>
 </g>
-<text transform="matrix(0.9939 0 0 1 213.6889 260.042)" class="st0 st8 st9" style="text-decoration: underline;">ilm</text>
-<text transform="matrix(0.9939 0 0 1 398.8668 103.2013)" class="st0 st8 st10" style="text-decoration: underline;">chuur</text>
-<text transform="matrix(0.9939 0 0 1 78.7982 149.3092)" class="st0 st8 st10" style="text-decoration: underline;">e</text>
+<text transform="matrix(0.9939 0 0 1 213.6889 260.042)" class="st8 st9 st10" style="text-decoration: underline;">ilm</text>
+<text transform="matrix(0.9939 0 0 1 398.8668 103.2013)" class="st8 st9 st11" style="text-decoration: underline;">chuur</text>
+<text transform="matrix(0.9939 0 0 1 78.7982 149.3092)" class="st8 st9 st11" style="text-decoration: underline;">e</text>
 </svg>
