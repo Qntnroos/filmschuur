@@ -1,0 +1,48 @@
+:root{
+  --main-bg-color: #1F1F1E;
+  --main-orange-color: #D17133;
+  --main-white-color: #F7F7F7;
+  --nog-een-kleur: #532406;
+}
+body{
+  background-color: var(--main-bg-color);
+}
+.navbar{
+  background-color: var(--main-orange-color) !important;
+}
+.navbar-brand{
+  width: 200px;
+  height: 60px;
+}
+.navbar-brand img{
+  width: 200px;
+  height: 50px;
+}
+.navbar-nav h3, .navbar-nav a{
+  color: var(--main-white-color);
+}
+.midtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.midtext p{
+  color: var(--nog-een-kleur);
+}
+.slider-item{
+  border: 1px solid var(--main-orange-color);
+}
+.card-body{
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-orange-color);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+}
+.card-body h4{
+  color: var(--main-orange-color);
+}
+.controls-top a{
+  background-color: var(--main-orange-color) !important;
+}
