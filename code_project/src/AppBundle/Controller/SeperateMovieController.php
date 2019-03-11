@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends Controller
+class SeperateMovieController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/film", name="film")
      */
-    public function renderHome(Request $request)
+    public function renderFilm(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('pages/home.html.twig');
+        return $this->render('pages/seperate-film.html.twig');
     }
 }
