@@ -4,10 +4,17 @@
   --main-orange-color: #D17133;
   --main-white-color: #F7F7F7;
   --nog-een-kleur: #532406;
+  --text-color: #707070;
 }
 body{
   background-color: var(--main-bg-color);
   font-family: 'Roboto', sans-serif;
+}
+p{
+  margin-bottom: 0;
+}
+.lightbody{
+  background-color: white;
 }
 .navbar{
   background-color: var(--main-orange-color) !important;
@@ -17,7 +24,6 @@ body{
   height: 60px;
 }
 .navbar-brand img{
-  width: 200px;
   height: 50px;
 }
 .navbar-nav h3, .navbar-nav a{
@@ -53,4 +59,63 @@ body{
 }
 .carousel-multi-item .controls-top{
   margin-bottom: 0;
+}
+.video{
+  width: 100vw;
+}
+.video iframe{
+  width: 100%;
+  height: calc(100vh - 76px);
+  border: none;
+}
+.movie-details{
+  border: 1px solid var(--main-orange-color);
+  border-radius: .125rem;
+}
+.icons{
+  width: 100%;
+  height: 60px;
+}
+.icons img{
+  width: 10%;
+  margin-right: 15px;
+}
+.info{
+  color:var(--text-color);
+}
+.info p{
+  font-size: 1.5rem;
+}
+.bestellen{
+  width: 100%;
+}
+.bestellen label{
+  float: left;
+}
+.bestellen select{
+  display: block !important;
+  height: 54px;
+  margin: .375rem;
+  border-radius: .125rem;
+  background-color: var(--main-bg-color);
+  color: white;
+}
+.order-button{
+  background-color: var(--main-orange-color);
+  color: white;
+}
+.order-button:hover{
+  color: var(--text-color);
+}
+.inhoud .sans-serif{
+  font-family: 'Lora', serif;
+}
+.head-img .row div img{
+  width: 150px;
+}
+.slate a{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
 }
