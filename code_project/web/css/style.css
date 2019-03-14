@@ -24,7 +24,6 @@ p{
   height: 60px;
 }
 .navbar-brand img{
-  width: 200px;
   height: 50px;
 }
 .navbar-nav h3, .navbar-nav a{
@@ -113,4 +112,10 @@ p{
 }
 .head-img .row div img{
   width: 150px;
+}
+.slate a{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
 }
