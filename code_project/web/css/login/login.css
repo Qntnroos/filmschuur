@@ -64,7 +64,10 @@
         -webkit-box-shadow: 3px 3px 10px 0 #532406;
         box-shadow:         3px 3px 10px 0 #532406;
       }
-  
+      .form-control:focus { 
+        outline: none !important;
+        border-bottom:1px solid #D17133;
+    }
   
       @media only screen and (max-width: 600px) {
         form {
@@ -156,7 +159,6 @@
         outline: none;
         box-shadow: none !important;
       }
-  
   
   /*phone portrait*/
   
