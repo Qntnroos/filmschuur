@@ -8,8 +8,8 @@ class database extends SQlite3
         $path = '../web/db/DFS.db';
         $this->open($path);
     }
-    public function getMovieDetails() {
-        $sql = $this->prepare(
+    public function getMovieDetails($id) {
+        $seperateMovie = $this->prepare(
             "select M.trailer_link, M.movie_title,
             group_concat (distinct strftime('%d-%m-%Y %H:%M', play_times_and_dates  )) as playList,
             AR.rateID,
@@ -35,9 +35,27 @@ class database extends SQlite3
             left join Directors as D on D.directorID = MD.directorID
             left join MovieActors as MA on M.movieID = MA.movieID
             left join Actors as A on A.actorID = MA.actorID
-            where M.movieID = 2"
+            where M.movieID = :id"
         );
-        $res = $sql->execute();
-        return array($res->fetchArray());
+        $seperateMovie->bindParam('id',$id);
+        $resSeperateMovie = $seperateMovie->execute();
+        return array($resSeperateMovie->fetchArray());
+    }
+    public function getHomepageDetails(){
+        $homepageQuery = $this->prepare(
+            "select  distinct M.movieID, M.movie_title from Movies as M
+            join MovieShows as MS on
+            M.movieID = MS.movieID
+            where datetime(MS.play_times_and_dates)
+            between datetime('now','localtime', '2 hours')
+            and date('now','localtime','7 days')
+            order by date(MS.play_times_and_dates), time (MS.play_times_and_dates)"
+        );
+        $resHomepageQuery = $homepageQuery->execute();
+        $multiArray = array();
+        while($row = $resHomepageQuery->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+            }
+        return $multiArray;
     }
 }

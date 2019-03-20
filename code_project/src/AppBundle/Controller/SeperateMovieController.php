@@ -10,12 +10,12 @@ use AppBundle\utils\database;
 class SeperateMovieController extends Controller
 {
     /**
-     * @Route("/film", name="film")
+     * @Route("/film/{id}", name="film")
      */
-    public function renderFilm(Request $request)
+    public function renderFilm(Request $request, $id)
     {
         $db = new database();
-        $values = $db-> getMovieDetails();
+        $values = $db->getMovieDetails($id);
         $val = ['info' => $values];
         // replace this example code with whatever you need
         return $this->render('pages/seperate-film.html.twig', $val);

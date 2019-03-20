@@ -15,16 +15,20 @@
     </head>
     <body>
     <!--Navbar -->
+    {% block navbar %}
+
     <nav class="navbar navbar-expand-lg navbar-dark default-color py-2">
-        <a class="navbar-brand" href="#"><img src="{{ asset('img/logo.png') }}" alt=""></a>
+        <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src="{{ asset('img/logo.png') }}" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <div class="navbar-nav ml-auto d-flex flex-column text-center align-content-center">
+                {% block midcontent %}
                 <div><h3>De Filmschuur</h3></div>
                 <div><p>"In De FilmSchuur kan je niet alleen films bekijken maar ze ook beleven."</p></div>
+                {% endblock  %}
             </div>
             <ul class="navbar-nav ml-auto nav-flex-icons">
 
@@ -47,6 +51,8 @@
             </ul>
         </div>
     </nav>
+
+    {% endblock %}
     <!--/.Navbar -->
     {% block body %}
     {% endblock %}
@@ -60,7 +66,7 @@
             <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
             <!-- MDB core JavaScript -->
             <script type="text/javascript" src="{{ asset('js/mdb.js') }}"></script>
-        {% block javascripts %}
+        {% block scripts %}
         {% endblock %}
     </body>
 </html>
