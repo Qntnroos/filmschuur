@@ -1,18 +1,21 @@
 {% extends 'base.html.twig' %}
-{% block title %}De filmschuur - Film{% endblock %}
+{% block title %}{{ info[0].movie_title }} - De filmschuur {% endblock %}
+{% block midcontent %}
+    <div><h3>{{ info[0].movie_title }}</h3></div>
+{% endblock  %}
 {% block body %}
 <body class="lightbody">
 <div class="container-fluid">
-    <div class="row">
-        <div class="video">
-            <iframe src="{{ info[0].trailer_link }}"></iframe>
+    <div class="row darkbody">
+        <div class="col-10 offset-1 video mb-5">
+            <iframe src="{{ info[0].trailer_link }}" scrolling="no" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="col-10 offset-1 movie-details">
+    <div class="row my-5">
+        <div class="col-8 offset-2 movie-details">
             <div class="row">
                 <div class="col-4 offset-1 mt-3">
-                    <h1>The Godfather</h1>
+                    <h1>{{ info[0].movie_title }}</h1>
                     <div class="icons mt-2">
                         <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
                         <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
@@ -20,20 +23,19 @@
                         <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
                     </div>
                     <div class="info mt-4">
-                        <p>Genre: drama, misdaad</p>
-                        <p>Duur: 175minuten</p>
-                        <p>Release: 1972</p>
-                        <p>Taal: Engels</p>
-                        <p>Ondertitels: Nederlands</p>
+                        <p>Genre: {{ info[0].genreList }}</p>
+                        <p>Duur: {{ info[0].movie_length }} minuten</p>
+                        <p>Release: {{ info[0].release_year }}</p>
+                        <p>Taal: {{ info[0].spokenlanguageList }}</p>
+                        <p>Ondertitels: {{ info[0].undertitlelanguageList }}</p>
                     </div>
                 </div>
                 <div class="col-5 offset-1">
                     <div class="bestellen mt-3">
-
                         <form action="">
                             <div class="row">
-                                <div class="col-6">
-                                    <label for="">Kies Datum:</label><select class="mdb-select btn-lg md-form colorful-select dropdown-primary">
+                                <div class="col-8 date-picker">
+                                    <label class="mr-2" for="">Kies Datum:</label><select class="mdb-select  btn-lg md-form colorful-select dropdown-primary">
                                         <option value="">12-03-2019 00:00</option>
                                         <option value="">13-03-2019 00:00</option>
                                         <option value="">14-03-2019 00:00</option>
@@ -43,39 +45,35 @@
                                         <option value="">18-03-2019 00:00</option>
                                     </select>
                                 </div>
-                        <div class="col-2 offset-3 clearfix">
+                        <div class="col-2 clearfix">
                         <button type="button" class="btn order-button btn-lg">Bestellen</button>
-                        </div></div>
+                        </div>
                         </form>
-
                     </div>
                     <div class="inhoud mt-5">
                         <h1>Korte inhoud:</h1>
                         <p class="sans-serif">
-                            De eer van de familie gaat boven alles, vooral als er een aanslag op de vader is gepleegd. Bloed moet vloeien!
+                            {{ info[0].synopsis }}
                         </p>
                     </div>
-                    <div class="directors head-img mt-5">
-                        <h1>Regisseur(s):</h1>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="data:image/jpeg;base64,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" alt="">
-                            </div>
-                            <div class="col-4">
-                                <p>Francis Ford Coppola</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="actors head-img mt-5 mb-2">
-                        <h1>Acteurs:</h1>
-                        <div class="row mt-2">
-                            <div class="col-8">
-                                <p>{{ info[0].actorsList }}</p>
-                            </div>
-                        </div>
-
+                </div>
+            </div>
+            <div class="col-4 offset-1 directors mt-5">
+                <h1>Regisseur(s):</h1>
+                <div class="row">
+                    <div class="col-8">
+                        <p>{{ info[0].directorsList}}</p>
                     </div>
                 </div>
+            </div>
+            <div class="col-5 offset-1 actors head-img mt-5 mb-2">
+                <h1>Acteurs:</h1>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <p>{{ info[0].actorsList }}</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -4,10 +4,20 @@
   --main-orange-color: #D17133;
   --main-white-color: #F7F7F7;
   --nog-een-kleur: #532406;
+  --text-color: #707070;
 }
 body{
   background-color: var(--main-bg-color);
   font-family: 'Roboto', sans-serif;
+}
+p{
+  margin-bottom: 0;
+}
+.lightbody{
+  background-color: white;
+}
+.darkbody{
+  background-color: var(--main-bg-color);
 }
 .navbar{
   background-color: var(--main-orange-color) !important;
@@ -30,7 +40,7 @@ body{
 .midtext p{
   color: var(--nog-een-kleur);
 }
-.slider-item{
+.slider-element{
   border: 1px solid var(--main-orange-color);
 }
 .card-body{
@@ -39,10 +49,21 @@ body{
   border-left: none;
   border-right: none;
   border-bottom: none;
-  text-align: center;
+  height: 109px;
+  position: relative;
 }
-.card-body h4{
+.card-title{
+  margin-bottom: 0;
+}
+.card-body h5{
   color: var(--main-orange-color);
+  margin-top: 20px;
+}
+.card-body:hover{
+  background-color: var(--main-orange-color);
+}
+.card-body:hover h5{
+  color: var(--main-white-color);
 }
 .controls-top a{
   background-color: var(--main-orange-color) !important;
@@ -52,8 +73,6 @@ body{
 }
 .carousel-multi-item .controls-top{
   margin-bottom: 0;
-<<<<<<< HEAD
-=======
 }
 .video{
   width: 100vw;
@@ -81,6 +100,9 @@ body{
 .info p{
   font-size: 1.5rem;
 }
+.date-picker label{
+  margin-top: 20px;
+}
 .bestellen{
   width: 100%;
 }
@@ -104,14 +126,4 @@ body{
 }
 .inhoud .sans-serif{
   font-family: 'Lora', serif;
-}
-.head-img .row div img{
-  width: 150px;
-}
-.slate a{
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100px;
->>>>>>> 685ed1b4794dd5d6907d40ca1a761c155d5d7374
 }

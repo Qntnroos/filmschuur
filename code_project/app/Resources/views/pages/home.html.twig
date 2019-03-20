@@ -3,132 +3,37 @@
 {% block body %}
     <div class="container-fluid homepage">
         <div class="row">
-            <div class="col-10 offset-1">
-                <!--Carousel Wrapper-->
-                <div id="multi-item-example" class="carousel slide carousel-multi-item mt-5" data-ride="carousel">
-
-                    <!--Slides-->
+            <div class="col-10 offset-1 mt-5">
+                <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-
-                        <!--First slide-->
-                        <div class="carousel-item active">
-                            <a href="">
-                            <div class="col-md-4">
-                                <div class="card mb-2 slider-item">
-                                    <img class="card-img-top" src="{{ asset('img/schindlers_list.jpg') }}" alt="Card image cap">
+                        {% for movie in res %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <div class="col-12 col-md-4">
+                                <a href="http://127.0.0.1:8000/film/{{ movie.movieID }}">
+                                <div class="card mb-2 slider-element">
+                                    <img class="card-img-top" src="http://fullstacksyntra.be/{{ movie.poster }}"
+                                         alt="Card image cap">
                                     <div class="card-body">
-                                        <h4 class="card-title">Schindler's List</h4>
+                                        <h5 class="card-title font-weight-bold text-center">{{ movie.movie_title }}</h5>
                                     </div>
                                 </div>
-                            </div>
-                            </a>
-                            <a href="">
-                            <div class="col-md-4">
-                                <div class="card mb-2 slider-item">
-                                    <img class="card-img-top" src="{{ asset('img/the_gothfather.jpg') }}" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">The Godfather</h4>
-
-                                    </div>
                                 </div>
-                            </div>
-                            </a>
-                            <a href="">
-                            <div class="col-md-4">
-                                <div class="card mb-2 slider-item">
-                                    <img class="card-img-top" src="{{ asset('img/shawshank_redemption.jpg') }}" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Shawshank Redemption</h4>
-
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
+                                </a>
                         </div>
-                        <!--/.First slide-->
-                        <!--second slide-->
-                        <div class="carousel-item">
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/schindlers_list.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Schindler's List</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/the_gothfather.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">The Godfather</h4>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/shawshank_redemption.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Shawshank Redemption</h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.First slide-->
-                        <!--third slide-->
-                        <div class="carousel-item">
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/schindlers_list.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Schindler's List</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/the_gothfather.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">The Godfather</h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="col-md-4">
-                                    <div class="card mb-2 slider-item">
-                                        <img class="card-img-top" src="{{ asset('img/shawshank_redemption.jpg') }}" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Shawshank Redemption</h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!--/.First slide-->
+                        {% endfor %}
                     </div>
-                    <!--/.Slides-->
                     <!--Controls-->
-                    <div class="controls-top mt-5">
-                        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+                    <div class="controls-top mt-3">
+                        <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+                        <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i class="fas fa-chevron-right"></i></a>
                     </div>
                     <!--/.Controls-->
                 </div>
-                <!--/.Carousel Wrapper-->
             </div>
         </div>
     </div>
+    {% block scripts %}
+        <script type="text/javascript" src="{{ asset('js/carousel.js') }}"></script>
+    {% endblock %}
 {% endblock %}
