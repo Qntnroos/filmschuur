@@ -19,6 +19,9 @@ p{
 .darkbody{
   background-color: var(--main-bg-color);
 }
+.orangebody{
+  background-color: var(--main-orange-color);
+}
 .navbar{
   background-color: var(--main-orange-color) !important;
 }
