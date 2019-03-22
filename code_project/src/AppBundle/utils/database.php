@@ -16,10 +16,10 @@ class database extends SQlite3
             group_concat (distinct CC.classification_componentID) as classificationList,
             group_concat (distinct G.genre_name) as genreList,
             M.movie_length, M.release_year, M.synopsis,
-            group_concat ( distinct L.language_name) as spokenlanguageList,
-            group_concat ( distinct LA.language_name) as undertitlelanguageList,
-            group_concat ( distinct D.director_firstname || ' ' || D.director_lastname) as directorsList,
-            group_concat ( distinct A.actor_firstname || ' ' || A.actor_lastname) as actorsList
+            GROUP_CONCAT ( DISTINCT ' '|| L.language_name) AS spokenlanguageList,
+            GROUP_CONCAT ( DISTINCT ' '|| LA.language_name) AS undertitlelanguageList,
+            GROUP_CONCAT ( DISTINCT ' '|| D.director_firstname || ' ' || D.director_lastname) AS directorsList,
+            GROUP_CONCAT ( DISTINCT ' '|| A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
             from Movies as M, Movies as X, Movies as Y
             join MovieShows as MS on Y.movieID = MS.movieID
             join AgeRates as AR on M.rating_ageID = AR.rateID
