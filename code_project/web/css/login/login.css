@@ -279,6 +279,3 @@
       .form-text{
         margin-top: 1rem;
       }
-  
-      <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src="{{ asset('img/logo.png') }}" alt=""></a>
-  

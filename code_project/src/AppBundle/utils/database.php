@@ -58,4 +58,23 @@ class database extends SQlite3
             }
         return $multiArray;
     }
+    public function getGenres(){
+        $genreQuery = $this->prepare(
+            "SELECT DISTINCT G.genre_name FROM Genres AS G
+            join MovieGenres AS MG
+            on MG.genreID = G.genreID
+            join Movies AS M
+            on M.movieID = MG.movieID
+            join MovieShows As MS
+            on M.movieID = MS.movieID
+            WHERE  datetime(MS.play_times_and_dates) BETWEEN datetime('now','localtime', '2 hours') AND date('now','localtime','7 days')
+            GROUP BY G.genre_name;"
+        );
+        $resgenreQuery = $genreQuery->execute();
+        $multiArray = array();
+        while($row = $resgenreQuery->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+        }
+        return $multiArray;
+    }
 }
