@@ -15,8 +15,9 @@ class SeperateMovieController extends Controller
     public function renderFilm(Request $request, $id)
     {
         $db = new database();
-        $values = $db->getMovieDetails($id);
-        $val = ['info' => $values];
+        $movieDetails = $db->getMovieDetails($id);
+        $movieDates = $db->getMovieDates($id);
+        $val = ['info' => $movieDetails, 'dates' => $movieDates];
         // replace this example code with whatever you need
         return $this->render('pages/seperate-film.html.twig', $val);
     }

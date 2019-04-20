@@ -41,6 +41,22 @@ class database extends SQlite3
         $resSeperateMovie = $seperateMovie->execute();
         return array($resSeperateMovie->fetchArray());
     }
+    public function getMovieDates($id){
+        $movieDates = $this->prepare(
+            "SELECT strftime('%d-%m-%Y %Hu%M',play_times_and_dates) AS vertoningsdata FROM Movieshows AS MS
+            JOIN Movies AS M
+            ON M.MovieID = MS.MovieID
+            WHERE (MS.MovieID = :id) AND (play_times_and_dates BETWEEN datetime('now','localtime', '2 hours') AND date('now','localtime','7 days'))
+            ORDER BY play_times_and_dates"
+        );
+        $movieDates->bindParam('id',$id);
+        $resmovieDates = $movieDates->execute();
+        $multiArray = array();
+        while($row = $resmovieDates->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+        }
+        return $multiArray;
+    }
     public function getHomepageDetails(){
         $homepageQuery = $this->prepare(
             "select  distinct M.movieID, M.movie_title from Movies as M
@@ -73,6 +89,131 @@ class database extends SQlite3
         $resgenreQuery = $genreQuery->execute();
         $multiArray = array();
         while($row = $resgenreQuery->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+        }
+        return $multiArray;
+    }
+    public function getOverviewDates(){
+        $dateQuery = $this->prepare(
+        "SELECT STRFTIME('%d-%m-%Y',MS.play_times_and_dates)AS date,
+        CASE 
+        WHEN date(MS.play_times_and_dates) = date('now','localtime')
+        THEN 'vandaag'
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','1 days')
+        THEN 'morgen'
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','2 days')
+        THEN 
+        CASE 
+        WHEN  strftime('%w',MS.play_times_and_dates) = '0'
+        THEN 'zondag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '1'
+        THEN 'maandag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '2'
+        THEN 'dinsdag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '3'
+        THEN 'woensdag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '4'
+        THEN 'donderdag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '5'
+        THEN 'vrijdag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '6'
+        THEN 'zaterdag'
+        WHEN  strftime('%w',MS.play_times_and_dates) = '7'
+        THEN 'zondag'
+        END
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','3 days')
+        THEN
+        CASE 
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '0'
+        THEN 'zondag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '1'
+        THEN 'maandag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '2'
+        THEN 'dinsdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '3'
+        THEN 'woensdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '4'
+        THEN 'donderdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '5'
+        THEN 'vrijdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '6'
+        THEN 'zaterdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '7'
+        THEN 'zondag'
+        END 
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','4 days')
+        THEN
+        CASE 
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '0'
+        THEN 'zondag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '1'
+        THEN 'maandag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '2'
+        THEN 'dinsdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '3'
+        THEN 'woensdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '4'
+        THEN 'donderdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '5'
+        THEN 'vrijdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '6'
+        THEN 'zaterdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '7'
+        THEN 'zondag'
+        END 
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','5 days')
+        THEN
+        CASE 
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '0'
+        THEN 'zondag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '1'
+        THEN 'maandag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '2'
+        THEN 'dinsdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '3'
+        THEN 'woensdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '4'
+        THEN 'donderdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '5'
+        THEN 'vrijdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '6'
+        THEN 'zaterdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '7'
+        THEN 'zondag'
+        END 
+        WHEN date(MS.play_times_and_dates) = date('now','localtime','6 days')
+        THEN
+        CASE 
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '0'
+        THEN 'zondag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '1'
+        THEN 'maandag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '2'
+        THEN 'dinsdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '3'
+        THEN 'woensdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '4'
+        THEN 'donderdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '5'
+        THEN 'vrijdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '6'
+        THEN 'zaterdag'
+        WHEN  strftime ('%w',MS.play_times_and_dates) = '7'
+        THEN 'zondag'
+        END 
+        ELSE 'fout'
+        END dag
+        FROM Movies AS M
+        JOIN MovieShows AS MS
+        ON M.movieID = MS.movieID
+        where (datetime(MS.play_times_and_dates) 
+        BETWEEN datetime('now','localtime', '2 hours') 
+        AND date('now','localtime','7 days'))
+        GROUP BY date(MS.play_times_and_dates);"
+        );
+        $resdateQuery = $dateQuery->execute();
+        $multiArray = array();
+        while($row = $resdateQuery->fetchArray(SQLITE3_ASSOC)){
             array_push($multiArray,$row);
         }
         return $multiArray;
