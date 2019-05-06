@@ -10,7 +10,7 @@
                         {% for movie in res %}
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
                             <div class="col-12 col-md-4">
-                                <a href="http://127.0.0.1:8000/film/{{ movie.movieID }}">
+                                <a href="/film/{{ movie.movieID }}">
                                 <div class="card mb-2 slider-element">
                                     <img class="card-img-top" src="http://fullstacksyntra.be/{{ movie.poster }}"
                                          alt="Card image cap">

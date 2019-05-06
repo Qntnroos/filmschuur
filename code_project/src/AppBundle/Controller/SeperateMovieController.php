@@ -17,7 +17,13 @@ class SeperateMovieController extends Controller
         $db = new database();
         $movieDetails = $db->getMovieDetails($id);
         $movieDates = $db->getMovieDates($id);
-        $val = ['info' => $movieDetails, 'dates' => $movieDates];
+        $directorInfoArray= array();
+        foreach ($movieDetails as $movieDetail){
+            $director = $movieDetail['directors'];
+            $directorInfo = $db->getDirectorInfo($director);
+            array_push($directorInfoArray,$directorInfo);
+        }
+        $val = ['info' => $movieDetails, 'dates' => $movieDates, 'directorInfo' => $directorInfoArray];
         // replace this example code with whatever you need
         return $this->render('pages/seperate-film.html.twig', $val);
     }

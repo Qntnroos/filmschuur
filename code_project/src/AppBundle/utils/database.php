@@ -10,36 +10,58 @@ class database extends SQlite3
     }
     public function getMovieDetails($id) {
         $seperateMovie = $this->prepare(
-            "select M.trailer_link, M.movie_title,
-            group_concat (distinct strftime('%d-%m-%Y %H:%M', play_times_and_dates  )) as playList,
-            AR.rateID,
-            group_concat (distinct CC.classification_componentID) as classificationList,
-            group_concat (distinct G.genre_name) as genreList,
-            M.movie_length, M.release_year, M.synopsis,
-            GROUP_CONCAT ( DISTINCT ' '|| L.language_name) AS spokenlanguageList,
-            GROUP_CONCAT ( DISTINCT ' '|| LA.language_name) AS undertitlelanguageList,
-            GROUP_CONCAT ( DISTINCT ' '|| D.director_firstname || ' ' || D.director_lastname) AS directorsList,
-            GROUP_CONCAT ( DISTINCT ' '|| A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
-            from Movies as M, Movies as X, Movies as Y
-            join MovieShows as MS on Y.movieID = MS.movieID
-            join AgeRates as AR on M.rating_ageID = AR.rateID
-            join MovieClassificationComponents as MCC on M.movieID = MCC.movieID
-            join ClassificationComponents as CC on CC.classification_componentID = MCC.classification_componentID
-            join MovieGenres as MG on M.movieID = MG.movieID
-            join Genres as G on G.genreID = MG.genreID
-            left join MovieSpokenLanguages as ML on M.movieID = ML.movieID
-            left join Languages as L on L.languageID = ML.languageID
-            left join MovieUndertitleLanguages as MUL on X.movieID = MUL.movieID
-            left join Languages as LA on LA.languageID = MUL.languageID
-            left join MovieDirectors as MD on M.movieID = MD.movieID
-            left join Directors as D on D.directorID = MD.directorID
-            left join MovieActors as MA on M.movieID = MA.movieID
-            left join Actors as A on A.actorID = MA.actorID
-            where M.movieID = :id"
+            "SELECT M.trailer_link, M.movie_title,
+GROUP_CONCAT (DISTINCT strftime('%d-%m-%Y %H:%M', play_times_and_dates) ) AS playList,
+AR.rateID,
+GROUP_CONCAT (DISTINCT CC.classification_componentID) AS classificationList,
+GROUP_CONCAT (DISTINCT G.genre_name) AS genreList,
+M.movie_length,
+M.release_year,
+M.synopsis,
+GROUP_CONCAT ( DISTINCT ' ' || L.language_name) AS spokenlanguageList,
+GROUP_CONCAT ( DISTINCT ' ' || LA.language_name) AS undertitlelanguageList,
+(D.director_firstname || ' ' || D.director_lastname) AS directors,
+GROUP_CONCAT ( DISTINCT ' ' || A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
+FROM Movies AS M, Movies AS X, Movies AS Y
+JOIN MovieShows AS MS
+ON Y.movieID = MS.movieID
+JOIN AgeRates AS AR
+ON M.rating_ageID = AR.rateID
+JOIN MovieClassificationComponents as MCC
+ON M.movieID = MCC.movieID
+JOIN ClassificationComponents as CC
+ON CC.classification_componentID = MCC.classification_componentID
+JOIN MovieGenres as MG
+ON M.movieID = MG.movieID
+JOIN Genres as G
+ON G.genreID = MG.genreID
+LEFT JOIN MovieSpokenLanguages as ML
+ON M.movieID = ML.movieID
+LEFT JOIN Languages as L
+ON L.languageID = ML.languageID
+LEFT JOIN MovieUndertitleLanguages as MUL
+ON X.movieID = MUL.movieID
+LEFT JOIN Languages as LA
+ON LA.languageID = MUL.languageID
+JOIN MovieDirectors as MD
+ON M.movieID = MD.movieID
+JOIN Directors as D
+ON D.directorID = MD.directorID
+LEFT JOIN MovieActors as MA
+ON M.movieID = MA.movieID
+LEFT JOIN Actors as A
+ON A.actorID = MA.actorID
+WHERE M.movieID = :id
+GROUP BY Directors;"
         );
         $seperateMovie->bindParam('id',$id);
         $resSeperateMovie = $seperateMovie->execute();
-        return array($resSeperateMovie->fetchArray());
+        $multiArray = array();
+        while($row = $resSeperateMovie->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+        }
+        return $multiArray;
+
     }
     public function getMovieDates($id){
         $movieDates = $this->prepare(
@@ -217,5 +239,38 @@ class database extends SQlite3
             array_push($multiArray,$row);
         }
         return $multiArray;
+    }
+    public function getDirectorInfo($director){
+        $directorQuery = $this->prepare(
+        "SELECT Directors, DateOfBirth, PlaceOfBirth, DateOfDeath, PlaceOfDeath, GROUP_CONCAT(' '|| movie_title) AS MovieTitles
+        FROM (SELECT (D. director_firstname || ' ' || D. director_lastname) AS Directors,
+        strftime('%d-%m-%Y', D.date_of_birth) AS DateOfBirth,
+        C1.city_name || ', ' || ST1.state_name || ', '|| CO1.country_name AS PlaceOfBirth,
+        strftime('%d-%m-%Y', D.date_of_death) AS DateOfDeath,
+        C2.city_name || ', ' || ST2.state_name || ', ' || CO2.country_name AS PlaceOfDeath,
+        M.movie_title
+        FROM Directors AS D
+        LEFT JOIN Cities AS C1 ON
+        D.place_of_birth = C1.cityID 
+        LEFT JOIN Cities AS C2 ON
+        D.place_of_death = C2.cityID 
+        LEFT JOIN States_Provinces_Departments AS ST1 ON
+        C1.stateID = ST1.StateID
+        LEFT JOIN  States_Provinces_Departments AS ST2 ON
+        C2.stateID = ST2.StateID
+        LEFT JOIN Countries AS CO1 ON
+        ST1.countryID = CO1.countryID
+        LEFT JOIN Countries AS CO2 ON
+        ST2.countryID = CO2.countryID
+        JOIN MovieDirectors AS MD ON
+        D.directorID = MD.directorID
+        JOIN Movies AS M ON
+        MD.movieID = M.movieID
+        WHERE (D.director_firstname || ' ' || D.director_lastname) = :director)
+        GROUP BY Directors;"
+        );
+        $directorQuery->bindParam('director',$director);
+        $resDirectorQuery = $directorQuery->execute();
+        return $resDirectorQuery->fetchArray(SQLITE3_ASSOC);
     }
 }

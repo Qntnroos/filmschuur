@@ -167,6 +167,9 @@ p{
 .datechoose{
   margin: 0;
 }
+.movie-date-choose{
+  width: 50%;
+}
 .dropdown-content{
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-orange-color);
