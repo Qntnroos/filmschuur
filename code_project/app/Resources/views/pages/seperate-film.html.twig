@@ -61,7 +61,9 @@
                 <h1>Regisseur(s):</h1>
                 <div class="row">
                     <div class="col-8">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal">{{ info[0].directorsList}}</a>
+                        {% for director in info %}
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">{{director.directors}}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -80,13 +82,20 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{ info[0].directorsList}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{directorInfo[0].Directors}}</h5>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <ul>
+                        <li>Name: {{directorInfo[0].Directors}}</li>
+                        <li>Geboortedatum: {{directorInfo[0].DateOfBirth}}</li>
+                        <li>Geboorteplaats: {{directorInfo[0].PlaceOfBirth}}</li>
+                        <li>Sterfdatum: {{directorInfo[0].DateOfDeath}}</li>
+                        <li>Plaats van overlijden: {{directorInfo[0].PlaceOfDeath}}</li>
+                        <li>Andere films die deze regisseur gemaakt heeft: {{directorInfo[0].MovieTitles}}</li>
+                    </ul>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="close text" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
