@@ -18,10 +18,11 @@ class FilmProgramController extends Controller
         $db = new database();
         $client = new Client(['base_uri' => 'http://fullstacksyntra.be/cockpitdfs/api/', 'timeout' => 2.0, ]);
 
-        $values = $db->getHomepageDetails();
-        $values2 = $db->getGenres();
+        $homeDetails = $db->getHomepageDetails();
+        $genres = $db->getGenres();
+        $dates = $db->getOverviewDates();
         $res= array();
-        foreach ($values as $value){
+        foreach ($homeDetails as $value){
             $id = $value['movieID'];
             $req = $client->request(
                 'GET',
@@ -37,6 +38,6 @@ class FilmProgramController extends Controller
         }
 
         return $this->render('pages/overview.html.twig', ['res' => $res,
-            'genres' => $values2]);
+            'genres' => $genres,'dates'=> $dates]);
     }
 }

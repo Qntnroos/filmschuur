@@ -2,7 +2,7 @@
 {% block title %} Programma {% endblock %}
 {% block body %}
     <body class="darkbody">
-    <div class="container">
+    <div class="container" style="padding-top: 100px">
         <div class="col-12 mt-4">
             <form action="" class="formOverview">
                 <!-- Material inline 1 -->
@@ -13,24 +13,22 @@
 
                 <!-- Material inline 2 -->
                 <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                    <input value="today" type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
                     <label class="form-check-label" for="materialInline2">Vandaag</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Kies Datum:</label>
                     <select class="mdb-select md-form dropdown-primary datechoose">
-                        <option value="" disabled selected>Kies Datum</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
+                        <option value="" disabled selected>Datum</option>
+                        {% for date in dates %}
+                            <option value="{{ date.date }}">{{ date.dag }} - {{ date.date }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Kies Genre:</label>
                     <select class="mdb-select md-form dropdown-primary datechoose">
-                        <option value="" disabled selected>Kies genre</option>
+                        <option value="" disabled selected>Genre</option>
                         {% for genre in genres %}
                             <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
                         {% endfor %}
@@ -42,6 +40,7 @@
                         <option value="" disabled selected>Kies leeftijd:</option>
                         <option value="AL">Alle leeftijden</option>
                         <option value="6">Vanaf 6 jaar</option>
+                        <option value="9">Vanaf 9 jaar</option>
                         <option value="12">Vanaf 12 jaar</option>
                         <option value="16">Vanaf 16 jaar</option>
                     </select>
@@ -52,11 +51,11 @@
             <h1>Alle films</h1>
             <hr>
         </div>
-        <div class="row">
+        <div class="row mb-5">
             {% for movie in res %}
             <div class="col-12 col-sm-6 col-lg-3 mt-5">
                 <!-- Card -->
-                <a href="http://127.0.0.1:8000/film/{{ movie.movieID }}">
+                <a href="film/{{ movie.movieID }}">
                 <div class="card">
 
                     <!-- Card image -->
