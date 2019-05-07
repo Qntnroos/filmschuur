@@ -152,8 +152,6 @@ p{
   margin-left: 35%;
   background-color: var(--main-orange-color);
 }
-.form-check-inline{
-}
 .select-wrapper input.select-dropdown{
   border: 1px solid var(--main-orange-color);
   background-color: var(--main-bg-color);
