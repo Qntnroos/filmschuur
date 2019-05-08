@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 use AppBundle\utils\database;
 
-class LoginController extends Controller
+class RouteController extends Controller
 {
     /**
      * @Route("/route", name="route")
