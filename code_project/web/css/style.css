@@ -8,7 +8,7 @@
   --hover-color: #A37054;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif,'FontAwesome';
 }
 p{
   margin-bottom: 0;
@@ -283,6 +283,10 @@ tr:first-child{
   height: auto;
   padding-left: 1.6rem;
 }
+.md-accordion .card .card-body{
+  font-size: 1rem;
+  color: var(--nog-een-kleur);
+}
 .btn.btn-link{
   color: #0056b3 !important;
   padding-left: 0;
@@ -292,6 +296,7 @@ tr:first-child{
 }
 .card-body, .card-body:hover{
   color: var(--nog-een-kleur);
+
 }
 a:hover {
   color: var(--main-orange-color);
