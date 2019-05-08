@@ -181,6 +181,9 @@ p{
   color: var(--main-orange-color);
 }
 
+
+
+
 .subnavbar {
   width: 90%;
   margin-top: 8rem !important;
@@ -238,4 +241,58 @@ p{
 }
 .explanation{
   padding: 2.75% 3% 2.75% 3%;
+}
+.custom_list li {
+  margin-left:0;
+  list-style:none;
+  display: table-row;
+}
+.custom_list li:before {
+  content: "\f008";
+  color: var(--main-orange-color);
+  padding-right:0.75rem;
+  display: table-cell;
+}
+tr:first-child{
+  background-color: var(--text-color);
+  color: white;
+}
+#list2 ol {
+  font-style:italic;
+  font-size:1.75rem;
+  color:var(--main-orange-color);
+  padding-left: 4%;
+}
+#list2 ol li p{
+  padding:8px;
+  font-style:normal;
+  font-size:1rem;
+  color:var(--text-color);
+  border-left: 1px solid #999; }
+
+#list2 ol li p em {
+  display:block;
+}
+@media screen and (max-width: 500px) {
+  #list2 ol {
+    padding-left: 8%;
+  }
+}
+.card-body, .card-body:hover{
+  background-color: white !important;
+  height: auto;
+  padding-left: 1.6rem;
+}
+.btn.btn-link{
+  color: #0056b3 !important;
+  padding-left: 0;
+}
+.card-up {
+  background-color: var(--main-orange-color);
+}
+.card-body, .card-body:hover{
+  color: var(--nog-een-kleur);
+}
+a:hover {
+  color: var(--main-orange-color);
 }
