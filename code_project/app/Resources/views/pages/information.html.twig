@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %} Route {% endblock %}
+{% block title %} information {% endblock %}
 {% block body %}
 <body>
 <nav class="subnavbar mt-3 mt-md-5  mb-3 mb-md-5 ">
@@ -11,42 +11,64 @@
   <a href="./Contact.html">Contact</a>
 </nav>
 
-<div class="map map-responsive mb-5">
-  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ckMeAA6Lf0NZFkupssiix8k6Lnavwuzq"
-          width="100%"
-          height="480"
-          style="border-color: var(--main-orange-color);">
-  </iframe>
+<div class="route">
+  <div class="map map-responsive mb-5">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ckMeAA6Lf0NZFkupssiix8k6Lnavwuzq"
+            width="100%"
+            height="480"
+            style="border-color: var(--main-orange-color);">
+    </iframe>
+  </div>
+
+  <div class="explanation mb-3 mb-md-5">
+    <h3 class="mb-4">Adres</h3>
+    <p class="mb-4"><i class="fas fa-map-marker-alt mr-2 "></i>Kasteelstraat 20, 1750 Gaasbeek</p>
+    <p>Gaasbeek is een deelgemeente van Lennik, ca. 10 km ten zuidwesten van Brussel.</p>
+    <p class="mb-4">GPS 50° 48' 0.1476" N, 4° 12' 8.1972" E (Kasteelstraat 20)</p>
+    <h3 class="mb-4">Openingstijden</h3>
+    <p><strong>Kassa</strong></p>
+    <p>Maandag – Zaterdag: 13u30 – 23u</p>
+    <p class="mb-4">Zondag: 10u30 – 23u</p>
+    <p><strong>Vertoningstijden</strong></p>
+    <p>Maandag – Zaterdag: 14u30 – 17u - 20u - 22u30</p>
+    <p class="mb-4">Zondag: 14u30 – 17u - 20u - 22u30</p>
+    <h3 class="mb-4">Bereikbaarheid</h3>
+    <p><strong>Met de wagen:</strong></p>
+    <p class="mb-4">Vanuit Gent, Antwerpen, Brussel: grote Brusselse ring, afrit 15a (afrit Lennik) richting Vlezenbeek</p>
+    <p><strong>Met de lijnbus:</strong>
+    <p class="mb-4">Vanuit Brussel-Zuid, lijn 142 (Gaasbeek-Leerbeek), halte De Filmschuur</p>
+    <p><strong>Met de metro:</strong></p>
+    <p>Vanuit Brussel, Lijn 5 tot eindhalte Erasmus, overstappen op lijnbus 142 (Gaasbeek-Leerbeek), halte De FilmschuurParking</p>
+    <p class="mb-4"><a href="https://www.delijn.be/nl/routeplanner/" target="_blank">Plan hier uw route</a></p>
+    <p><strong>Met de fiets:</strong></p>
+    <p>Er zijn 2 fietsenstallingen voorzien aan de ingang van De FilmSchuur. Zet je fiets steeds op slot.</p>
+    <p>Let Op: wegens veiligheidsvoorschriften worden plooifietsen niet toegelaten in de cinemazalen.</p>
+    <p class="mb-4"><a href="https://www.blue-bike.be/nl" target="_blank">Combineer je treinrit in Brussel-Zuid of Halle met Blue-Bike. Of combineer je metrotrip met Villo.</a></p>
+    <h3>Parking:</h3>
+    <p>Naast De Filmschuur bevindt zich een ruime parking.</p>
+    <p>Momenteel zijn er vijf laadpalen voor elektrische auto's aanwezig</p>
+    <p>Een parkeerticket kost 2 euro. Deze parking wordt niet bewaakt. Laat dus geen waardevolle voorwerpen zichtbaar achter in je wagen.</p>
+  </div>
 </div>
 
-<div class="explanation mb-3 mb-md-5">
-  <h3 class="mb-4">Adres</h3>
-  <p class="mb-4"><i class="fas fa-map-marker-alt mr-2 "></i>Kasteelstraat 20, 1750 Gaasbeek</p>
-  <p>Gaasbeek is een deelgemeente van Lennik, ca. 10 km ten zuidwesten van Brussel.</p>
-  <p class="mb-4">GPS 50° 48' 0.1476" N, 4° 12' 8.1972" E (Kasteelstraat 20)</p>
-  <h3 class="mb-4">Openingstijden</h3>
-  <p><strong>Kassa</strong></p>
-  <p>Maandag – Zaterdag: 13u30 – 23u</p>
-  <p class="mb-4">Zondag: 10u30 – 23u</p>
-  <p><strong>Vertoningstijden</strong></p>
-  <p>Maandag – Zaterdag: 14u30 – 17u - 20u - 22u30</p>
-  <p class="mb-4">Zondag: 14u30 – 17u - 20u - 22u30</p>
-  <h3 class="mb-4">Bereikbaarheid</h3>
-  <p><strong>Met de wagen:</strong></p>
-  <p class="mb-4">Vanuit Gent, Antwerpen, Brussel: grote Brusselse ring, afrit 15a (afrit Lennik) richting Vlezenbeek</p>
-  <p><strong>Met de lijnbus:</strong>
-  <p class="mb-4">Vanuit Brussel-Zuid, lijn 142 (Gaasbeek-Leerbeek), halte De Filmschuur</p>
-  <p><strong>Met de metro:</strong></p>
-  <p>Vanuit Brussel, Lijn 5 tot eindhalte Erasmus, overstappen op lijnbus 142 (Gaasbeek-Leerbeek), halte De FilmschuurParking</p>
-  <p class="mb-4"><a href="https://www.delijn.be/nl/routeplanner/" target="_blank">Plan hier uw route</a></p>
-  <p><strong>Met de fiets:</strong></p>
-  <p>Er zijn 2 fietsenstallingen voorzien aan de ingang van De FilmSchuur. Zet je fiets steeds op slot.</p>
-  <p>Let Op: wegens veiligheidsvoorschriften worden plooifietsen niet toegelaten in de cinemazalen.</p>
-  <p class="mb-4"><a href="https://www.blue-bike.be/nl" target="_blank">Combineer je treinrit in Brussel-Zuid of Halle met Blue-Bike. Of combineer je metrotrip met Villo.</a></p>
-  <h3>Parking:</h3>
-  <p>Naast De Filmschuur bevindt zich een ruime parking.</p>
-  <p>Momenteel zijn er vijf laadpalen voor elektrische auto's aanwezig</p>
-  <p>Een parkeerticket kost 2 euro. Deze parking wordt niet bewaakt. Laat dus geen waardevolle voorwerpen zichtbaar achter in je wagen.</p>
+<div class="tarieven">
+
 </div>
+
+<div class="Zalen">
+
+</div>
+
+<div class="Huisregels">
+
+</div>
+
+<div class="FAQ">
+
+</div>
+<div class="Contact">
+
+</div>
+
 </body>
 {% endblock %}
