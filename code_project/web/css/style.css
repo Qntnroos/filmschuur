@@ -179,3 +179,61 @@ p{
 .dropdown-content li>a, .dropdown-content li>span{
   color: var(--main-orange-color);
 }
+
+.subnavbar {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: auto;
+}
+.subnavbar a {
+  float: left;
+  background-color: var(--nog-een-kleur);
+  margin-left: 1%;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 15.8%; /* Six links of equal widths */
+  text-align: center;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(120,120,120,1);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(120,120,120,1);
+  box-shadow: 4px 4px 8px 0px rgba(120,120,120,1);
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .subnavbar a {
+    padding: .5rem 1rem;
+  }
+}
+.subnavbar a:first-child {
+  margin-left: 0;
+}
+.subnavbar a:hover {
+  background-color: var(--hover-color);
+  color: var(--main-white-color);
+}
+.subnavbar a.active {
+  background-color: var(--main-orange-color);
+  color: var(--main-white-color);
+}
+@media screen and (max-width: 500px) {
+  .subnavbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+.explanation{
+  border: 2px solid var(--main-orange-color);
+}
+.explanation, .map{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: -0.75rem;
+}
+.explanation{
+  padding: 2.75% 3% 2.75% 3%;
+}
