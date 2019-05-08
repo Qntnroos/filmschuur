@@ -5,6 +5,7 @@
   --main-white-color: #F7F7F7;
   --nog-een-kleur: #532406;
   --text-color: #707070;
+  --hover-color: #A37054;
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -182,6 +183,7 @@ p{
 
 .subnavbar {
   width: 90%;
+  margin-top: 8rem !important;
   margin-left: 5%;
   margin-right: 5%;
   overflow: auto;

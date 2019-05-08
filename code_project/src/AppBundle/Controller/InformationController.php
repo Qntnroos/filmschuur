@@ -8,9 +8,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 use AppBundle\utils\database;
 
-class RouteController extends Controller
+class InformationController extends Controller
 {
     /**
-     * @Route("/info", name="route")
+     * @Route("/information", name="information")
      */
+    public function route_to_information_page(Request $request){
+    
+        return $this->render('pages/information.html.twig');
+    }
 }
