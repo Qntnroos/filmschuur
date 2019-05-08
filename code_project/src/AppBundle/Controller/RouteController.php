@@ -11,6 +11,6 @@ use AppBundle\utils\database;
 class RouteController extends Controller
 {
     /**
-     * @Route("/route", name="route")
+     * @Route("/info", name="route")
      */
 }
