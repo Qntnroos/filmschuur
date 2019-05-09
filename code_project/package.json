@@ -2,7 +2,7 @@
   "name": "dfs",
   "version": "1.0.0",
   "description": "Symfony Standard Edition ========================",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "directories": {
     "test": "tests"
   },

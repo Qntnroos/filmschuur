@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lora|Roboto');
-:root{
-  --main-bg-color: #1F1F1E;
-  --main-orange-color: #D17133;
-  --main-white-color: #F7F7F7;
-  --nog-een-kleur: #532406;
-  --text-color: #707070;
-  --hover-color: #A37054;
-}
 body{
   font-family: 'Roboto', sans-serif,'FontAwesome';
 }
