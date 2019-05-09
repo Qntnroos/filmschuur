@@ -1,0 +1,12 @@
+@import "settings/colors";
+@import "settings/fonts";
+
+body{
+    font-family: $f-lora;
+}
+.lightbody{
+    background-color: $c-white;
+}
+.darkbody{
+    background-color: $c-black;
+}
