@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eef92737-b37b-45e9-81a6-e8210ee959f0" name="Default Changelist" comment="" />
+    <list default="true" id="eef92737-b37b-45e9-81a6-e8210ee959f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/filmschuur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/filmschuur.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,24 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1406234583">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="24" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="filmschuur" />
@@ -53,17 +76,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code_project/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="425">
               <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code_project/bin/console">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding>
                 <element signature="e#26#81#0#PHP" expanded="true" />
               </folding>
@@ -71,7 +94,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code_project/web/html/privacybeleid.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code_project/web/html/cookiebeleid.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,11 +129,63 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" />
+        <option value="$PROJECT_DIR$/code_project/web/html/cookiebeleid.html" />
+        <option value="$PROJECT_DIR$/code_project/web/html/algemene_voorwaarden.html" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/code_project/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/code_project/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/code_project/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/code_project/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/code_project/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/code_project/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/code_project/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/code_project/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/code_project/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/code_project/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/code_project/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/composer" />
+      <path value="$PROJECT_DIR$/code_project/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/code_project/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/code_project/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-util" />
+    </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
@@ -98,104 +198,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
               <item name="code_project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="var" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
               <item name="code_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
               <item name="code_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TrivialGoose" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -227,17 +265,19 @@
       <workItem from="1556790294506" duration="593000" />
       <workItem from="1557149029270" duration="718000" />
       <workItem from="1557316752744" duration="547000" />
+      <workItem from="1557386688896" duration="1167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3413000" />
+    <option name="totallyTimeSpent" value="4580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9050633" visible="true" weight="0.21744967" />
-      <window_info id="Structure" order="1" sideWeight="0.094936706" side_tool="true" visible="true" weight="0.21744967" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84810126" visible="true" weight="0.22080536" />
+      <window_info id="Structure" order="1" sideWeight="0.15189873" side_tool="true" visible="true" weight="0.22080536" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -273,7 +313,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code_project/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="425">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
         </state>
       </provider>
@@ -281,10 +321,31 @@
     <entry file="file://$PROJECT_DIR$/code_project/bin/console">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding>
             <element signature="e#26#81#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_project/web/html/privacybeleid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_project/web/html/algemene_voorwaarden.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="96" lean-forward="true" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_project/web/html/cookiebeleid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
