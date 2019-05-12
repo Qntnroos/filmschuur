@@ -228,16 +228,17 @@ p{
     margin-left: 0;
   }
 }
-.explanation{
-  border: 2px solid var(--main-orange-color);
+.explanation p, .explanation li{
+  color: var(--text-color);
 }
 .explanation, .map{
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: -0.75rem;
+  margin-top: 0.75rem;
 }
 .explanation{
   padding: 2.75% 3% 2.75% 3%;
+  border: solid 1px var(--main-orange-color);
 }
 .custom_list li {
   margin-left:0;
