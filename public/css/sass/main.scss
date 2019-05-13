@@ -15,10 +15,10 @@ p{
     background-color: $c-black;
 }
 .orangebody{
-    background-color: var(--main-orange-color);
+    background-color: $c-orange;
   }
 .navbar{
-    background-color: var(--main-orange-color) !important;
+    background-color: $c-orange !important;
     &-brand{
         width: 200px;
         height: 60px;
@@ -26,4 +26,15 @@ p{
             height: 50px;
           }
       }
+    &-nav h3, &-nav a{
+        color: $c-white;
+    }
+}
+.midtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & p {
+      color: $c-wine;
+  }
 }
