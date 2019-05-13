@@ -1,0 +1,33 @@
+footer{
+    background-color: $c-orange;
+    text-align:center;
+    }
+    footer a{
+    color: $c-white;
+    text-transform: uppercase;
+    }
+    footer a:hover {
+    color: rgba(255, 255, 255, .75);
+    }
+    .copy{
+    margin-left: 5%;
+    }
+    .footer-menu{
+    margin-right: 5%;
+    }
+    @media screen and (max-width:767px) {
+    .lijn-top{
+      border-top: 1px solid $c-white;
+    }
+    .lijn-top-bottom{
+      border-bottom: 1px solid $c-white;
+      border-top: 1px solid $c-white;
+    }
+    .copy{
+      margin-left: 0;
+    }
+    .footer-menu{
+      margin: 0;
+      padding-left: 0!important;
+    }
+    }
