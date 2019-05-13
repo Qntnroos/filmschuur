@@ -17,12 +17,7 @@
             <div class="row">
                 <div class="col-4 offset-1 mt-3">
                     <h1>{{ info[0].movie_title }}</h1>
-                    <div class="icons mt-2">
-                        <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
-                        <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
-                        <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
-                        <img src="{{ asset('img/kijkwijzer-16.svg') }}" alt="">
-                    </div>
+                   
                     <div class="info mt-4">
                         <p>Genre: {{ info[0].genreList }}</p>
                         <p>Duur: {{ info[0].movie_length }} minuten</p>
@@ -95,5 +90,13 @@
         </div>
     </div>
 </div>
-</section>
+
+</main>
+{% endblock %}
+{% block scripts %}
+    <script>
+      const directorInfo = {{json_encode(directorInfo)}};
+      console.log(directorInfo);
+      // Material Select Initialization
+    </script>
 {% endblock %}
