@@ -15,13 +15,15 @@ p {
   background-color: #D17133; }
 
 .navbar {
-  background-color: #D17133 !important; }
+  background-color: #D17133 !important;
+  font-family: "Roboto", sans-serif; }
   .navbar-brand {
     width: 200px;
     height: 60px; }
     .navbar-brand img {
       height: 50px; }
-  .navbar-nav h3, .navbar-nav a {
+  .navbar-nav h3,
+  .navbar-nav a {
     color: #F7F7F7; }
 
 .midtext {
@@ -30,3 +32,27 @@ p {
   justify-content: center; }
   .midtext p {
     color: #532406; }
+
+.slider-element {
+  border: 1px solid #D17133; }
+
+.card {
+  font-family: "Roboto", sans-serif; }
+  .card-title {
+    margin-bottom: 0; }
+  .card-body {
+    background-color: #1F1F1E;
+    border: 1px solid #D17133;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    position: relative; }
+    .card-body:hover {
+      background-color: #D17133; }
+    .card-body h5 {
+      color: #D17133; }
+    .card-body:hover h5 {
+      color: #F7F7F7; }
+
+.carousel-inner {
+  padding-top: 74px; }

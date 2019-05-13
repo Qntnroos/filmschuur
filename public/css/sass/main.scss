@@ -1,40 +1,79 @@
 @import "settings/colors";
 @import "settings/fonts";
 
-body{
+body {
     font-family: $f-lora;
 }
-p{
+
+p {
     margin-bottom: 0;
 }
 
-.lightbody{
+.lightbody {
     background-color: $c-white;
 }
-.darkbody{
+
+.darkbody {
     background-color: $c-black;
-} 
-.orangebody{
+}
+
+.orangebody {
     background-color: $c-orange;
-  }
-.navbar{
+}
+
+.navbar {
     background-color: $c-orange !important;
-    &-brand{
+    font-family: $f-roboto;
+    &-brand {
         width: 200px;
         height: 60px;
-        & img{
+
+        & img {
             height: 50px;
         }
     }
-    &-nav h3, &-nav a{
+
+    &-nav h3,
+    &-nav a {
         color: $c-white;
     }
 }
-.midtext{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  & p {
-      color: $c-wine;
-  }
+
+.midtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & p {
+        color: $c-wine;
+    }
+}
+.slider-element{
+    border: 1px solid $c-orange;
+}
+.card{
+    font-family: $f-roboto;
+    &-title{
+        margin-bottom: 0;
+    }
+    &-body{
+        background-color: $c-black;
+        border: 1px solid $c-orange;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        position: relative;
+        &:hover{
+            background-color: $c-orange;
+        }
+        & h5{
+            color: $c-orange;
+        }
+        &:hover h5{
+            color: $c-white;
+        }
+    }
+}
+.carousel-inner{
+    padding-top: 74px;
 }
