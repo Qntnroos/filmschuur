@@ -55,8 +55,11 @@
     border: solid 1px $c-orange;
     }
     .explanation p, .explanation li{
-      color: $c-grey;
+      color: $c-gray;
       }
+    iframe{
+      border-color:$c-orange;
+    }  
     .custom_list li {
     margin-left:0;
     list-style:none;
@@ -69,7 +72,7 @@
     display: table-cell;
     }
     tr:first-child{
-    background-color: $c-grey;
+    background-color: $c-gray;
     color: white;
     }
     #list2 ol {
@@ -82,7 +85,7 @@
     padding:8px;
     font-style:normal;
     font-size:1rem;
-    color:$c-grey;
+    color:$c-gray;
     border-left: 1px solid #999;
     }
     #list2 ol li p em {
@@ -112,8 +115,11 @@
     .card-up {
     background-color: $c-orange;
     }
-    .card-body, .card-body:hover{
-      background-color: white;
+    .card-body,.card-body:hover{
+      background-color: $c-white;
+      color: $c-wine;
+    }
+    .card-title:hover{
       color: $c-wine;
     }
     #topbar{
