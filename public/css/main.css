@@ -18,23 +18,8 @@
   .midtext p {
     color: #532406; }
 
-body {
-  font-family: "Lora", serif; }
-
-p {
-  margin-bottom: 0; }
-
 .homepage {
   height: 100vh; }
-
-.lightbody {
-  background-color: #F7F7F7; }
-
-.darkbody {
-  background-color: #1F1F1E; }
-
-.orangebody {
-  background-color: #D17133; }
 
 .slider-element {
   border: 1px solid #D17133; }
@@ -65,3 +50,18 @@ p {
       height: 50px; }
     .card-body:hover h5 {
       color: #F7F7F7; }
+
+body {
+  font-family: "Lora", serif; }
+
+p {
+  margin-bottom: 0; }
+
+.lightbody {
+  background-color: #F7F7F7; }
+
+.darkbody {
+  background-color: #1F1F1E; }
+
+.orangebody {
+  background-color: #D17133; }

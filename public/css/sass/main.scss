@@ -1,15 +1,13 @@
 @import "settings/colors";
 @import "settings/fonts";
 @import "components/header";
+@import "pages/homepage";
 
 body {
     font-family: $f-lora;
 }
 p {
     margin-bottom: 0;
-}
-.homepage{
-    height: 100vh;
 }
 .lightbody {
     background-color: $c-white;
@@ -21,41 +19,4 @@ p {
 
 .orangebody {
     background-color: $c-orange;
-}
-.slider-element{
-    border: 1px solid $c-orange;
-}
-.carousel-multi-item {
-    margin-top: 80px;
-    margin-bottom: 0 !important;
-    .controls-top{
-        margin-bottom: 0;
-        & a{
-            background-color: $c-orange !important;
-        }
-    }
-}
-.card{
-    font-family: $f-roboto;
-    &-title{
-        margin-bottom: 0;
-    }
-    &-body{
-        background-color: $c-black;
-        border: 1px solid $c-orange;
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
-        position: relative;
-        &:hover{
-            background-color: $c-orange;
-        }
-        & h5{
-            color: $c-orange;
-            height: 50px;
-        }
-        &:hover h5{
-            color: $c-white;
-        }
-    }
 }
