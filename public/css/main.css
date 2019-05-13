@@ -1,19 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lora|Roboto");
-body {
-  font-family: "Lora", serif; }
-
-p {
-  margin-bottom: 0; }
-
-.lightbody {
-  background-color: #F7F7F7; }
-
-.darkbody {
-  background-color: #1F1F1E; }
-
-.orangebody {
-  background-color: #D17133; }
-
 .navbar {
   background-color: #D17133 !important;
   font-family: "Roboto", sans-serif; }
@@ -33,8 +18,34 @@ p {
   .midtext p {
     color: #532406; }
 
+body {
+  font-family: "Lora", serif; }
+
+p {
+  margin-bottom: 0; }
+
+.homepage {
+  height: 100vh; }
+
+.lightbody {
+  background-color: #F7F7F7; }
+
+.darkbody {
+  background-color: #1F1F1E; }
+
+.orangebody {
+  background-color: #D17133; }
+
 .slider-element {
   border: 1px solid #D17133; }
+
+.carousel-multi-item {
+  margin-top: 80px;
+  margin-bottom: 0 !important; }
+  .carousel-multi-item .controls-top {
+    margin-bottom: 0; }
+    .carousel-multi-item .controls-top a {
+      background-color: #D17133 !important; }
 
 .card {
   font-family: "Roboto", sans-serif; }
@@ -50,9 +61,7 @@ p {
     .card-body:hover {
       background-color: #D17133; }
     .card-body h5 {
-      color: #D17133; }
+      color: #D17133;
+      height: 50px; }
     .card-body:hover h5 {
       color: #F7F7F7; }
-
-.carousel-inner {
-  padding-top: 74px; }

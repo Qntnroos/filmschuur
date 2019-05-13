@@ -1,14 +1,16 @@
 @import "settings/colors";
 @import "settings/fonts";
+@import "components/header";
 
 body {
     font-family: $f-lora;
 }
-
 p {
     margin-bottom: 0;
 }
-
+.homepage{
+    height: 100vh;
+}
 .lightbody {
     background-color: $c-white;
 }
@@ -20,36 +22,18 @@ p {
 .orangebody {
     background-color: $c-orange;
 }
-
-.navbar {
-    background-color: $c-orange !important;
-    font-family: $f-roboto;
-    &-brand {
-        width: 200px;
-        height: 60px;
-
-        & img {
-            height: 50px;
-        }
-    }
-
-    &-nav h3,
-    &-nav a {
-        color: $c-white;
-    }
-}
-
-.midtext {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    & p {
-        color: $c-wine;
-    }
-}
 .slider-element{
     border: 1px solid $c-orange;
+}
+.carousel-multi-item {
+    margin-top: 80px;
+    margin-bottom: 0 !important;
+    .controls-top{
+        margin-bottom: 0;
+        & a{
+            background-color: $c-orange !important;
+        }
+    }
 }
 .card{
     font-family: $f-roboto;
@@ -68,12 +52,10 @@ p {
         }
         & h5{
             color: $c-orange;
+            height: 50px;
         }
         &:hover h5{
             color: $c-white;
         }
     }
-}
-.carousel-inner{
-    padding-top: 74px;
 }

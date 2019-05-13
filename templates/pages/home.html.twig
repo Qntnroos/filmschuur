@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}De filmschuur{% endblock %}
 {% block body %}
-    <section class="darkbody">
+    <section class="darkbody homepage">
     <div class="container-fluid">
         <div class="row">
             <div class="col-10 offset-1 mt-5">
@@ -11,7 +11,7 @@
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
                             <div class="col-12 col-md-4">
                                 <a href="/film/{{ movie.movieID }}">
-                                <div class="card mb-2 slider-element">
+                                <div class="card slider-element">
                                     <img class="card-img-top" src="http://fullstacksyntra.be/{{ movie.poster }}"
                                          alt="Card image cap">
                                     <div class="card-body">
