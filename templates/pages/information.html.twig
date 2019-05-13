@@ -2,7 +2,7 @@
 {% block title %} information {% endblock %}
 {% block body %}
 <nav class="subnavbar mt-3 mt-md-5  mb-3 mb-md-4 ">
-  <a id="O" class="htmlbutton active" href="#">Route</a>
+  <a id="0" class="htmlbutton active" href="#">Route</a>
   <a id="1" class="htmlbutton" href="#">Tarieven</a>
   <a id="2" class="htmlbutton" href="#">Zalen</a>
   <a id="3" class="htmlbutton" href="#">Huisregels</a>
@@ -54,7 +54,7 @@
 </div>
 
 <div id="tarievenf" class="jump"></div>
-<div class="explanation content mb-3 mb-md-5">
+<div class="explanation content noshow mb-3 mb-md-5">
   <h3>Standaardtarief: € 9,50</h3>
   <h3 class="mb-2">Kortingstarief: € 7,50 </h3>
   <ul class="custom_list">
@@ -81,7 +81,7 @@
 </div>
 
 <div id="zalen" class="jump"></div>
-<div class="explanation content mb-3 mb-md-5">
+<div class="explanation content noshow mb-3 mb-md-5">
   <h3>Duurzaamheid</h3>
   <p class="text-justify mb-4"> Bij het ontwerp van ons bioscoopcomplex stonden naast het comfort van de bezoekers en medewerkers
       ook de groene parameters centraal. De FilmSchuur tracht haar ecologische voetafdruk maximaal te beperken
@@ -197,7 +197,7 @@
 </div>
 
 <div id="huisregels" class="jump"></div>
-<div class="explanation content mb-3 mb-md-5">
+<div class="explanation content noshow mb-3 mb-md-5">
 
   <div class="mb-5">
     <h3>Onze huisregels</h3>
@@ -239,7 +239,7 @@
 </div>
 
 <div id="FAQ" class="jump"></div>
-<div class="explanation content mb-3 mb-md-5">
+<div class="explanation content noshow mb-3 mb-md-5">
 
   <div class>
     <h3 class="text-center text-sm-left mb-4">Veel gestelde vragen</h3>
@@ -427,7 +427,7 @@
 </div>
 
 <div id="contact" class="jump"></div>
-  <div class="explanation contennt mb-3 mb-md-5">
+  <div class="explanation content noshow mb-3 mb-md-5">
 
   <div class="row">
       <div class="col-6">
@@ -504,5 +504,11 @@
 
 </div>
 
-</section>
+{{ include('footer.html.twig') }}
+
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ asset('js/year.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/submenu.js') }}"></script>
 {% endblock %}
