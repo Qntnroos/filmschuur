@@ -4,7 +4,7 @@
     <div><h3>{{ info[0].movie_title }}</h3></div>
 {% endblock  %}
 {% block body %}
-<body class="lightbody">
+<section class="lightbody">
 <div class="container-fluid">
     <div class="row darkbody">
         <div class="col-10 offset-1 mt-4 video text-center">
@@ -95,13 +95,5 @@
         </div>
     </div>
 </div>
-{% block scripts %}
-    <script>
-      // Material Select Initialization
-      $(document).ready(function() {
-        $('.mdb-select').materialSelect();
-      });
-    </script>
-{% endblock %}
-</body>
+</section>
 {% endblock %}

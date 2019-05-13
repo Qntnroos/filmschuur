@@ -4,9 +4,26 @@
 body{
     font-family: $f-lora;
 }
+p{
+    margin-bottom: 0;
+}
+
 .lightbody{
     background-color: $c-white;
 }
 .darkbody{
     background-color: $c-black;
+}
+.orangebody{
+    background-color: var(--main-orange-color);
+  }
+.navbar{
+    background-color: var(--main-orange-color) !important;
+    &-brand{
+        width: 200px;
+        height: 60px;
+        & img{
+            height: 50px;
+          }
+      }
 }
