@@ -1,0 +1,27 @@
+.navbar {
+    background-color: $c-orange !important;
+    font-family: $f-roboto;
+    &-brand {
+        width: 200px;
+        height: 60px;
+
+        & img {
+            height: 50px;
+        }
+    }
+
+    &-nav h3,
+    &-nav a {
+        color: $c-white;
+    }
+}
+
+.midtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & p {
+        color: $c-wine;
+    }
+}

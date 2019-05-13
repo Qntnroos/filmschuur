@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block title %}De filmschuur{% endblock %}
 {% block body %}
-    <section class="darkbody">
-    <div class="container-fluid homepage" style="padding-top: 100px">
+    <section class="darkbody homepage">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-10 offset-1 mt-5">
                 <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
@@ -11,7 +11,7 @@
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
                             <div class="col-12 col-md-4">
                                 <a href="/film/{{ movie.movieID }}">
-                                <div class="card mb-2 slider-element">
+                                <div class="card slider-element">
                                     <img class="card-img-top" src="http://fullstacksyntra.be/{{ movie.poster }}"
                                          alt="Card image cap">
                                     <div class="card-body">
