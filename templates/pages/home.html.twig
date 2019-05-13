@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}De filmschuur{% endblock %}
 {% block body %}
-    <body class="darkbody">
+    <section class="darkbody">
     <div class="container-fluid homepage" style="padding-top: 100px">
         <div class="row">
             <div class="col-10 offset-1 mt-5">
@@ -34,8 +34,8 @@
             </div>
         </div>
     </div>
-    {% block scripts %}
+    </section>
+{% endblock %}
+{% block scripts %}
         <script type="text/javascript" src="{{ asset('js/carousel.js') }}"></script>
-    {% endblock %}
-    </body>
 {% endblock %}

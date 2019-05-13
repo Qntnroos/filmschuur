@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %} Programma {% endblock %}
 {% block body %}
-    <body class="darkbody">
+    <section class="darkbody">
     <div class="container" style="padding-top: 100px">
         <div class="col-12 mt-4">
             <form action="" class="formOverview">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Kies Genre:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
+                    <select class="mdb-select md-form datechoose">
                         <option value="" disabled selected>Genre</option>
                         {% for genre in genres %}
                             <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
@@ -69,13 +69,13 @@
             </div>
         </div>
     </div>
-    {% block scripts %}
-        <script>
-          // Material Select Initialization
-          $(document).ready(function() {
-            $('.mdb-select').materialSelect();
-          });
-        </script>
-    {% endblock %}
-    </body>
+    </section>
+{% endblock %}
+{% block scripts %}
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
 {% endblock %}
