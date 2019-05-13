@@ -83,8 +83,8 @@
     font-style:normal;
     font-size:1rem;
     color:$c-grey;
-    border-left: 1px solid #999; }
-    
+    border-left: 1px solid #999;
+    }
     #list2 ol li p em {
     display:block;
     }
@@ -109,7 +109,6 @@
     a:hover{
       color: $c-orange;
     }
-    
     .card-up {
     background-color: $c-orange;
     }
@@ -129,8 +128,7 @@
     .map{
       position:relative
     }
-    /*internal anchor*/
-    
+    /*internal anchor*/   
     .jump {
     content: "";
     display:block;
