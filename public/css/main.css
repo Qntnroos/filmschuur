@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Lora|Roboto");
+body {
+  font-family: "Lora", serif; }
+
+p {
+  margin-bottom: 0; }
+
+.lightbody {
+  background-color: #F7F7F7; }
+
+.darkbody {
+  background-color: #1F1F1E; }
+
+.orangebody {
+  background-color: #D17133; }
+
 .navbar {
   background-color: #D17133 !important;
   font-family: "Roboto", sans-serif; }
@@ -34,6 +49,9 @@
 
 .card {
   font-family: "Roboto", sans-serif; }
+  .card:hover .card-body, .card:hover .card-body h5 {
+    background-color: #D17133;
+    color: #F7F7F7; }
   .card-title {
     margin-bottom: 0; }
   .card-body {
@@ -48,20 +66,3 @@
     .card-body h5 {
       color: #D17133;
       height: 50px; }
-    .card-body:hover h5 {
-      color: #F7F7F7; }
-
-body {
-  font-family: "Lora", serif; }
-
-p {
-  margin-bottom: 0; }
-
-.lightbody {
-  background-color: #F7F7F7; }
-
-.darkbody {
-  background-color: #1F1F1E; }
-
-.orangebody {
-  background-color: #D17133; }
