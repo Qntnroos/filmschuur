@@ -228,16 +228,17 @@ p{
     margin-left: 0;
   }
 }
-.explanation{
-  border: 2px solid var(--main-orange-color);
+.explanation p, .explanation li{
+  color: var(--text-color);
 }
 .explanation, .map{
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: -0.75rem;
+  margin-top: 0.75rem;
 }
 .explanation{
   padding: 2.75% 3% 2.75% 3%;
+  border: solid 1px var(--main-orange-color);
 }
 .custom_list li {
   margin-left:0;
@@ -297,4 +298,65 @@ tr:first-child{
 }
 a:hover {
   color: var(--main-orange-color);
+}
+
+/*internal anchor*/
+
+.jump {
+  content: "";
+  display:block;
+  height: 16rem; /* fixed header height*/
+  margin: -16rem 0 0; /* negative fixed header height */
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.noshow{
+  display:none;
+}
+a.htmlbutton {
+  top: 5rem;
+
+
+/*faq page */
+.accordion a{
+  color: var(--main-orange-color);
+}
+.accordion a:hover, .accordion a:focus{
+  color: var(--nog-een-kleur);
+}
+
+/*footer*/
+footer{
+  background-color: var(--main-orange-color);
+  text-align:center;
+}
+footer a{
+  color: var(--main-white-color);
+  text-transform: uppercase;
+}
+footer a:hover {
+  color: rgba(255, 255, 255, .75);
+}
+.copy{
+  margin-left: 5%;
+}
+.footer-menu{
+  margin-right: 5%;
+}
+@media screen and (max-width:767px) {
+  .lijn-top{
+    border-top: 1px solid var(--main-white-color);
+  }
+  .lijn-top-bottom{
+    border-bottom: 1px solid var(--main-white-color);
+    border-top: 1px solid var(--main-white-color);
+  }
+  .copy{
+    margin-left: 0;
+  }
+  .footer-menu{
+    margin: 0;
+    padding-left: 0!important;
+  }
 }
