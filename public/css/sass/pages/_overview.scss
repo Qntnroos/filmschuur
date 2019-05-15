@@ -1,0 +1,48 @@
+.overview{
+    padding-top: 100px;
+}
+.formOverview{
+    border: 1px solid $c-orange;
+    color: $c-white;
+  }
+  .form-check-input[type=radio].with-gap:checked+label:after, .form-check-input[type=radio]:checked+label:after, label.btn input[type=radio].with-gap:checked+label:after, label.btn input[type=radio]:checked+label:after{
+    background-color: $c-orange;
+  }
+  .form-check-input[type=radio].with-gap:checked+label:after, .form-check-input[type=radio].with-gap:checked+label:before, .form-check-input[type=radio]:checked+label:after, label.btn input[type=radio].with-gap:checked+label:after, label.btn input[type=radio].with-gap:checked+label:before, label.btn input[type=radio]:checked+label:after{
+    border: 2px solid $c-orange;
+  }
+  .form-check-inline:first-child{
+    margin-left: 20px;
+  }
+  .overview{
+    color: $c-orange;
+  }
+  .overview hr{
+    width: 30%;
+    margin-left: 35%;
+    background-color: $c-orange;
+  }
+  .select-wrapper input.select-dropdown{
+    border: 1px solid $c-orange;
+    background-color: $c-black;
+    margin: 0 0 0 0.375rem;
+    color: $c-white;
+  }
+  .datechoose{
+    margin: 0;
+  }
+  .movie-date-choose{
+    width: 50%;
+  }
+  .dropdown-content{
+    background-color: $c-black;
+    border: 1px solid $c-orange;
+  }
+  .dropdown-primary .dropdown-content li a, .dropdown-primary .dropdown-content li span:hover, .dropdown-primary .dropdown-content li.active{
+    background-color: $c-orange!important;
+    color: $c-white!important;
+  }
+  .dropdown-content li>a, .dropdown-content li>span{
+    color: $c-orange;
+  }
+  

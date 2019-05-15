@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block title %} Programma {% endblock %}
 {% block body %}
-    <section class="darkbody">
-    <div class="container" style="padding-top: 100px">
+    <section class="darkbody overview">
+    <div class="container">
         <div class="col-12 mt-4">
             <form action="" class="formOverview">
                 <!-- Material inline 1 -->
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Kies Datum:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
+                    <select class="mdb-select md-form">
                         <option value="" disabled selected>Datum</option>
                         {% for date in dates %}
                             <option value="{{ date.date }}">{{ date.dag }} - {{ date.date }}</option>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Kies Genre:</label>
-                    <select class="mdb-select md-form datechoose">
+                    <select class="mdb-select md-form">
                         <option value="" disabled selected>Genre</option>
                         {% for genre in genres %}
                             <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Leeftijd:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
+                    <select class="mdb-select md-form">
                         <option value="" disabled selected>Kies leeftijd:</option>
                         <option value="AL">Alle leeftijden</option>
                         <option value="6">Vanaf 6 jaar</option>
@@ -47,11 +47,11 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 text-center mt-5 overview">
+        <div class="col-12 text-center mt-5">
             <h1>Alle films</h1>
             <hr>
         </div>
-        <div class="row mb-5">
+        <div class="row pb-5">
             {% for movie in res %}
             <div class="col-12 col-sm-6 col-lg-3 mt-5">
                 <!-- Card -->
