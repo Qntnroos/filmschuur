@@ -1,0 +1,54 @@
+.video{
+    width: 100vw;
+    & iframe{
+        width: 100%;
+        height: calc(100vh - 76px);
+        border: none;
+      }
+  }
+
+  .pijl{
+    color: $c-white;
+    & i{
+        font-size: 2.5rem;
+      }
+    &:hover{
+        color: $c-orange;
+    }
+  }
+  .movie-details{
+    border: 1px solid $c-orange;
+    border-radius: .125rem;
+  }
+  .icons{
+    width: 100%;
+    height: 60px;
+    & img{
+        width: 10%;
+        margin-right: 15px;
+      }  
+}
+  .info{
+    color:$c-black;
+   & p{
+        font-size: 1.5rem;
+      }
+  }
+  .date-picker label{
+    margin-top: 20px;
+  }
+  .bestellen{
+    width: 100%;
+
+    & label{
+        float: left;
+      }  
+}
+  .order-button{
+    background-color: $c-orange;
+    color: $c-white;
+    &:hover{
+        color: $c-black;
+      }
+  }
+  
