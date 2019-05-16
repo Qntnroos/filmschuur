@@ -1,9 +1,24 @@
 body {
-    font-family: $f-roboto, 'FontAwesome';
+    font-family: $f-lora, 'FontAwesome';
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: $f-roboto;
 }
 p {
     margin-bottom: 0;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: $f-roboto
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-family: $f-roboto
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-family: $f-roboto
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-family: $f-roboto
+  }
 .lightbody {
     background-color: $c-white;
 }
