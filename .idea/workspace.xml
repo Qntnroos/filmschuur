@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f0de0e-2edd-480c-9bc1-92ba51ab524c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/sass/.sass-cache/2f3017cdb59558497addc1db12ca05b7b2298693/main.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/.sass-cache/2f3017cdb59558497addc1db12ca05b7b2298693/main.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sass/.sass-cache/887a5cef5cdd4b02e03e85e11a6e2cab5f44e46f/_base.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/.sass-cache/887a5cef5cdd4b02e03e85e11a6e2cab5f44e46f/_base.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sass/.sass-cache/887a5cef5cdd4b02e03e85e11a6e2cab5f44e46f/_colors.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/.sass-cache/887a5cef5cdd4b02e03e85e11a6e2cab5f44e46f/_colors.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sass/.sass-cache/bc3f1f85cea7d0a3e0cf4660f8f6ac6d629686bd/_information.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/.sass-cache/bc3f1f85cea7d0a3e0cf4660f8f6ac6d629686bd/_information.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sass/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sass/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
