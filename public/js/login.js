@@ -1,5 +1,3 @@
-<script>
-
         let emailinput = document.querySelector("#loginFormEmail");
         let emailerrorText = document.querySelector(".errorEmail");
         let passwordinput = document.querySelector("#loginPassword");
@@ -21,10 +19,10 @@
           passworderrorText.style.display="none"
         }
 
-        /*regex passwordl*/
+        /*regex password*/
         function regpasswordCheck(mailCheck) {
-          let emailRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,13}$/;
-          return (emailRegex.test(mailCheck));
+          let passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,13}$/;
+          return (passwordRegex.test(mailCheck));
         }
 
         /*check mail on blur*/
@@ -74,5 +72,3 @@
         passworderrorText.addEventListener('click',removeErrorTextPassword);
 
         logbutton.addEventListener('click', CheckAll);
-
-    </script>
