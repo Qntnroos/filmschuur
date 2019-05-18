@@ -1,5 +1,4 @@
 let subnavbarcontainer = document.querySelector(".subnavbar");
-console.log(subnavbarcontainer);
 
 function MakeActiveAndShowContent(event) {
   if (event.target.matches(".htmlbutton")) {
