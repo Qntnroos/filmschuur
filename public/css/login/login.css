@@ -1,3 +1,5 @@
+      
+
       main.container {
         width: 100vh;
         padding-left: 0;
@@ -26,11 +28,18 @@
         font-size: 0.8rem;
       }
   
-      .error, .errorEmail, .errorPassword{
+      .errorEmail, .errorPassword{
         color: red;
         float: right;
         display: inline;
         margin-top: 0.25rem;
+      }
+
+      .errorReset{
+        color: red !important;
+        margin-right: -1.6rem;
+        float: right !important;
+        position: relative !important;
       }
 
   
@@ -122,6 +131,10 @@
       }
       .md-form {
         margin-top: 0;
+      }
+
+      .label-model{
+        position:relative;
       }
   
       .input-group-addon, input.form-control{
@@ -254,7 +267,7 @@
       }
 
   /* css modal */
-  
+
       .modal-dialog {
         margin-top: 21vh;
         max-width: 56vw;

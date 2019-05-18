@@ -32,7 +32,7 @@
           <div class ="col-12 col text-left mb-5">
           <!-- E-mail -->
               <label for="loginFormEmail">E-mail:</label>
-              <label class ="errorEmail">{{ error|raw }}</label>
+              <label class ="errorEmail"></label>
               <input id="loginFormEmail" type="email" name="loginFormEmail" value ="" class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
           </div>
       </div>
@@ -41,7 +41,7 @@
           <div class ="col-12 text-left mb-5">
               <!-- Password -->
               <div class="form-group">
-                  <label for= "RegisterFormPassword1">Paswoord</label>
+                  <label for= "RegisterFormPassword1">Paswoord:</label>
                   <label class ="errorPassword"></label>
                   <div class="input-group" id="show_hide_password">
                       <input id="loginPassword" class="form-control mb-0 " name="RegisterFormPassword1" value="" type="password" placeholder ="paswoord">
@@ -83,11 +83,12 @@
           <h4 class="modal-title w-100 font-weight-bold">RESET PASWOORD</h4>
         </div>
         <div class="modal-body mx-3">
-          <div class="md-form">
-            <label for="RegisterFormEmail">E-mail:</label> <label class ="error"></label>
-            <input type="email" name="RegisterFormEmail" value =""class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
-            <span id="helpResetPasswordEmail" class="form-text text-center small text-muted">
-                                            Instructies voor paswoord-reset worden verzonden naar bovenstaand e-mailadres. </span>
+          <div class="coll-12 md-form p-0">
+            <label class="label-model" for="ResetFormEmail">E-mail:</label>
+            <label class="errorReset "></label>
+            <input id="resetPasswordEmail" type="email" name="ResetFormEmail" value ="" class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
+            <span id="helpResetPasswordEmail" class="text-center small text-muted">
+            Instructies voor paswoord-reset worden verzonden naar bovenstaand e-mailadres. </span>
           </div>
         </div>
         <div class="modal-footer d-flex justify-content-center mt-0 mb-3">
