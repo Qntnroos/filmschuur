@@ -15,10 +15,10 @@
 {% block body %}
 <body class="orangebody">
 <main class="container-fluid">
-    <form id="app"  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="text-center border border-light p-4 p-ms-5 max-vw-75" novalidate>
+    <form id="app"  method="POST" action="" class="text-center border border-light p-4 p-ms-5 max-vw-75" novalidate>
 
         <div class="mb-4">
-            <img src ="img/svg/lock.svg"  alt ="slot"/>
+            <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
         </div>
 
         <div class ="col-12 mt-2">
@@ -66,7 +66,7 @@
         <div class ="row">
             <div class ="col-12 col-sm-6 text-left">
                 <!-- Password -->
-                <div class="form-group">
+                {# <div class="form-group"> #}
                     <label for= "RegisterFormPassword1 ">Paswoord</label>
                     <label class ="errorPassword"> </label>
                     <div class="input-group" id="show_hide_password">
@@ -75,26 +75,24 @@
                             <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                {# </div> #}
             </div>
 
             <div class ="col-12 col-sm-6 text-left">
                 <!-- Repeat Password -->
-                <div class="form-group">
-                    <label for = "RegisterFormPassword2">Herhaal paswoord</label>
-                    <label class ="errorPassword2"></label>
-                    <div class="input-group" id="show_hide_password">
-                        <input id="registerPassword2" class="form-control mb-0" name="RegisterFormPassword2" value="" type="password" placeholder ="paswoord">
-                        <div class="input-group-addon">
-                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                        </div>
+                <label for = "RegisterFormPassword2">Herhaal paswoord</label>
+                <label class ="errorPassword2"></label>
+                <div class="input-group" id="show_hide_password">
+                    <input id="registerPassword2" class="form-control mb-0" name="RegisterFormPassword2" value="" type="password" placeholder ="paswoord">
+                    <div class="input-group-addon">
+                        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class ="col-12 mb-1 text-left">
                 <!-- Aanwijzingstekst -->
-                    <label id="RegisterFormPasswordHelpBlock" class="text-muted mb-1 mb-sm-0">
+                    <label class="text-muted mb-1 mb-sm-0">
                         Tenminste 8 karakters waarvan minimum 1 hoofdletter, 1 kleine letter, 1 cijfer, geen opeenvolgende spaties.
                     </label>
                     <label class="errorPasswordCompare"></label>
@@ -126,7 +124,7 @@
         </div>
 
         <div class ="row">
-            <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
+            <div class ="col-12 col-sm-6 text-left">
                 <!-- Phone number -->
                 <label for="RegisterPhone"> GSM/Telefoon:</label>
                 <label class ="errorphone"></label>
@@ -136,16 +134,16 @@
                 <!-- Gender -->
             <div class ="col-12 col-sm-6 text-left">
                 <label for="RegisterFormGender">Geslacht:</label>
-                <select name="RegisterFormGender" class="md-form mdb-select">
-                    <option value="" disabled <?= $_SESSION['gender'] === '' ? 'selected' : '' ?>>Kies je geslacht:</option>
-                    <option value="M" <?= $_SESSION['gender'] === 'M' ? 'selected' : '' ?>>M</option>
-                    <option value="V" <?= $_SESSION['gender'] === 'V' ? 'selected' : '' ?>>V</option>
-                    <option value="X" <?= $_SESSION['gender'] === 'X' ? 'selected' : '' ?>>X</option>
+                <select name="RegisterFormGender" class="md-form mdb-select caret">
+                    <option value="" disabled>Kies je geslacht:</option>
+                    <option value="M">M</option>
+                    <option value="V">V</option>
+                    <option value="X">X</option>
                 </select>
             </div>
         </div>
 
-        <div class ="row">
+        <div class ="row mt-n3 mb-3">
             <div class ="col-12 col-sm-6 text-left mb-0">
                 <!-- Birthdate -->
                 <label for="date-picker">Geboortedatum</label>
@@ -175,7 +173,7 @@
                 <div class ="col-6 text-right mb-0">
                 </div>
                 <!-- Sign up button -->
-                    <a href="Login2.php"><button class="btn2" type="submit">REEDS EEN ACCOUNT? LOGIN</button></a>
+                    <a href="/login"><button class="btn2" type="submit">REEDS EEN ACCOUNT? LOGIN</button></a>
                     <br>
                     <a href="" >Algemene Voorwaarden -</a>
                     <a href="" >Privacybeleid -</a>

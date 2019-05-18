@@ -1,5 +1,4 @@
       
-
       main.container {
         width: 100vh;
         padding-left: 0;
@@ -28,11 +27,16 @@
         font-size: 0.8rem;
       }
   
-      .errorEmail, .errorPassword{
+      .errorfirstname,.errorlastname, .errorEmail,.errorEmail2, .errorPassword, .errorPassword2, .errorPasswordCompare, .errorpostalnumber, .erroradress, .errorphone{
         color: red;
         float: right;
         display: inline;
         margin-top: 0.25rem;
+      }
+
+      .errorCompare{
+        color:red;
+        float:right;
       }
 
       .errorReset{
@@ -42,12 +46,11 @@
         position: relative !important;
       }
 
-  
       .btn{
         font-weight: bold;
         color: #532406;
         border: 1px solid #D17133;
-        margin: 0;
+        margin: 0.5rem 0 0 0;
       }
 
       .btn2{
@@ -63,7 +66,7 @@
   
       form{
         background-color: #F7F7F7;
-        width: 56vw;
+        width: 60vw;
         left: 35%;
         top: 50%;
         position: absolute;
@@ -93,7 +96,7 @@
       }
   
       .form-control{
-        margin-bottom: 1.5rem;
+        /* margin-bottom: 1.5rem; */
         color: #532406;
         background-color: #f7f7f7;
         border-bottom: 1px solid #D17133;
@@ -108,29 +111,55 @@
       .form-control:disabled, .form-control[readonly]{
         background-color: #f7f7f7;
       }
-  
+      .form-group{
+        margin-bottom: 0;
+      }
       .text-muted {
           color: #1B67BF !important;
       }
-  
+      
       .select-wrapper input.select-dropdown {
-        border-bottom: 1px solid #D17133;
-        line-height: 1.5;
-        height: 1.6rem;
+        background-color: transparent;
+        border: none;
+        border-bottom:1px solid #D17133;
+        margin: 0;
+        width: 100%;
+        line-height: 1.5rem;
+        height: 1.5rem;
         color: #532406;
+      }
+      .caret{
+        color:#D17133 !important;
+        margin-top: -0.5rem;
+      }
+
+      .dropdown-content{
+        background-color: #F7F7F7;
       }
   
       .dropdown-content li span{
-        color: #D17133;
+        color: #532406;
         padding: 0.25rem;
       }
   
       .test {
         color: red;
-  
       }
       .md-form {
         margin-top: 0;
+      }
+
+      .picker__box .picker__header .picker__date-display .picker__weekday-display {
+        background-color: #D17133;
+      }
+      .picker__box .picker__header .picker__date-display {
+        background-color: #D17133;
+      }
+      .picker__box .picker__table .picker--focused, .picker__box .picker__table .picker__day--selected, .picker__box .picker__table .picker__day--selected:hover {
+        background-color: #D17133;
+      }
+      .picker__box .picker__table .picker__day.picker__day--today {
+        color: #D17133;
       }
 
       .label-model{
@@ -270,8 +299,7 @@
 
       .modal-dialog {
         margin-top: 21vh;
-        max-width: 56vw;
-        left: -1%;
+        max-width: 60vw;
       }
       .close {
         font-size: 2rem;
@@ -292,6 +320,10 @@
         border-bottom-color: #D17133;
         line-height: 1.5;
         padding: .3rem 0 .1rem;
+        margin-top: -1rem;
+      }
+      .md-form label{
+        position:relative;
       }
       .form-text{
         margin-top: 1rem;

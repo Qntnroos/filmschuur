@@ -220,7 +220,7 @@ function adressVerify() {
             adresserrorText.innerHTML = "";
             adressinput.value = cleanadress(adressinput.value);
         } else {
-            adresserrorText.innerHTML = "Geen geldige opbouw van adres&nbsp;&#x274C";
+            adresserrorText.innerHTML = "Geen geldige opbouw van adres. Straatnaam en nummer gescheiden door spatie&nbsp;&#x274C";
             adresserrorText.style.display ="block";
         }
     }
