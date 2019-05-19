@@ -77,7 +77,7 @@ iframe {
     & li {
         margin-left: 0;
         list-style: none;
-        display: table-row;
+        display: inline-table;
 
         &::before {
             content: "\f008";
