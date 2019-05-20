@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %} cookiebeleid {% endblock %}
+{% block body %}
+
+ <div class="footer-link-page explanation mt-5 mb-3 mb-md-5">
+    <h3>WAT ZIJN COOKIES, HOE WERKEN ZE EN WAT ZIJN DE GEVAREN?</h3>
+    <ul class="custom_list">
+      <li class="text-justify mb-4">Een cookie is een tekstbestandje dat door de server van een website in de browser van je computer of op je mobiel apparaat geplaatst wordt als je de website bezoekt. De cookie bevat een unieke code die toelaat om je browser te herkennen gedurende het bezoek aan de website(een zogenaamde ‘session’ cookie) of bij latere, herhaalde bezoeken (een zogenaamde ‘permanente’ cookie).</li>
+
+      <li class="text-justify mb-4">Cookies kunnen geplaatst worden door de server van de website die je bezoekt of door partners waarmee deze website samenwerkt. De server van een website kan alleen de cookies lezen die hij zelf geplaatst heeft; hij heeft geen toegang tot andere informatie die zich op je computerof mobiel apparaat bevindt.</li>
+
+      <li class="text-justify mb-4">Cookies worden op je computer of mobiel apparaat gestockeerd in de folder van uw browser, m.a.w. cookies zijn browser-afhankelijk.</li>
+
+      <li class="text-justify mb-4">De inhoud van een cookie bestaat meestal uit de naam van de server die de cookie geplaatst heeft, een vervaldatum en een unieke cijfercode.</li>
+
+      <li class="text-justify mb-4">Cookies maken de interactie tussen de bezoeker en de website over het algemeen gemakkelijker en sneller en helpen de bezoeker om te navigeren tussen de verschillende onderdelen van een website.Cookies kunnen ook gebruikt worden om de inhoud van een website relevanter te maken voor de bezoeker en aan te passen aan zijn persoonlijke smaak en behoeften. (bijv. taalkeuze)</li>
+
+      <li class="text-justify mb-4">Kortom, op zichzelf vormen cookies geen enkel risico omdat ze geen enkele vorm van virus bevatten en de inhoud van jouw computer of mobiel apparaat niet kunnen bespioneren. Ze hebben hun negatieve naam tedanken aan het feit dat ze kunnen worden ingezet voor marketingdoeleinden. Digitale marketingtools kunnen namelijk met de hulp van analyse-instrumenten het parcours achterhalen dat je als internetgebruiker aflegt. Het tracken van internetgebruikers is zo efficiënt geworden dat, wanneer je een advertentie op een website aanklikt zonder iets te kopen, die advertentie je blijft achtervolgen waarheen je ook surft. En dat in de hoop je alsnog tot een aankoop te verleiden. Op die manier kunnen websites die je niet bezoekt cookies recupereren die werden aangemaakt door websites die je wel hebt bezocht. Dat is het geval met reclamecookies.</li>
+  </ul>   
+</div>
+
+{{ include('components/footer.html.twig') }}
+
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ asset('js/year.js') }}"></script>
+{% endblock %}

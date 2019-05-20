@@ -2,49 +2,6 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-<<<<<<< HEAD
-      <sourceFolder url="file://$MODULE_DIR$/code_project/tests" isTestSource="true" packagePrefix="Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/code_project/src/AppBundle" isTestSource="false" packagePrefix="AppBundle\" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/annotations" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/cache" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/collections" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/common" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/dbal" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/doctrine-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/doctrine-cache-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/inflector" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/instantiator" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/lexer" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/doctrine/orm" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/fig/link-util" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/incenteev/composer-parameter-handler" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/jdorn/sql-formatter" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/monolog/monolog" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/paragonie/random_compat" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/psr/cache" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/psr/container" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/psr/link" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/psr/log" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/psr/simple-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/sensio/distribution-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/sensio/framework-extra-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/sensio/generator-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/sensiolabs/security-checker" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/swiftmailer/swiftmailer" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/monolog-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/phpunit-bridge" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-apcu" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-ctype" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-intl-icu" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-mbstring" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-php56" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-php70" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/polyfill-util" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/swiftmailer-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/symfony/symfony" />
-      <excludeFolder url="file://$MODULE_DIR$/code_project/vendor/twig/twig" />
-=======
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
@@ -71,6 +28,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/h4cc/wkhtmltopdf-amd64" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
@@ -153,7 +111,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
->>>>>>> master
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

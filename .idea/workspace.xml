@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="eef92737-b37b-45e9-81a6-e8210ee959f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/filmschuur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/filmschuur.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" afterDir="false" />
-=======
     <list default="true" id="f9f0de0e-2edd-480c-9bc1-92ba51ab524c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
->>>>>>> master
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,212 +11,71 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-<<<<<<< HEAD
-    <pharConfigPath>$PROJECT_DIR$/code_project/composer.json</pharConfigPath>
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1573705694">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="PHP" value="1" />
-          <entry key="Twig" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.create.new" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1406234583">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="24" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="filmschuur" />
-=======
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
->>>>>>> master
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/code_project/app/Resources/views/pages/seperate-film.html.twig">
+        <entry file="file://$PROJECT_DIR$/public/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            <state relative-caret-position="1590">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code_project/web/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/public/js/submenu.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code_project/bin/console">
+        <entry file="file://$PROJECT_DIR$/public/css/login/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-              <folding>
-                <element signature="e#26#81#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code_project/web/html/privacybeleid.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="4830">
+              <caret line="322" column="22" selection-start-line="322" selection-start-column="22" selection-end-line="322" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code_project/web/html/cookiebeleid.html">
+        <entry file="file://$PROJECT_DIR$/templates/login/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="460">
+              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
             </state>
           </provider>
-=======
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/services.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/templates/login/registreer.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1875">
+              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
+        <entry file="file://$PROJECT_DIR$/public/js/passwordviewer.js">
           <provider selected="true" editor-type-id="text-editor" />
->>>>>>> master
         </entry>
       </file>
     </leaf>
   </component>
-<<<<<<< HEAD
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="koen_masterbranch" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code_project/web/html/privacybeleid.html" />
-        <option value="$PROJECT_DIR$/code_project/web/html/cookiebeleid.html" />
-        <option value="$PROJECT_DIR$/code_project/web/html/algemene_voorwaarden.html" />
+        <option value="$PROJECT_DIR$/public/css/sass/pages/test.scss" />
+        <option value="$PROJECT_DIR$/public/css/sass/settings/_base.scss" />
+        <option value="$PROJECT_DIR$/public/js/login.js" />
+        <option value="$PROJECT_DIR$/public/css/login/login.css" />
+        <option value="$PROJECT_DIR$/templates/login/login.html.twig" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
-    <include_path>
-      <path value="$PROJECT_DIR$/code_project/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-php70" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/phpunit-bridge" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/doctrine-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/code_project/vendor/sensiolabs/security-checker" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/code_project/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/code_project/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/code_project/vendor/psr/link" />
-      <path value="$PROJECT_DIR$/code_project/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/code_project/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/code_project/vendor/incenteev/composer-parameter-handler" />
-      <path value="$PROJECT_DIR$/code_project/vendor/jdorn/sql-formatter" />
-      <path value="$PROJECT_DIR$/code_project/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/code_project/vendor/sensio/distribution-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/sensio/framework-extra-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/composer" />
-      <path value="$PROJECT_DIR$/code_project/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/code_project/vendor/sensio/generator-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-apcu" />
-      <path value="$PROJECT_DIR$/code_project/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-php56" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/swiftmailer-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/fig/link-util" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/symfony" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/monolog-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/doctrine/doctrine-cache-bundle" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/code_project/vendor/symfony/polyfill-util" />
-    </include_path>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
-=======
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -335,78 +185,86 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/h4cc/wkhtmltopdf-amd64" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="834" />
-    <option name="height" value="1050" />
->>>>>>> master
+    <option name="y" value="23" />
+    <option name="width" value="1661" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-      <pane id="Scope" />
-=======
->>>>>>> master
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-<<<<<<< HEAD
-              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur2" type="462c0819:PsiDirectoryNode" />
-              <item name="code_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-=======
               <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
               <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
               <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
@@ -422,32 +280,34 @@
             <path>
               <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
               <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filmschuur" type="b2602c69:ProjectViewProjectNode" />
+              <item name="filmschuur" type="462c0819:PsiDirectoryNode" />
               <item name="translations" type="462c0819:PsiDirectoryNode" />
->>>>>>> master
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-    </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-=======
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
->>>>>>> master
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-<<<<<<< HEAD
-=======
     <property name="nodejs_package_manager_path" value="npm" />
->>>>>>> master
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -466,20 +326,6 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="eef92737-b37b-45e9-81a6-e8210ee959f0" name="Default Changelist" comment="" />
-      <created>1553864023316</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1553864023316</updated>
-      <workItem from="1553864024527" duration="1212000" />
-      <workItem from="1555762943436" duration="27000" />
-      <workItem from="1556789839255" duration="316000" />
-      <workItem from="1556790294506" duration="593000" />
-      <workItem from="1557149029270" duration="718000" />
-      <workItem from="1557316752744" duration="547000" />
-      <workItem from="1557386688896" duration="1167000" />
-=======
       <changelist id="f9f0de0e-2edd-480c-9bc1-92ba51ab524c" name="Default Changelist" comment="" />
       <created>1557400269201</created>
       <option name="number" value="Default" />
@@ -487,33 +333,26 @@
       <updated>1557400269201</updated>
       <workItem from="1557400270774" duration="1183000" />
       <workItem from="1557463826512" duration="1811000" />
->>>>>>> master
+      <workItem from="1558012548088" duration="2408000" />
+      <workItem from="1558074469294" duration="1090000" />
+      <workItem from="1558162942198" duration="1378000" />
+      <workItem from="1558203426296" duration="1285000" />
+      <workItem from="1558253218721" duration="595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="4580000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84810126" visible="true" weight="0.22080536" />
-      <window_info id="Structure" order="1" sideWeight="0.15189873" side_tool="true" visible="true" weight="0.22080536" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
-=======
-    <option name="totallyTimeSpent" value="2994000" />
+    <option name="totallyTimeSpent" value="9750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info id="Favorites" order="4" side_tool="true" />
->>>>>>> master
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -522,17 +361,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-=======
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3291536" />
->>>>>>> master
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.35214213" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -542,69 +374,72 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-<<<<<<< HEAD
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code_project/app/Resources/views/pages/seperate-film.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_project/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_project/bin/console">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <element signature="e#26#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_project/web/html/privacybeleid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_project/web/html/algemene_voorwaarden.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="96" lean-forward="true" selection-start-line="18" selection-start-column="96" selection-end-line="18" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_project/web/html/cookiebeleid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-=======
-  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/css/sass/pages/test.scss" />
+    <entry file="file://$PROJECT_DIR$/public/css/sass/pages/test.css" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/sass/settings/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/sass/settings/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+    <entry file="file://$PROJECT_DIR$/public/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/submenu.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+    <entry file="file://$PROJECT_DIR$/public/css/login/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="322" column="22" selection-start-line="322" selection-start-column="22" selection-end-line="322" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login/registreer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/passwordviewer.js">
       <provider selected="true" editor-type-id="text-editor" />
->>>>>>> master
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
