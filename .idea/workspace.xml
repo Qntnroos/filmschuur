@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9f0de0e-2edd-480c-9bc1-92ba51ab524c" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/public/css/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/login/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/registreer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/registreer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login/registreer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/registreer.html.twig" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Koen
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

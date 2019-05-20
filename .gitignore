@@ -18,9 +18,6 @@
 ###< symfony/web-server-bundle ###
 /node_modules
 /.vscode
-<<<<<<< HEAD
 
 .DS_Store
-=======
->>>>>>> Koen
 .idea
