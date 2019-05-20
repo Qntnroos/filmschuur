@@ -1,57 +1,59 @@
 {% extends 'base.html.twig' %}
 {% block title %} Programma {% endblock %}
 {% block body %}
-    <body class="darkbody">
-    <div class="container" style="padding-top: 100px">
-        <div class="col-12 mt-4">
-            <form action="" class="formOverview">
-                <!-- Material inline 1 -->
-                <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" checked>
-                    <label class="form-check-label" for="materialInline1">Alle films</label>
-                </div>
+    <section class="darkbody overview">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-4">
+                <form action="" class="formOverview">
+                    <!-- Material inline 1 -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" checked>
+                        <label class="form-check-label" for="materialInline1">Alle films</label>
+                    </div>
 
-                <!-- Material inline 2 -->
-                <div class="form-check form-check-inline">
-                    <input value="today" type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
-                    <label class="form-check-label" for="materialInline2">Vandaag</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">Kies Datum:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
-                        <option value="" disabled selected>Datum</option>
-                        {% for date in dates %}
-                            <option value="{{ date.date }}">{{ date.dag }} - {{ date.date }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">Kies Genre:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
-                        <option value="" disabled selected>Genre</option>
-                        {% for genre in genres %}
-                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">Leeftijd:</label>
-                    <select class="mdb-select md-form dropdown-primary datechoose">
-                        <option value="" disabled selected>Kies leeftijd:</option>
-                        <option value="AL">Alle leeftijden</option>
-                        <option value="6">Vanaf 6 jaar</option>
-                        <option value="9">Vanaf 9 jaar</option>
-                        <option value="12">Vanaf 12 jaar</option>
-                        <option value="16">Vanaf 16 jaar</option>
-                    </select>
-                </div>
-            </form>
+                    <!-- Material inline 2 -->
+                    <div class="form-check form-check-inline">
+                        <input value="today" type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">Vandaag</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">Kies Datum:</label>
+                        <select class="mdb-select md-form">
+                            <option value="" disabled selected>Datum</option>
+                            {% for date in dates %}
+                                <option value="{{ date.date }}">{{ date.dag }} - {{ date.date }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">Kies Genre:</label>
+                        <select class="mdb-select md-form">
+                            <option value="" disabled selected>Genre</option>
+                            {% for genre in genres %}
+                                <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">Leeftijd:</label>
+                        <select class="mdb-select md-form">
+                            <option value="" disabled selected>Kies leeftijd:</option>
+                            <option value="AL">Alle leeftijden</option>
+                            <option value="6">Vanaf 6 jaar</option>
+                            <option value="9">Vanaf 9 jaar</option>
+                            <option value="12">Vanaf 12 jaar</option>
+                            <option value="16">Vanaf 16 jaar</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col-12 text-center mt-5 overview">
+        <div class="col-12 text-center mt-5">
             <h1>Alle films</h1>
             <hr>
         </div>
-        <div class="row mb-5">
+        <div class="row pb-5">
             {% for movie in res %}
             <div class="col-12 col-sm-6 col-lg-3 mt-5">
                 <!-- Card -->
@@ -69,13 +71,14 @@
             </div>
         </div>
     </div>
-    {% block scripts %}
-        <script>
-          // Material Select Initialization
-          $(document).ready(function() {
-            $('.mdb-select').materialSelect();
-          });
-        </script>
-    {% endblock %}
-    </body>
+    </section>
+    {{ include('components/footer.html.twig') }}
+{% endblock %}
+{% block scripts %}
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
 {% endblock %}

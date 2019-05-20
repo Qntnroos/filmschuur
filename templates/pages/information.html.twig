@@ -1,28 +1,28 @@
 {% extends 'base.html.twig' %}
 {% block title %} information {% endblock %}
 {% block body %}
-<body>
-<nav class="subnavbar mt-3 mt-md-5  mb-3 mb-md-5 ">
-  <a class="active" href="#">Route</a>
-  <a href="#">Tarieven</a>
-  <a href="#">Zalen</a>
-  <a href="#">Huisregels</a>
-  <a href="#">FAQ</a>
-  <a href="#">Contact</a>
+<nav class="subnavbar mt-3 mt-md-5  mb-3 mb-md-4 ">
+  <a id="0" class="htmlbutton active" href="#">Route</a>
+  <a id="1" class="htmlbutton" href="#">Tarieven</a>
+  <a id="2" class="htmlbutton" href="#">Zalen</a>
+  <a id="3" class="htmlbutton" href="#">Huisregels</a>
+  <a id="4" class="htmlbutton" href="#">FAQ</a>
+  <a id="5" class="htmlbutton" href="#">Contact</a>
 </nav>
 
-<div class="route">
+<div id="route" class="jump"></div>
+ <div class="content">
   <div class="map map-responsive mb-5">
+    <p id="topbar" class=" mt-1">Route naar DFS met auto en openbaar vervoer</p> 
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ckMeAA6Lf0NZFkupssiix8k6Lnavwuzq"
             width="100%"
-            height="480"
-            style="border-color: var(--main-orange-color);">
+            height="480">
     </iframe>
   </div>
 
   <div class="explanation mb-3 mb-md-5">
     <h3 class="mb-4">Adres</h3>
-    <p class="mb-4"><i class="fas fa-map-marker-alt mr-2 "></i>Kasteelstraat 20, 1750 Gaasbeek</p>
+    <p class="mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Kasteelstraat 20, 1750 Gaasbeek</p>
     <p>Gaasbeek is een deelgemeente van Lennik, ca. 10 km ten zuidwesten van Brussel.</p>
     <p class="mb-4">GPS 50° 48' 0.1476" N, 4° 12' 8.1972" E (Kasteelstraat 20)</p>
     <h3 class="mb-4">Openingstijden</h3>
@@ -51,38 +51,37 @@
   </div>
 </div>
 
-<div id= "tarief" class="tarieven">
-  <div class="explanation mb-3 mb-md-5">
-    <h3>Standaardtarief: € 9,50</h3>
-    <h3 class="mb-2">Kortingstarief: € 7,50 </h3>
-    <ul class="custom_list">
-      <li>Kinderen en jongeren tot 18 jaar</li>
-      <li>Studenten tot 26 jaar (op vertoon van een geldige studentenkaart)</li>
-      <li>Senioren vanaf 60 jaar</li>
-      <li>Mensen met een handicap</li>
-      <li>Werklozen (op vertoon van een geldige controlekaart)</li>
-    </ul>
-    <h3 class="mb-2">Toeslagen: € 1,00</h3>
-    <ul class="custom_list">
-      <li>3D-films (3D-brillen zijn te koop aan de kassa aan € 2,50 per stuk.)</li>
-      <li>films langer dan 140 minuten</li>
-    </ul>
-    <h3>Parking: € 2,00</h3>
-    <h3>Cadeaucheque: € 9,50 per stuk,
+<div id="tarievenf" class="jump"></div>
+<div class="explanation content noshow mb-3 mb-md-5">
+  <h3>Standaardtarief: € 9,50</h3>
+  <h3 class="mb-2">Kortingstarief: € 7,50 </h3>
+  <ul class="custom_list">
+    <li>Kinderen en jongeren tot 18 jaar</li>
+    <li>Studenten tot 26 jaar (op vertoon van een geldige studentenkaart)</li>
+    <li>Senioren vanaf 60 jaar</li>
+    <li>Mensen met een handicap</li>
+    <li>Werklozen (op vertoon van een geldige controlekaart)</li>
+  </ul>
+  <h3 class="mb-2">Toeslagen: € 1,00</h3>
+  <ul class="custom_list">
+    <li>3D-films (3D-brillen zijn te koop aan de kassa aan € 2,50 per stuk.)</li>
+    <li>films langer dan 140 minuten</li>
+  </ul>
+  <h3>Parking: € 2,00</h3>
+  <h3>Cadeaucheque: € 9,50 per stuk,
       vanaf 10 stuks slechts € 7,50 per stuk</h3>
-    <p>Verjaardag, pensioen, kerst, nieuwjaar .... Allemaal gelegenheden die wel een geschenk verdienen. De Filmschuur heeft voor jou de ideale oplossing.
+  <p>Verjaardag, pensioen, kerst, nieuwjaar .... Allemaal gelegenheden die wel een geschenk verdienen. De Filmschuur heeft voor jou de ideale oplossing.
       De bioscoopcheque is een leuk cadeau voor jong en oud.
-    <p><em>De bioscoopcheque is een leuk cadeau waar iedereen kan van genieten!</em></p>
-    <p>Deze cheques kan je bij ons aan de kassa verkrijgen.
+  <p><em>De bioscoopcheque is een leuk cadeau waar iedereen kan van genieten!</em></p>
+  <p>Deze cheques kan je bij ons aan de kassa verkrijgen.
     Ze zitten verpakt in een leuke geschenkverpakking (1 verpakking per 2 tickets inbegrepen, anders 0.50 € voor een verpakking van 1 ticket).</p>
-    <p>Let wel, speciale vertoningen, 3D voorstellingen, extra lange films en exclusieve avant-premières kunnen een lichte toeslag kennen.</p>
-  </div>
+  <p>Let wel, speciale vertoningen, 3D voorstellingen, extra lange films en exclusieve avant-premières kunnen een lichte toeslag kennen.</p>
 </div>
 
-<div class="Zalen">
-  <div class="explanation mb-3 mb-md-5">
-    <h3>Duurzaamheid</h3>
-    <p class="text-justify mb-4"> Bij het ontwerp van ons bioscoopcomplex stonden naast het comfort van de bezoekers en medewerkers
+<div id="zalen" class="jump"></div>
+<div class="explanation content noshow mb-3 mb-md-5">
+  <h3>Duurzaamheid</h3>
+  <p class="text-justify mb-4"> Bij het ontwerp van ons bioscoopcomplex stonden naast het comfort van de bezoekers en medewerkers
       ook de groene parameters centraal. De FilmSchuur tracht haar ecologische voetafdruk maximaal te beperken
       door de keuze van energiebronnen en bouwtechnische materialen en door middel van het flexibel gebruik van ruimtes.
       Een belangrijke stap in het duurzaamheidsbeleid was de digitalisering van de projectiesystemen.
@@ -95,21 +94,21 @@
       Het waterverbruik werd ingeperkt, onder meer door kranen met optische detectie, en bezoekers worden voortdurend gesensibiliseerd
       om de sortering van afval te respecteren.</p>
 
-    <h3>Nieuwe ervaring</h3>
+  <h3>Nieuwe ervaring</h3>
 
-    <h5>Dolby Atmos</h5>
-    <p class="text-justify mb-4">Dit immersieve geluidssysteem zorgt voor een adembenemend geluid uit alle richtingen. Je wordt helemaal ondergedompeld
+  <h5>Dolby Atmos</h5>
+  <p class="text-justify mb-4">Dit immersieve geluidssysteem zorgt voor een adembenemend geluid uit alle richtingen. Je wordt helemaal ondergedompeld
       in een verbluffend heldere, ruimtelijke, rijke geluidsomgeving door 64 boxen, waardoor je letterlijk én figuurlijk door
       de meest onheilspellende, zoete of opzwepende klanken wordt omringd.</p>
-    <h5>Laser ULTRA</h5>
-    <p class="text-justify mb-4">Haarscherpe lijnen, kleuren die van het scherm spatten: met een lichtsterkte tot wel 60.000 lumen is de bekroonde laserprojector
+  <h5>Laser ULTRA</h5>
+  <p class="text-justify mb-4">Haarscherpe lijnen, kleuren die van het scherm spatten: met een lichtsterkte tot wel 60.000 lumen is de bekroonde laserprojector
       van Barco in staat om 4K-content te tonen tegen 60 beelden per seconde (fps). Met Laser ULTRA ontgaat je geen enkel detail, want echter dan dit wordt het niet.</p>
-    <h5>Auro by Barco</h5>
-    <p class="text-justify mb-4">Het immersieve geluidssysteem gecreëerd door Barco, genaamd ‘Auro’, zorgt ervoor dat het geluid levensecht gaat klinken
+  <h5>Auro by Barco</h5>
+  <p class="text-justify mb-4">Het immersieve geluidssysteem gecreëerd door Barco, genaamd ‘Auro’, zorgt ervoor dat het geluid levensecht gaat klinken
       door de geluidsgolven van alle kanten te laten komen zoals dit ook in het dagdagelijkse leven gebeurt.
       Auro implementeert twee extra lagen boven de Dolby 5.1 surround sound-laag.</p>
-    <h5>IMAX</h5>
-    <p class="text-justify mb-4">Krachtiger. Performanter. Vernieuwender. Intenser. Innovatie, volledig ten dienste van uw filmbeleving.
+  <h5>IMAX</h5>
+  <p class="text-justify mb-4">Krachtiger. Performanter. Vernieuwender. Intenser. Innovatie, volledig ten dienste van uw filmbeleving.
       Onze IMAX zaal dompelt u onder in een volledig nieuwe wereld. Beleef de IMAX®-ervaring. Dankzij onze kennis van de geometrie
       van zalen komt de magie tot leven zodra het licht wordt gedoofd. Een spectaculaire ontploffing. Zacht gefluister in je oor.
       Het is niet langer alleen je oor maar je hele lichaam dat zelfs het zachtste geruis ervaart. Dankzij de uiterste precisie van
@@ -117,71 +116,71 @@
       maar weet u ook precies waar ze is terechtgekomen. De IMAX-technologie verbetert de weergave van de geluidsband in elke noot,
       tot het zachtste geschuifel van schoenen op de grond. De originele klankband van elke film wordt volledig geremixt onder toezicht van de regisseur.
       Deze klank, die bijzonder helder en zuiver is, wordt vervolgens in een op maat ontworpen zaal verspreid voor een optimale filmbeleving.</p>
-    <h5>RealD 3D</h5>
-    <p class="text-justify">Onze 100% digitale 6D technologie wordt aangedreven door het baanbrekende RealD Cinema-systeem.
+  <h5>RealD 3D</h5>
+  <p class="text-justify">Onze 100% digitale 6D technologie wordt aangedreven door het baanbrekende RealD Cinema-systeem.
       RealD 3D zorgt voor een unieke en innovatieve visuele ervaring, met een ongeziene diepte en helderheid.
       De digitale 3D technologie brengt je een prachtige, meeslepende belevenis, met heldere, scherpe, hyperrealistische beelden
       zo levensecht dat je het gevoel hebt dat je in de film bent gestapt. RealD 3D voegt een diepte toe die je midden in de actie plaatst,
       of je nu een reis maakt door een nog onontdekt land of voorwerpen ontwijkt die door de bioscoopzaal lijken te vliegen.
       Meer info over tarieven en beschikbaarheid vind je op onze bioscooppagina's.</p>
-    <p class="text-justify mb-4">Je hebt natuurlijk een 3D bril nodig.
+  <p class="text-justify mb-4">Je hebt natuurlijk een 3D bril nodig.
       Onze 3D brillen zijn superlicht met een geweldig ontwerp en zitten echt comfortabel (en ja - ze passen gemakkelijk over een bril op sterkte).
       Ze bestaan zelfs in drie soorten: één voor volwassenen, één voor kinderen en een clip-on versie die je eenvoudig op je gewone bril vastklikt.
       Wanneer je je tickets koopt, moet je jouw 3D bril apart aanschaffen omdat deze niet bij het ticket wordt geleverd (geldt niet voor IMAX 3D voorstellingen).
       De bril kost slechts € 2.5 en je kunt je 3D bril de volgende keer gewoon opnieuw gebruiken (dit bespaart geld en is beter voor het milieu).
       Als de glazen bekrast of verkleurd raken, raden we aan om een nieuwe bril te kopen.</p>
 
-    <h3 i>Zaalinfo</h3>
-    <div class="table-responsive">
-      <table class="table table-hover">
-        <tr>
-          <th scope="col">Zaalnaam</th>
-          <th scope="col">Plaatsen</th>
-          <th scope="col">Schermgrootte</th>
-          <th scope="col">Technologiëen</th>
-          <th scope="col">Faciliteiten</th>
-        </tr>
-        <tr>
-          <th scope="row">Lumière</th>
-          <td>153</td>
-          <td>5.04m x 12.25m</td>
-          <td>alle hoger genoemde technologieën</td>
-          <td>toegankelijk voor anders validen</td>
-        </tr>
-        <tr>
-          <th scope="row">Edison</th>
-          <td>108</td>
-          <td>4.51m x 10.78m</td>
-          <td>alle hoger genoemde technologieën</td>
-          <td>toegankelijk voor anders validen</td>
-        </tr>
-        <tr>
-          <th scope="row">Muybridge</th>
-          <td>57</td>
-          <td>2.98m x 6.78m</td>
-          <td>alle hoger genoemde technologieën</td>
-          <td>toegankelijk voor anders validen</td>
-        </tr>
-      </table>
-    </div>
+  <h3 i>Zaalinfo</h3>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tr>
+        <th scope="col">Zaalnaam</th>
+        <th scope="col">Plaatsen</th>
+        <th scope="col">Schermgrootte</th>
+        <th scope="col">Technologiëen</th>
+        <th scope="col">Faciliteiten</th>
+      </tr>
+      <tr>
+        <th scope="row">Lumière</th>
+        <td>153</td>
+        <td>5.04m x 12.25m</td>
+        <td>alle hoger genoemde technologieën</td>
+        <td>toegankelijk voor anders validen</td>
+      </tr>
+      <tr>
+        <th scope="row">Edison</th>
+        <td>108</td>
+        <td>4.51m x 10.78m</td>
+        <td>alle hoger genoemde technologieën</td>
+        <td>toegankelijk voor anders validen</td>
+      </tr>
+      <tr>
+        <th scope="row">Muybridge</th>
+        <td>57</td>
+        <td>2.98m x 6.78m</td>
+        <td>alle hoger genoemde technologieën</td>
+        <td>toegankelijk voor anders validen</td>
+      </tr>
+    </table>
+  </div>
 
-    <h5>Geluidsnormen</h5>
-    <p>De Filmschuur past het ministrieel besluit 12310 van 12.02.2014 toe, dat de vereisten vastlegt waaraan het geluidssysteem in digitale bioscopen moet voldoen.</p>
-    <p>Dit betekent onder meer dat we:</p>
-    <ul class="custom_list">
-      <li>jaarlijks al onze bioscoopzalen kalibreren.</li>
-      <li>om de twee weken de geluidsinstellingen aan een nauwgezette controle onderwerpen.</li>
-      <li>ook het maximale geluidsdrukniveau controleren van de verschillende programmatypes (voorprogramma, kinderfilms,...).</li>
-      <li>systematisch de regeling van het volume aanpassen aan het programmatype en aan de zaalgrootte.</li>
-    </ul>
+  <h5>Geluidsnormen</h5>
+  <p>De Filmschuur past het ministrieel besluit 12310 van 12.02.2014 toe, dat de vereisten vastlegt waaraan het geluidssysteem in digitale bioscopen moet voldoen.</p>
+  <p>Dit betekent onder meer dat we:</p>
+  <ul class="custom_list">
+    <li>jaarlijks al onze bioscoopzalen kalibreren.</li>
+    <li>om de twee weken de geluidsinstellingen aan een nauwgezette controle onderwerpen.</li>
+    <li>ook het maximale geluidsdrukniveau controleren van de verschillende programmatypes (voorprogramma, kinderfilms,...).</li>
+    <li>systematisch de regeling van het volume aanpassen aan het programmatype en aan de zaalgrootte.</li>
+  </ul>
 
-    <h5>Onberispelijk schoon bij elke vertoning?</h5>
-    <p class="text-justify mb-4">Een bioscoop is een cultureel trefpunt waar heel veel bezoekers komen en dat bijzondere zorg vereist.
+  <h5>Onberispelijk schoon bij elke vertoning?</h5>
+  <p class="text-justify mb-4">Een bioscoop is een cultureel trefpunt waar heel veel bezoekers komen en dat bijzondere zorg vereist.
       Het is belangrijk dat uw bioscoopcomplex methodisch en zeer nauwgezet worden schoongemaakt. Vooral ook omdat
       de ervaring van uw bezoekers zich niet beperkt tot het bekijken van een film. Ze wordt ook beïnvloed door
       de kwaliteit van de omgeving waarin de film wordt vertoond.</p>
-    <h5>De temperatuur in onze zalen</h5>
-    <p class="text-justify mb-4">Al onze zalen beschikken over airco. De temperatuur in de zaal wordt permanent gecontroleerd.
+  <h5>De temperatuur in onze zalen</h5>
+  <p class="text-justify mb-4">Al onze zalen beschikken over airco. De temperatuur in de zaal wordt permanent gecontroleerd.
       Wanneer je de temperatuur als abnormaal warm of koud ervaart, kan je je tot een van onze medewerkers wenden.
       Zij zullen de temperatuur in de zaal extra controleren en indien nodig actie ondernemen.
       Om het probleem zo goed mogelijk te kunnen aanpakken vragen wij je ook je rij- en zetelnummer door te geven.
@@ -189,24 +188,22 @@
       In sommige bioscopen staan de oudere installaties niet toe om op korte tijd over te schakelen van verwarmen naar koelen. Dit kan in het tussenseizoen (lente - herfst) mogelijk vervelende situaties opleveren wanneer het bijvoorbeeld overdag nog zeer warm is, maar 's avonds sterk afkoelt.
     </p>
 
-    <h5>Toiletten</h5>
-    <p class="text-justify">Het toiletbeheer in De FilmSchuur is in handen van een gespecialiseerd bedrijf. Dit is noodzakelijk om de hygiëne en het beheer van de toiletten de waarborgen.
+  <h5>Toiletten</h5>
+  <p class="text-justify">Het toiletbeheer in De FilmSchuur is in handen van een gespecialiseerd bedrijf. Dit is noodzakelijk om de hygiëne en het beheer van de toiletten de waarborgen.
       Heb je een opmerking of vraag over de verleende service, aarzel dan niet om de toitletdames aan te spreken.
       Het gebruik van de toiletten is gratis voor kinderen kleiner dan 1m40 en in Kinepolis Leuven. In onze andere cinema's vragen we 0.40 euro.</p>
-  </div>
-
 </div>
 
-<div class="Huisregels">
-  <div class="explanation mb-3 mb-md-5">
+<div id="huisregels" class="jump"></div>
+<div class="explanation content noshow mb-3 mb-md-5">
 
-    <div class="text-center mb-5">
-      <h3>Onze huisregels</h3>
-      <p><em>"Uitgaan moet voor iedereen gezellig zijn. Daarom gelden er huis- en gedragsregels."</em></p>
-    </div>
+  <div class="mb-5">
+    <h3>Onze huisregels</h3>
+    <p><em>"Uitgaan moet voor iedereen gezellig zijn. Daarom gelden er huis- en gedragsregels."</em></p>
+  </div>
 
-    <div class= "row" id="list2">
-      <div class ="col-12 col-sm-6">
+  <div class= "row" id="list2">
+    <div class ="col-12 col-sm-6">
       <ol>
         <li><p class="text-justify"><em><strong>GSM's</strong></em> Draagbare telefoons zijn onverdraagbaar. Vergeet niet om je gsm uit te zetten vóór je de zaal binnengaat.</p></li>
         <li><p class="text-justify"><em><strong>Verplichte vestiare</strong></em> Om veiligheidsredenen is het opbergen van jassen, (rug)zakken, grote tassen voor de voorstelling verplicht. Je kan je jas met een gerust hart achterlaten in de bewaakte vestiaire. Het gebruik van de vestiaire is verplicht.</p></li>
@@ -217,32 +214,30 @@
           verplicht goede nota te nemen van diverse nooduitgangen. In geval van evacuatie wordt de bezoeker verzocht de aanwijzingen en instructies van het als zodanig herkenbare bioscooppersoneel en dit terstond op te volgen.</p></li>
         <li><p class="text-justify"><em><strong>Opnames</strong></em> Het is verboden foto’s, film- of geluidsopnames te maken tijdens de voorstelling zonder voorafgaande toestemming.</p></li>
       </ol>
-      </div>
+    </div>
 
-      <div class ="col-12 col-sm-6">
-        <ol start="8">
-          <li><p class="text-justify"><em><strong>Toegang</strong></em> Je bent geen duif, en een cinemazaal is geen duivenhok. 10 minuten na aanvang van de film is de toegang tot de zaal verboden..</p></li>
-          <li><p class="text-justify"><em><strong>Eten</strong></em> Je eet wat de pot schaft. In de zalen mag je uitsluitend dranken en versnaperingen nuttigen die in het bioscoopcomplex worden verkocht.</p></li>
-          <li><p class="text-justify"><em><strong>Huisdieren</strong></em> Dieren, ook aan de leiband, zijn niet toegelaten binnen het cinemacomplex.</p></li>
-          <li><p class="text-justify"><em><strong>Gedrag</strong></em> Zorg zelf niet voor cinema. De toegang tot de cinema zal worden geweigerd aan elke persoon die tekenen vertoont van dronkenschap of aanstalten maakt tot fysiek of verbaal geweld.</p></li>
-          <li><p class="text-justify"><em><strong>Kijkwijzer</strong></em> Kinderen vanaf 3 jaar zijn welkom. Kinderen jonger dan 12 jaar dienen steeds begeleid te worden door een volwassene. Bij sommige speelfilms geldt een leeftijdsgrens.
+    <div class ="col-12 col-sm-6">
+      <ol start="8">
+        <li><p class="text-justify"><em><strong>Toegang</strong></em> Je bent geen duif, en een cinemazaal is geen duivenhok. 10 minuten na aanvang van de film is de toegang tot de zaal verboden..</p></li>
+        <li><p class="text-justify"><em><strong>Eten</strong></em> Je eet wat de pot schaft. In de zalen mag je uitsluitend dranken en versnaperingen nuttigen die in het bioscoopcomplex worden verkocht.</p></li>
+        <li><p class="text-justify"><em><strong>Huisdieren</strong></em> Dieren, ook aan de leiband, zijn niet toegelaten binnen het cinemacomplex.</p></li>
+        <li><p class="text-justify"><em><strong>Gedrag</strong></em> Zorg zelf niet voor cinema. De toegang tot de cinema zal worden geweigerd aan elke persoon die tekenen vertoont van dronkenschap of aanstalten maakt tot fysiek of verbaal geweld.</p></li>
+        <li><p class="text-justify"><em><strong>Kijkwijzer</strong></em> Kinderen vanaf 3 jaar zijn welkom. Kinderen jonger dan 12 jaar dienen steeds begeleid te worden door een volwassene. Bij sommige speelfilms geldt een leeftijdsgrens.
             Daartoe als zodanig herkenbare functionarissen van de bioscoop hebben het recht de bezoeker hierop te wijzen en personen beneden deze leeftijdsgrens te weigeren. </p></li>
-          <li><p class="text-justify"><em><strong>Baldadigheden</strong></em> Het is verboden om onze eigendommen mee te nemen buiten het gebouw. Bij beschadigingen van onze eigendommen bent u aansprakelijk voor de reparatie- en vernieuwingskosten. Elke beschadiging wordt vervolgd.</p></li>
-          <li><p class="text-justify"><em><strong>Aansprakelijheid</strong></em> Het verblijf van de bezoeker in de bioscoop is voor zijn/haar eigen rekening en risico. De bioscoop is nimmer aansprakelijk voor de door de bezoeker geleden schade wegens verlies en/of diefstal van persoonlijke eigendommen</p></li>
-        </ol>
-      </div>
+        <li><p class="text-justify"><em><strong>Baldadigheden</strong></em> Het is verboden om onze eigendommen mee te nemen buiten het gebouw. Bij beschadigingen van onze eigendommen bent u aansprakelijk voor de reparatie- en vernieuwingskosten. Elke beschadiging wordt vervolgd.</p></li>
+        <li><p class="text-justify"><em><strong>Aansprakelijheid</strong></em> Het verblijf van de bezoeker in de bioscoop is voor zijn/haar eigen rekening en risico. De bioscoop is nimmer aansprakelijk voor de door de bezoeker geleden schade wegens verlies en/of diefstal van persoonlijke eigendommen</p></li>
+      </ol>
+    </div>
 
-      <p class="text-justify">
+    <p class="px-3 text-justify">
       Indien het redelijk oordeel van een leidinggevend functionaris van de bioscoop, de bezoeker op enigerlei wijze in strijd is met de aangegeven normen,
         aanwijzingen of instructies handelt, kan de bezoeker de verdere toegang tot de bioscoop worden ontzegd dan wel door de politie worden verwijderd,
         zonder dat de bezoeker enig recht op vergoeding van zijn/haar toegangsbewijs geldend kan maken.</p>
-    </div>
-
   </div>
 </div>
 
-<div class="FAQ">
-  <div class="explanation mb-3 mb-md-5">
+<div id="FAQ" class="jump"></div>
+<div class="explanation content noshow mb-3 mb-md-5">
 
   <div class>
     <h3 class="text-center text-sm-left mb-4">Veel gestelde vragen</h3>
@@ -261,7 +256,7 @@
       </div>
 
       <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Alle zalen van De Fimschuur zijn op het gelijkvloers en beschikken over een zone vooraan in de zaal die voorbehouden is voor rolstoelen.
           Er is een rolstoeltoegankelijk toilet aanwezig. Houders van een begeleiderspas voor personen met een handicap kunnen als begeleider een gratis ticket verkrijgen.
           Je kan het gratis ticket enkel verkrijgen aan de ticketbalies van De Filmschuur, op vertoon van een geldige begeleiderspas.
@@ -286,7 +281,7 @@
       </div>
 
       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           De deuren van de zaal gaan ongeveer een kwartier voor de start van de filmvoorstelling open. Wij adviseren je echter om een half uur van tevoren aanwezig te zijn omdat het wel eens druk kan zijn met parkeren of aan de kassa. Als je online een ticket hebt gekocht is een kwartier van tevoren aanwezig zijn voldoende.
         </div>
       </div>
@@ -303,7 +298,7 @@
       </div>
 
       <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Filmkaartjes kun je kopen via onze website en betalen met bank- of creditkaart. Dat is het snelste en het makkelijkste, want je kunt direct doorlopen zonder aan te schuiven aan het loket.
         </div>
       </div>
@@ -320,7 +315,7 @@
       </div>
 
       <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Iedere maandag maken we op onze site het filmprogramma bekend. Het nieuwe programma loopt van donderdag tot en met de woensdag de week erna.
         </div>
       </div>
@@ -337,7 +332,7 @@
       </div>
 
       <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Zodra de nieuwe films bekend zijn, kun je het aanbod bekijken op onze website. Volg ons ook op Facebook voor het laatste nieuws.
           De FilmSchuur behoudt zich het recht voor om de filmprogrammatie te wijzigen en kan niet aansprakelijk gesteld worden voor het niet
           projecteren van de in de media en/of op   de   website aangekondigde   films,   die   steeds   onder   voorbehoud gepubliceerd worden
@@ -356,7 +351,7 @@
       </div>
 
       <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Bij de middagvoorstellingen is er altijd een pauze. Bij avondvoorstellingen is er alleen een pauze, wanneer de voorstelling meer dan 140 minuten duurt.
         </div>
       </div>
@@ -373,7 +368,7 @@
       </div>
 
       <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Sommige films kan je bij ons inderdaad zien in 3D formaat. 3D-brillen zijn te koop aan de kassa aan €2,50 per stuk. Let wel dat 3D-films een meerprijs hebben van € 1,OO.
         </div>
       </div>
@@ -389,7 +384,7 @@
         </a>
       </div>
       <div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Ja, als je online een reservering maakt is het mogelijk om zelf een plaats uit te kiezen, zolang deze nog vrij is?
         </div>
       </div>
@@ -405,7 +400,7 @@
         </a>
       </div>
       <div id="collapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           De vestiaire bevindt zich vlak naast het onthaal. Op last van de brandweer mogen jassen, grote tassen en (rug)zakken niet meegenomen worden in de zalen.
         </div>
       </div>
@@ -421,17 +416,16 @@
         </a>
       </div>
       <div id="collapseTeen" class="collapse" role="tabpanel" aria-labelledby="headingTeen" data-parent="#accordionOne">
-        <div class="card-body">
+        <div class="card-body card-body-info">
           Op maandag maken we op deze site het nieuwe filmprogramma bekend. Het nieuwe programma loopt van donderdag t/m woensdag. Hoe lang een bepaalde film wordt vertoond, is onder andere afhankelijk van het nieuwe aanbod.
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
-<div class="Contact">
-  <div class="explanation mb-3 mb-md-5">
+<div id="contact" class="jump"></div>
+  <div class="explanation content noshow mb-3 mb-md-5">
 
   <div class="row">
       <div class="col-6">
@@ -440,11 +434,6 @@
         <p><i class="fas fa-phone-volume mr-2"></i> 00 32 (0)2 123 45 67 <span class="small">(op weekdagen van 14u tot 22u)</span></p>
         <p><i class="far fa-envelope mr-2 mb-4"></i> <a href="mailto:info@dfs.be">info(at)dfs.be</a></p>
       </div>
-
-      <!--<div class="image-background-colour text-center col-5 offset-1 pt-3 pl-2 mr-0">
-        <img src="img/logo.png" class="img-fluid mx-auto d-block" alt="logo Filmschuur">
-        <h4 class="ml-5 mt-3 fade-in one">"Beleef film anders"</h4>
-      </div>-->
   </div>
 
   <section class="section pb-3">
@@ -461,8 +450,8 @@
           <div class="avatar mx-auto white"><img src="{{ asset('img/avatar-danny.png') }}"
                                                  alt="avatar mx-auto white" class="rounded-circle img-fluid">
           </div>
-          <div class="card-body mb-5">
-            <h4 class="card-title mt-1">Danny Eeraerts</h4>
+          <div class="card-body card-body-info mb-5">
+            <h4 class="card-title-info mt-1">Danny Eeraerts</h4>
             <hr>
             <p>"Bioscoop is de perfecte plek voor 'samen' beleven."</p>
           </div>
@@ -479,8 +468,8 @@
                                                  alt="avatar mx-auto white" class="rounded-circle img-fluid">
           </div>
 
-          <div class="card-body mb-5">
-            <h4 class="card-title mt-1">Koen Michiels</h4>
+          <div class="card-body card-body-info mb-5">
+            <h4 class="card-title-info mt-1">Koen Michiels</h4>
             <hr>
             <p>"DFS, zoveel meer dan rode theaterstoelen."</p>
           </div>
@@ -496,8 +485,8 @@
           <div class="avatar mx-auto white"><img src="{{ asset('img/avatar_quinten.png') }}"
                                                  alt="avatar mx-auto white" class="rounded-circle img-fluid">
           </div>
-          <div class="card-body mb-5">
-            <h4 class="card-title mt-1">Quinten Roos</h4>
+          <div class="card-body card-body-info mb-5">
+            <h4 class="card-title-info mt-1">Quinten Roos</h4>
             <hr>
             <p>"Alleen met het beste zijn we tevreden".</p>
           </div>
@@ -512,7 +501,12 @@
     De FilmSchuur brengt de boodschap dat we een beter leven hebben wanneer we ons inspannen om onze planeet te beschermen en met respect omgaan met alles dat en iedereen die daarop leeft. Dit doen we door onze bezoekers virtueel naar andere plaatsen te brengen en ze daardoor meer wereldburger te maken.</p>
 
 </div>
-</div>
 
-</body>
+{{ include('components/footer.html.twig') }}
+
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ asset('js/year.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/submenu.js') }}"></script>
 {% endblock %}

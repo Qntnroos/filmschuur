@@ -1,12 +1,9 @@
 @import "settings/colors";
 @import "settings/fonts";
-
-body{
-    font-family: $f-lora;
-}
-.lightbody{
-    background-color: $c-white;
-}
-.darkbody{
-    background-color: $c-black;
-}
+@import "settings/base";
+@import "components/header";
+@import "pages/homepage";
+@import "pages/overview";
+@import "pages/seperate-movie";
+@import "pages/information";
+@import "components/footer";
