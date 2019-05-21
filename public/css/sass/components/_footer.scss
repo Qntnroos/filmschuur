@@ -1,13 +1,14 @@
 footer{
     background-color: $c-orange;
     text-align:center;
+    & a{
+        color: $c-orange;
+        text-transform: uppercase;
+        &:hover {
+            background-color: $c-orange;
+            color: rgba(255, 255, 255, .75);    
+        }    
     }
-    footer a{
-    color: $c-white;
-    text-transform: uppercase;
-    }
-    footer a:hover {
-    color: rgba(255, 255, 255, .75);
     }
     .copy{
     margin-left: 5%;
