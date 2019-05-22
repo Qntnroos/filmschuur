@@ -77,10 +77,9 @@
         -webkit-box-shadow: 3px 3px 10px 0 #532406;
         box-shadow:         3px 3px 10px 0 #532406;
       }
-
-      .form-control:focus { 
+      .input-group:focus .form-control,.input-group:focus .input-group-addon { 
         outline: none !important;
-        border-bottom:1px solid #D17133;
+        border-bottom:1px solid #D17133!important;
       }
   
       @media only screen and (max-width: 600px) {
