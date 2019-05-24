@@ -27,6 +27,11 @@ class User implements UserInterface
      */
     private $roles = [];
 
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $user_firstname;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -96,5 +101,17 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getUserFirstname(): ?string
+    {
+        return $this->user_firstname;
+    }
+
+    public function setUserFirstname(string $user_firstname): self
+    {
+        $this->user_firstname = $user_firstname;
+
+        return $this;
     }
 }
