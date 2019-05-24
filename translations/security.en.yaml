@@ -1,2 +1,3 @@
-"Username could not be found.": "Dit email-adres komt niet voor in onze database. Kijk het na of maak een nieuwe account."
+"Username could not be found.": "Dit email-adres is nog niet geregistreerd."
 "Invalid CSRF token.": "Ongeldige CSRF-token. Cross-site request vervalsing."
+"Invalid credentials.": "Het opgegeven paswoord is onjuist"
