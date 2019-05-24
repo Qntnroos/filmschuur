@@ -59,10 +59,10 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
          we can really return whatever we want from this method. Because, 
          after we return from getCredentials(), Symfony will immediately call getUser()
          and pass this array back to us as the first $credentials argument:*/
-
-         return [
-            'email' => $request->request->get('email'),
-            'password' => $request->request->get('password'),
+         
+        $credentials = [
+            'email' => $request->request->get('loginFormEmail'),
+            'password' => $request->request->get('loginFormPassword'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
 
@@ -70,11 +70,13 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             Security::LAST_USERNAME,
             $credentials['email']
         );
+        
         return $credentials;
     
     }
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
+        
         $token = new CsrfToken('authenticate', $credentials['csrf_token']);
         if (!$this->csrfTokenManager->isTokenValid($token)) {
             throw new InvalidCsrfTokenException();
