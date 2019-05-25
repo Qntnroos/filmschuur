@@ -14,8 +14,13 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
+use Symfony\Component\Security\Http\Util\TargetPathTrait;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
+    use TargetPathTrait;  
+        /*last visited page is stored in session*/
+        
         /* Our job in getUser() is to use these $credentials to return a User object,
         or null if the user isn't found. Because we're storing our users in the database,
         we need to query for the user via their email. And to do that, 
@@ -29,6 +34,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function __construct(UserRepository $userRepository, RouterInterface $router, CsrfTokenManagerInterface $csrfTokenManager,  UserPasswordEncoderInterface $passwordEncoder)
     {
+
         $this->userRepository = $userRepository;
         $this->router = $router;
         $this->csrfTokenManager = $csrfTokenManager;
@@ -99,8 +105,19 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     {
         /* If our authenticator is able to return a User from getUser() and we return true from checkCredentials():
         Our user is logged in!
-        Redirect user via SecurityController*/ 
+        Redirect user via SecurityController 
+        target is last visited page where access was denied*/
+
+
+        /* $targetPath = $this->getTargetPath($request->getSession(), $providerKey);
+        dd($targetPath); */
         
+
+
+        if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
+            /*providerKey is the name of the firewall*/
+            return new RedirectResponse($targetPath);
+        }
         return new RedirectResponse($this->router->generate('homepage'));
     }
     protected function getLoginUrl()
