@@ -12,7 +12,7 @@
             <a class="pijl" href="#movie-details"><i class="fas fa-angle-down"></i></a>
         </div>
     </div>
-    <div class="row my-5">
+    <div class="row py-5">
         <div class="col-8 offset-2 movie-details" id="movie-details">
             <div class="row">
                 <div class="col-4 offset-1 mt-3">
@@ -28,17 +28,20 @@
                 </div>
                 <div class="col-5 offset-1">
                     <div class="bestellen mt-3">
-                        <form action="">
+                        <form>
                             <div class="row">
                                 <div class="col-8 date-picker">
-                                    <label class="mr-2" for="">Kies Datum:</label>
-                                    <select class="mdb-select md-form dropdown-primary datechoose movie-date-choose">
-                                        <option disabled selected>Kies datum:</option>
-                                        {% for date in dates %}
-                                            <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
-                                        {% endfor %}
-                                    </select>
+                                    <div class="form-check form-check-inline">
+                                        <label class="mr-2" for="">Kies Datum:</label>
+                                        <select class="mdb-select md-form">
+                                            <option disabled selected>Kies datum:</option>
+                                            {% for date in dates %}
+                                                <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
                                 </div>
+                                
                         <div class="col-2 clearfix">
                         <button type="button" class="btn order-button btn-lg">Bestellen</button>
                         </div>
@@ -57,7 +60,7 @@
                 <div class="row">
                     <div class="col-8">
                         {% for director in directorInfo %}
-                            <a href="#" data-toggle="modal" data-target="{{info[0].directors}}">{{director.directors}}</a>
+                            <a href="#" data-toggle="modal" data-target="testModal">{{director.Directors}}</a>
                         {% endfor %}
                     </div>
                 </div>
@@ -73,17 +76,16 @@
             </div>
         </div>
     </div>
-    
-        
-    <div class="modal fade" id="{{info[0].directors}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">{{directorInfo[0].Directors}}</h5>
                 </div>
                 <div class="modal-body">
-                {% for directors in directorInfo %}
-                    <p>Name: {{directors.directors}}</p>
+                {% 
+                for directors in directorInfo %}
+                    <p>Name: {{directors.Directors}}</p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="close text" data-dismiss="modal" aria-label="Close">
@@ -97,4 +99,12 @@
 </div>
 
 </main>
+{% endblock %}
+{% block scripts %}
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
 {% endblock %}

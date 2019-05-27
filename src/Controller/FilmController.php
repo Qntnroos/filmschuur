@@ -8,41 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\utils\database;
 use GuzzleHttp\Client;
 
-class FilmProgramController extends AbstractController
+class FilmController extends AbstractController
 {
-
-    //private $genre;
-    /**
-     * @Route("/programma", name="programma")
-     */
-    public function renderOverview(Request $request)
-    {
-        $var = $this->helpFunctions();
-
-        return $this->render('pages/overview.html.twig', $var
-            );
-    }
     /**
      * @Route("/filmrender", name="filmm")
      */
     public function renderFilm(Request $request)
     {
-        //$this->genre = $request->get("genre");
-        $variables = $this->helpFunctions();
-
-        $html = $this->renderView('components/film.html.twig', $variables);
-        return $this->json([
-            'data' => $html
-        ]);
-    }
-    function helpFunctions(){
         $db = new database();
         $client = new Client(['base_uri' => 'http://fullstacksyntra.be/cockpitdfs/api/', 'timeout' => 2.0, ]);
 
         $homeDetails = $db->getHomepageDetails();
         $movieGenre = $db->getMoviesByGenres();
-        $genres = $db->getGenres();
-        $dates = $db->getOverviewDates();
         $resHome= [];
         foreach ($homeDetails as $value){
             $id = $value['movieID'];
@@ -73,6 +50,10 @@ class FilmProgramController extends AbstractController
             $genreValue['poster'] = $genreval;
             array_push($resGenre, $genreValue);
         }
-        return ['res' => $resHome, 'film' => $resGenre,'genres' => $genres,'dates'=> $dates];
+        $variables = ['res' => $resHome, 'film' => $resGenre];
+        $html = $this->renderView('components/film.html.twig', $variables);
+        return $this->json([
+            'data' => $html
+        ]);
     }
 }
