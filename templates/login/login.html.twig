@@ -6,7 +6,7 @@
 {% block body %}
 <body class="orangebody">
 <main class="container-fluid">
-<form method="POST" action="" class="text-center border border-light p-5  max-vw-75" autocomplete="off" novalidate>
+<form method="POST" action="" name="inlogForm" class="text-center border border-light p-5  max-vw-75" autocomplete="off" novalidate>
 
       <div class="mb-4">
          <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
@@ -19,23 +19,27 @@
         <p class>Gebruik je DFS-account</p>
       </div>
 
+      {% if error %}
+        <div class= "alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+      {% endif %}
+
       <div class ="row">
           <div class ="col-12 col text-left mb-4">
           <!-- E-mail -->
               <label for="loginFormEmail">E-mail:</label>
               <label class ="errorEmail"></label>
-              <input id="loginFormEmail" type="email" name="loginFormEmail" value ="" class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
+              <input id="loginFormEmail" type="email" name="loginFormEmail" value ="{{ last_username }}" class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
           </div>
       </div>
 
       <div class ="row">
-          <div class ="col-12 text-left mb-5">
+          <div class ="col-12 text-left mb-4">
               <!-- Password -->
               <div class="form-group">
-                  <label for= "RegisterFormPassword1">Paswoord:</label>
+                  <label for= "loginFormPassword">Paswoord:</label>
                   <label class ="errorPassword"></label>
                   <div class="input-group" id="show_hide_password">
-                      <input id="loginPassword" class="form-control mb-0 " name="RegisterFormPassword1" value="" type="password" placeholder ="paswoord">
+                      <input id="loginPassword" class="form-control mb-0 " name="loginFormPassword" value="" type="password" placeholder ="paswoord">
                       <div class="input-group-addon">
                           <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                       </div>
@@ -43,18 +47,30 @@
               </div>
           </div>
       </div>
+      <div>
+      <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+      </div>
+      <!-- Default unchecked -->
+      <div class="custom-control custom-checkbox text-left mb-2">
+          <input type="checkbox" name="_remember_me" class="custom-control-input" id="defaultUnchecked">
+          <label class="custom-control-label" for="defaultUnchecked">Onthou mij</label>
+      </div>
+      <div class ="row">
+          <div class ="col-6 text-left mt-2 mb-1">
+            <!-- Lose password -->
+            <p class="text-muted"><a href="" data-toggle="modal" data-target="#modalLoginForm">Wachtwoord vergeten?</a></p>
+          </div>
+          {#
+              If you want to control the URL the user
+              is redirected to on success (more details below)
+              <input type="hidden" name="_target_path" value="/account" />
+          #}
 
-    <div class ="row">
-        <div class ="col-6 text-left mt-2 mb-1">
-          <!-- Lose password -->
-          <p class="text-muted"><a href="" data-toggle="modal" data-target="#modalLoginForm">Wachtwoord vergeten?</a></p>
-        </div>
-
-        <div class ="col-6 text-right mb-1">
-              <!-- Inlog button -->
-              <button id="inlogbtn" class="btn" type="submit">INLOGGEN</button>
-        </div>
-    </div>
+          <div class ="col-6 text-right mb-1">
+                <!-- Inlog button -->
+                <button id="inlogbtn" class="btn" type="submit">INLOGGEN</button>
+          </div>
+      </div>
 
   </form>
 
