@@ -1,0 +1,31 @@
+{# templates/bundles/TwigBundle/Exception/error403.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}error403{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+        {% endblock %}
+
+{% block body %}
+    <main class="container-fluid">
+        <div class="row toptop text-center">
+            <div class="col-12">
+                <h1>Toegang geweigerd</h1>
+            </div>
+        </div>
+    <div class="row text-center mt-2">
+        <div class="col-12">
+            <h5 class="mb-5">
+                Meld eerst aan alvorens verder te gaan.
+            </h5>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-12">
+            <button class="btn"><a href="{{ path('login') }}">Login</a></button>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
