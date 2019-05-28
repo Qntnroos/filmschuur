@@ -54,20 +54,7 @@
             <hr>
         </div>
         <div class="row pb-5">
-            {% for movie in res %}
-            <div class="col-12 col-sm-6 col-lg-3 mt-5">
-                <!-- Card -->
-                <a href="film/{{ movie.movieID }}">
-                <div class="card">
-
-                    <!-- Card image -->
-                    <img class="card-img-top" src="http://fullstacksyntra.be/{{ movie.poster }}" alt="poster {{ movie.movie_title }}">
-
-                </div>
-                </a>
-                <!-- Card -->
-            </div>
-            {% endfor %}
+        {{ include('components/film.html.twig') }}
             </div>
         </div>
     </div>
