@@ -6,9 +6,10 @@
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/tickets.ticketreservering.css') }}">
+            <link rel="stylesheet" href="http://127.0.0.1:8001/css/bootstrap.min.css">
+            <link rel="stylesheet" href="http://127.0.0.1:8001/css/mdb.min.css">
+            <link rel="stylesheet" href="http://127.0.0.1:8001/css/sass/tickets/ticketreservering.css
+            ">
         {% block stylesheets %}
         {% endblock %}
 
@@ -19,10 +20,10 @@
 
       <header class="row text-center">
         <div class="col-6">
-          <img src="img/logo.png" class="img-fluid p-4" alt="logo Filmschuur">
+          <img src="http://127.0.0.1:8001/img/logo.png" class="img-fluid p-4" alt="logo Filmschuur">
         </div>
         <div class="col-6">
-          <img src="img/barcode.png" class="img-fluid px-5 pt-5 pb-3" alt="logo Filmschuur">
+          <img src="" class="img-fluid px-5 pt-5 pb-3" alt="barcode">
         </div>
         <div class="col-12 pb-4 text-center">
           <h3>"In de filmschuur kan je niet alleen films bekijken maar ze ook beleven"</h3>
@@ -138,13 +139,9 @@
 
             <!-- SCRIPTS -->
             <!-- JQuery -->
-            <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-            <!-- Bootstrap tooltips -->
-            <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-            <!-- Bootstrap core JavaScript -->
-            <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-            <!-- MDB core JavaScript -->
-            <script type="text/javascript" src="{{ asset('js/mdb.js') }}"></script>
+            <script type="text/javascript" src="http://127.0.0.1:8001/js/jquery-3.3.1.min.js"></script>
+                      <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="http://127.0.0.1:8001/js/bootstrap.min.js"></script>
         {% block scripts %}
         {% endblock %}
     </body>

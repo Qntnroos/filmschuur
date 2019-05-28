@@ -106,7 +106,12 @@
         height: 1.6rem;
         padding: 0;
       }
-  
+      
+
+      .custom-control-label{
+        padding-top: 0.2rem;
+      }
+
       .form-control:disabled, .form-control[readonly]{
         background-color: #f7f7f7;
       }
@@ -175,6 +180,12 @@
   
       small,.right-corner a {
         font-size: 0.75rem;
+      }
+
+      .alert{
+        color: white;
+        background-color: #D17133;
+        text-align: left;
       }
   
       #triangle-bottomright {

@@ -39,11 +39,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/information">INFORMATIE</a>
                 </li>
+                {% if is_granted('ROLE_USER') %}
                 <li class="nav-item">
-                    <a  href="/registreer" class="nav-link waves-effect waves-light">
-                        <i class="fas fa-user"></i>
+                    <a  href="/logout" class="nav-link waves-effect waves-light" data-toggle="tooltip"
+                        data-placement="bottom" title="afmelden">
+                        <i class="fas fa-sign-out-alt"></i>
                     </a>
                 </li>
+                {% else %}
+                <li class="nav-item">
+                    <a  href="/login" class="nav-link waves-effect waves-light" data-toggle="tooltip"
+                        data-placement="bottom" title="inloggen">
+                        <i class="fas fa-user" ></i>
+                    </a>
+                </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link waves-effect waves-light">
                         <i class="fas fa-search"></i>
@@ -68,6 +78,10 @@
             <!-- MDB core JavaScript -->
             <script type="text/javascript" src="{{ asset('js/mdb.js') }}"></script>
         {% block scripts %}
+        <script>
+            // Tooltips Initialization
+            <script type="text/javascript" src="{{ asset('js/tooltip.js') }}"></script>
+        </script>
         {% endblock %}
     </body>
 </html>
