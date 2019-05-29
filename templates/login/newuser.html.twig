@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+{% block title %}De filmschuur{% endblock %}
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+    {% endblock %}
+{% block body %}
+<body class="orangebody">
+<main class="container-fluid">
+    {{ form_start(userRegistrationForm, {'attr': {'novalidate': 'novalidate'}}) }}
+    <div class="text-center border border-light p-4 p-ms-5 max-vw-75">
+        <div class="mt-4 mb-4 text-center">
+            <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
+        </div>
+        <div class ="col-12 mt-2">
+                <h4 class=" text-center mb-4 ">REGISTRATIE</h4>
+        </div>
+
+                <div class ="row mb-2">
+                    <!-- First name -->
+                    <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
+                        <label class ="errorfirstname">test</label>
+                        {{ form_row(userRegistrationForm.user_firstname, {
+                            'label': 'Voornaam:'
+                        }) }}
+                    </div>
+                    <!-- Last name -->
+                    <div class ="col-12 col-sm-6 text-left">
+                        <label class ="errorlastname">Achternaam is vereist&nbsp;&#x274C </label>
+                        {{ form_row(userRegistrationForm.user_lastname, {
+                                'label': 'Naam:'
+                            }) }}
+                    </div>
+                </div>
+
+                <div class ="row">      
+                    <!-- E-mail -->
+                    <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
+                        <label class="errorEmail">test</label>
+                        {{ form_row(userRegistrationForm.email.first, {
+                                'label': 'E-mail:'
+                            }) }}
+                    </div>
+                    <!-- Repeat E-mail -->
+                    <div class ="col-12 col-sm-6 text-left">
+                        <label class ="errorEmail2">test</label> 
+                        {{ form_row(userRegistrationForm.email.second, {
+                                'label': 'Herhaal E-mail:'
+                            }) }}
+                    </div>  
+                </div>
+                <!-- Comment text -->
+                <div class ="col-12 mb-1 text-left px-0">
+                    <label class="text-muted mb-1 mb-sm-0">We zullen je e-mail <u> nooit</u> met iemand delen.</label>
+                    <label class="errorCompare mb-1 mb-sm-0"></label>
+                </div>
+
+                <div class ="row">
+                    <div class ="col-12 col-sm-6 text-left">
+                        <!-- Password -->
+                        <label class ="errorPassword">test</label>
+                        {{ form_row(userRegistrationForm.plainPassword.first, {
+                            'label': 'Paswoord:'
+                        }) }}
+                    </div>
+                    <div class ="col-12 col-sm-6 text-left">
+                        <label class ="errorPassword2">test</label>
+                        {{ form_row(userRegistrationForm.plainPassword.second, {
+                            'label': 'Herhaal paswoord:'
+                        }) }}
+                        <!-- Repeat Password -->
+                    </div>
+
+                    <div class ="col-12 mb-1 text-left">
+                    <!-- Aanwijzingstekst -->
+                        <label class="text-muted mb-1 mb-sm-0">
+                            Tenminste 8 karakters waarvan minimum 1 hoofdletter, 1 kleine letter, 1 cijfer, geen opeenvolgende spaties.
+                        </label>
+                        <label class="errorPasswordCompare"></label>
+                    </div>
+                </div>
+
+                <div class ="row mb-2">
+                    <div class ="col-12 text-left">
+                        <!-- Adress -->
+                        <label class ="erroradress">test</label>
+                        {{ form_row(userRegistrationForm.user_adress, {
+                                'label': 'Adres:'
+                            }) }}
+                    </div>
+                </div>
+
+                <div class ="row">
+                    <div class ="col-12 col-sm-6 text-left">
+                    <!-- Phone number -->
+                    <label class ="errorphone">test</label>
+                    {{ form_row(userRegistrationForm.phone, {
+                            'label': 'GSM/Telefoon:'
+                        }) }}
+                    </div>
+                    
+                    <div class ="col-12 col-sm-6 text-left">
+                    <!-- Gender -->
+                    {{ form_row(userRegistrationForm.genderID, {
+                            'label': 'Geslacht:'
+                        }) }}
+                    </div>
+                </div>
+                    
+                <div class ="row mb-3">
+                    <div class ="col-12 col-sm-6 text-left mb-0">
+                        <!-- Birthdate -->
+                    </div>
+
+                    <div class ="col-12 col-sm-6 text-right mb-2 mb-sm-0 ">
+                        <button id ="regbutton" class ="btn" type="submit">REGISTREREN</button>
+                    </div>
+                </div>
+    </div>
+    {{ form_end(userRegistrationForm) }}
+   
+</main>
+<footer>
+    <div class="d-flex flex-row-reverse">
+        <div class="triangle"></div>
+        <div class= "d-flex" id = "triangle-bottomright">
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Terms of service -->
+            <div class="right-corner col-12 text-right mb-2 mr-2">
+                <div class ="col-6 text-right mb-0">
+                </div>
+                <!-- Sign up button -->
+                    <a href="/login"><button class="btn2" type="submit">REEDS EEN ACCOUNT? LOGIN</button></a>
+                    <br>
+                    <a href="/algemene_voorwaarden" target="_blank">Algemene Voorwaarden -</a>
+                    <a href="/privacybeleid" target="_blank">Privacybeleid -</a>
+                    <a href="/cookiebeleid" target="_blank">Cookiebeleid</a>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
