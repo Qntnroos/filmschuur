@@ -37,6 +37,26 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $user_lastname;
+
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $user_adress;
+
+    /**
+     * @ORM\Column(type="string", length=15)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="string", length=1)
+     */
+    private $genderID;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -123,6 +143,54 @@ class User implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getUserLastname(): ?string
+    {
+        return $this->user_lastname;
+    }
+
+    public function setUserLastname(string $user_lastname): self
+    {
+        $this->user_lastname = $user_lastname;
+
+        return $this;
+    }
+
+    public function getUserAdress(): ?string
+    {
+        return $this->user_adress;
+    }
+
+    public function setUserAdress(string $user_adress): self
+    {
+        $this->user_adress = $user_adress;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getGenderID(): ?string
+    {
+        return $this->genderID;
+    }
+
+    public function setGenderID(string $genderID): self
+    {
+        $this->genderID = $genderID;
 
         return $this;
     }
