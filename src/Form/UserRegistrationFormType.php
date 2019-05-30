@@ -3,9 +3,11 @@
 namespace App\Form;
 
 use App\Entity\User;
+use App\Entity\Genders;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -13,7 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UserRegistrationFormType extends AbstractType
@@ -41,12 +43,16 @@ class UserRegistrationFormType extends AbstractType
             ->add('phone', TelType::class, [
                 'attr'=> ['placeholder' => '0999 99 99 99 (respecteer spaties)'],
             ])
-            ->add('genderID'/* , ChoiceType:: class, [
-                'attr'=> ['placeholder' => 'Selecteer jouw geslacht'],] */
-            );
+            /* ->add('gender_abbreviation', EntityType:: class, [
+                'class' => User::class,
+                'attr'=> ['placeholder' => 'Selecteer jouw geslacht'],
+            ]) */
+            ->add('birthday', DateType::class, [
+                'widget' => 'single_text',
+                'attr'=> ['class' => 'js-datepicker'],
+            ])
         ;
     }
-
 
     public function configureOptions(OptionsResolver $resolver)
     {

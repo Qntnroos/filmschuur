@@ -91,24 +91,28 @@
 
                 <div class ="row">
                     <div class ="col-12 col-sm-6 text-left">
-                    <!-- Phone number -->
-                    <label class ="errorphone">test</label>
-                    {{ form_row(userRegistrationForm.phone, {
-                            'label': 'GSM/Telefoon:'
-                        }) }}
+                        <!-- Phone number -->
+                        <label class ="errorphone">test</label>
+                        {{ form_row(userRegistrationForm.phone, {
+                                'label': 'GSM/Telefoon:'
+                            }) }}
                     </div>
                     
-                    <div class ="col-12 col-sm-6 text-left">
+                    {# <div class ="col-12 col-sm-6 text-left">
                     <!-- Gender -->
-                    {{ form_row(userRegistrationForm.genderID, {
+                    {{ form_row(userRegistrationForm.gender_abbreviation, {
                             'label': 'Geslacht:'
                         }) }}
-                    </div>
+                    </div> #}
                 </div>
                     
                 <div class ="row mb-3">
                     <div class ="col-12 col-sm-6 text-left mb-0">
                         <!-- Birthdate -->
+                        {{ form_row(userRegistrationForm.birthday, {
+                            'label': 'Geboortedatum:'
+                        }) }}
+
                     </div>
 
                     <div class ="col-12 col-sm-6 text-right mb-2 mb-sm-0 ">
@@ -142,4 +146,16 @@
         </div>
     </div>
 </footer>
+{# {% block scripts %}
+    <script type="text/javascript" src="{{ asset('js/passwordviewer.js') }}"></script>      
+    <script type="text/javascript" src="{{ asset('js/registreer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/datepicker.js') }}"></script>
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
+{% endblock %} #}
+</body>
 {% endblock %}
