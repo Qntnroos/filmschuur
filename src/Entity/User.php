@@ -53,9 +53,24 @@ class User implements UserInterface
     private $phone;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $gender_id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Genders", inversedBy="users")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $gender;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthday;
+
+    /**
      * @ORM\Column(type="string", length=1)
      */
-    private $genderID;
 
     public function getId(): ?int
     {
@@ -183,14 +198,38 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getGenderID(): ?string
+    public function getGenderId(): ?int
     {
-        return $this->genderID;
+        return $this->gender_id;
     }
 
-    public function setGenderID(string $genderID): self
+    public function setGenderId(int $gender_id): self
     {
-        $this->genderID = $genderID;
+        $this->gender_id = $gender_id;
+
+        return $this;
+    }
+
+    public function getGender(): ?Genders
+    {
+        return $this->gender;
+    }
+
+    public function setGender(?Genders $gender): self
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(\DateTimeInterface $birthday): self
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }
