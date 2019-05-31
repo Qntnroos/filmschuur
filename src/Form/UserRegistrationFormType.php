@@ -31,11 +31,15 @@ class UserRegistrationFormType extends AbstractType
             ])
             ->add('email', RepeatedType::class, [
                 'type'=> EmailType::class,
-                'attr'=> ['placeholder' => 'voorbeeld@email.be'],
+                'first_options' => ['attr' => ['placeholder' => 'voorbeeld@email.be']],
+                'second_options' => ['attr' => ['placeholder' => 'voorbeeld@email.be']],
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'attr'=> ['placeholder' => 'Paswoord'],
+                'first_options' => ['attr' => ['placeholder' => 'paswoord']],
+                'second_options' => ['attr' => ['placeholder' => 'herhaal paswoord']],
+                /* 'attr'=> ['class' => 'js-datepicker'], */
+                'attr' => ['style' => 'width: 100%'],
             ])
             ->add('user_adress', TextType::class, [
                 'attr'=> ['placeholder' => 'straat nr (gescheiden door spatie)'],
@@ -49,9 +53,17 @@ class UserRegistrationFormType extends AbstractType
             ]) */
             ->add('birthday', DateType::class, [
                 'widget' => 'single_text',
-                'attr'=> ['class' => 'js-datepicker'],
-            ])
-        ;
+                'attr' => ['class' => 'js-datepicker'],
+                'attr'=> ['placeholder' => '1 januari 1970'],
+                'html5' => false, 
+                ])   
+    ;
+
+/*     $builder->add('publishedAt', DateType::class, [
+        'widget' => 'choice',
+        'input'  => 'datetime_immutable'
+    ]); */
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

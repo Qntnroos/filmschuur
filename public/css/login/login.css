@@ -106,8 +106,12 @@
         height: 1.6rem;
         padding: 0;
       }
-      
 
+      /* input#user_registration_form_plainPassword_first.form-control, input#user_registration_form_plainPassword_second.form-control{
+        
+        width: 20vw;
+      } */
+    
       .custom-control-label{
         padding-top: 0.2rem;
       }
@@ -176,6 +180,7 @@
   
       .input-group-addon a, a:hover{
         color:#D17133;
+        text-align: right;
       }
   
       small,.right-corner a {

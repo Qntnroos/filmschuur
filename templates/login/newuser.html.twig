@@ -1,8 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block title %}De filmschuur{% endblock %}
-    {% block stylesheets %}
+{% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
-    {% endblock %}
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{{ asset('js/datepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/passwordviewer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/newuserform.js') }}"></script>     
+{% endblock %}
 {% block body %}
 <body class="orangebody">
 <main class="container-fluid">
@@ -18,14 +23,14 @@
                 <div class ="row mb-2">
                     <!-- First name -->
                     <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
-                        <label class ="errorfirstname">test</label>
+                        <label class ="errorfirstname"></label>
                         {{ form_row(userRegistrationForm.user_firstname, {
                             'label': 'Voornaam:'
                         }) }}
                     </div>
                     <!-- Last name -->
                     <div class ="col-12 col-sm-6 text-left">
-                        <label class ="errorlastname">Achternaam is vereist&nbsp;&#x274C </label>
+                        <label class ="errorlastname"></label>
                         {{ form_row(userRegistrationForm.user_lastname, {
                                 'label': 'Naam:'
                             }) }}
@@ -35,16 +40,16 @@
                 <div class ="row">      
                     <!-- E-mail -->
                     <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
-                        <label class="errorEmail">test</label>
+                        <label class="errorEmail"></label>
                         {{ form_row(userRegistrationForm.email.first, {
                                 'label': 'E-mail:'
                             }) }}
                     </div>
                     <!-- Repeat E-mail -->
                     <div class ="col-12 col-sm-6 text-left">
-                        <label class ="errorEmail2">test</label> 
+                        <label class ="errorEmail2"></label> 
                         {{ form_row(userRegistrationForm.email.second, {
-                                'label': 'Herhaal E-mail:'
+                                'label': 'Herhaal E-mail:',
                             }) }}
                     </div>  
                 </div>
@@ -56,18 +61,30 @@
 
                 <div class ="row">
                     <div class ="col-12 col-sm-6 text-left">
-                        <!-- Password -->
-                        <label class ="errorPassword">test</label>
-                        {{ form_row(userRegistrationForm.plainPassword.first, {
-                            'label': 'Paswoord:'
-                        }) }}
+                        <!-- Password -->   
+                        <label class ="errorPassword"></label>
+                        {# <div class="input-group" id="show_hide_password"> #}
+                            
+                            {{ form_row(userRegistrationForm.plainPassword.first, {
+                            'label': 'Paswoord:',
+                                }) }}
+                            {# <div class="input-group-addon pl-auto ml-auto mt-3">
+                                <a href=""><i class="fa fa-eye-slash mt-2" aria-hidden="true"></i></a>
+                            </div> #}
+                        {# </div>  #}                             
                     </div>
+
                     <div class ="col-12 col-sm-6 text-left">
-                        <label class ="errorPassword2">test</label>
-                        {{ form_row(userRegistrationForm.plainPassword.second, {
-                            'label': 'Herhaal paswoord:'
-                        }) }}
                         <!-- Repeat Password -->
+                        {# <div class="d-flex input-group" id="show_hide_password" > #}
+                            <label class ="errorPassword2"></label>
+                            {{ form_row(userRegistrationForm.plainPassword.second, {
+                                'label': 'Herhaal paswoord:'
+                            }) }}
+                            {# <div class="input-group-addon ml-auto mt-3">
+                                <a href=""><i class="fa fa-eye-slash mt-2" aria-hidden="true"></i></a>
+                            </div>      #}    
+                        {# </div> #}
                     </div>
 
                     <div class ="col-12 mb-1 text-left">
@@ -77,25 +94,25 @@
                         </label>
                         <label class="errorPasswordCompare"></label>
                     </div>
-                </div>
+            </div>
 
                 <div class ="row mb-2">
                     <div class ="col-12 text-left">
                         <!-- Adress -->
-                        <label class ="erroradress">test</label>
+                        <label class ="erroradress"></label>
                         {{ form_row(userRegistrationForm.user_adress, {
                                 'label': 'Adres:'
                             }) }}
                     </div>
                 </div>
 
-                <div class ="row">
+                <div class ="row mb-2">
                     <div class ="col-12 col-sm-6 text-left">
                         <!-- Phone number -->
-                        <label class ="errorphone">test</label>
+                        <label class ="errorphone"></label>
                         {{ form_row(userRegistrationForm.phone, {
                                 'label': 'GSM/Telefoon:'
-                            }) }}
+                        }) }}
                     </div>
                     
                     {# <div class ="col-12 col-sm-6 text-left">
@@ -107,14 +124,14 @@
                 </div>
                     
                 <div class ="row mb-3">
-                    <div class ="col-12 col-sm-6 text-left mb-0">
+                    <div class ="col-12 col-sm-6 text-left datepicker mb-0">
                         <!-- Birthdate -->
                         {{ form_row(userRegistrationForm.birthday, {
                             'label': 'Geboortedatum:'
                         }) }}
 
                     </div>
-
+            
                     <div class ="col-12 col-sm-6 text-right mb-2 mb-sm-0 ">
                         <button id ="regbutton" class ="btn" type="submit">REGISTREREN</button>
                     </div>
@@ -146,8 +163,6 @@
         </div>
     </div>
 </footer>
-{% block scripts %}
-    <script type="text/javascript" src="{{ asset('js/datepicker.js') }}"></script>
-{% endblock %} #}
+
 </body>
 {% endblock %}

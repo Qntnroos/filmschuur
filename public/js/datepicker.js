@@ -10,5 +10,6 @@ $('.datepicker').pickadate({
     clear: 'wis',
     close: 'sluiten',
     format: 'dddd d mmmm yyyy',
-    formatSubmit: 'yyyy/mm/dd'
+    formatSubmit: 'yyyy/mm/dd',
+    editable: true
 });
