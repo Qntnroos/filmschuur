@@ -21,8 +21,10 @@ let adresserrorText = document.querySelector(".erroradress");
 /* let postalnumberinput = document.querySelector("#postalnumber");
 let postalnumbererrorText = document.querySelector(".errorpostalnumber"); */
 
-/* let phoneinput = document.querySelector("#user_registration_form_phone");
-let phoneerrorText = document.querySelector(".errorphone"); */
+let phoneinput = document.querySelector("#user_registration_form_phone");
+let phoneerrorText = document.querySelector(".errorphone");
+
+let errorBackEndText = document.querySelector(".form-error-message, .form-error-icon")
 
 let logbutton = document.querySelector("#regbutton");
 
@@ -102,6 +104,10 @@ function removeErrorTextPostalnumber() {
 
 function removeErrorTextPhone() {
     phoneerrorText.style.display ="none";
+}
+
+function removeErrorBackEnd() {
+    errorBackEndText.style.display ="none";
 }
 
 /*check inputs on blur*/
@@ -403,6 +409,8 @@ passwordCompareErrorText. addEventListener('click',removeErrorTextPasswordCompar
 postalnumbererrorText.addEventListener('click',removeErrorTextPostalnumber); */
 adressinput.addEventListener('blur',adressVerify);
 adresserrorText.addEventListener('click',removeErrorTextAdress);
-/* phoneinput.addEventListener('blur',phoneVerify);
-phoneerrorText.addEventListener('click',removeErrorTextPhone); */
+phoneinput.addEventListener('blur',phoneVerify);
+phoneerrorText.addEventListener('click',removeErrorTextPhone);
+errorBackEndText.addEventListener('click',removeErrorBackEnd);
+
 logbutton.addEventListener('click', CheckAll);
