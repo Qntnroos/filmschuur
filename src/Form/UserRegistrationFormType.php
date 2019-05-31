@@ -15,8 +15,12 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\IsTrue;
 
 class UserRegistrationFormType extends AbstractType
 {
@@ -34,12 +38,23 @@ class UserRegistrationFormType extends AbstractType
                 'first_options' => ['attr' => ['placeholder' => 'voorbeeld@email.be']],
                 'second_options' => ['attr' => ['placeholder' => 'voorbeeld@email.be']],
             ])
+            // don't use password: avoid EVER setting that on a field that might be persisted
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
+                'mapped' => false,
                 'first_options' => ['attr' => ['placeholder' => 'paswoord']],
                 'second_options' => ['attr' => ['placeholder' => 'herhaal paswoord']],
                 /* 'attr'=> ['class' => 'js-datepicker'], */
                 'attr' => ['style' => 'width: 100%'],
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Paswoord is vereist'
+                    ]),
+                    new Length([
+                        'min' => 8,
+                        'minMessage' => 'Come on, you can think of a password longer than that!'
+                    ])
+                ]
             ])
             ->add('user_adress', TextType::class, [
                 'attr'=> ['placeholder' => 'straat nr (gescheiden door spatie)'],
@@ -51,12 +66,22 @@ class UserRegistrationFormType extends AbstractType
                 'class' => User::class,
                 'attr'=> ['placeholder' => 'Selecteer jouw geslacht'],
             ]) */
-            ->add('birthday', DateType::class, [
+            /* ->add('birthday', DateType::class, [
+                'data' => '1965-04-02 21:30:45',
                 'widget' => 'single_text',
-                
-                'attr'=> ['placeholder' => '1 januari 1970'],
+
+                'attr'=> ['placeholder' => '1965-04-02 21:30:45'],
                 'html5' => false, 
-                ])   
+                ])    */
+
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Ik ben akkoord met de algemene voorwaarden, cookie- en privacybeleid.'
+                    ])
+                ]
+            ])
     ;
 
     }
