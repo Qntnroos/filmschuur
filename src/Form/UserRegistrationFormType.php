@@ -53,16 +53,11 @@ class UserRegistrationFormType extends AbstractType
             ]) */
             ->add('birthday', DateType::class, [
                 'widget' => 'single_text',
-                'attr' => ['class' => 'js-datepicker'],
+                
                 'attr'=> ['placeholder' => '1 januari 1970'],
                 'html5' => false, 
                 ])   
     ;
-
-/*     $builder->add('publishedAt', DateType::class, [
-        'widget' => 'choice',
-        'input'  => 'datetime_immutable'
-    ]); */
 
     }
 
