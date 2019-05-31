@@ -4,9 +4,18 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ *  * @UniqueEntity(
+ *     fields={"email"},
+ *     message="Je ben reeds geregistreerd, login"
+ * )
  */
 class User implements UserInterface
 {
@@ -19,6 +28,8 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(message="E-mail is vereist")
+     * @Assert\Email(message="E-mail heeft geen geldig formaat")
      */
     private $email;
 
@@ -29,26 +40,31 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\NotBlank(message="Voornaam is vereist")
      */
     private $user_firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Paswoord is vereist") 
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\NotBlank(message="Naam is vereist") 
      */
     private $user_lastname;
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\NotBlank(message="Adres is vereist")
      */
     private $user_adress;
 
     /**
      * @ORM\Column(type="string", length=15)
+     * @Assert\NotBlank(message="GSM of telefoon is vereist")
      */
     private $phone;
 
@@ -69,8 +85,9 @@ class User implements UserInterface
     private $birthday;
 
     /**
-     * @ORM\Column(type="string", length=1)
+     * @ORM\Column(type="datetime")
      */
+    private $agreedTermsAt;
 
     public function getId(): ?int
     {
@@ -230,6 +247,18 @@ class User implements UserInterface
     public function setBirthday(\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getagreedTermsAt(): ?\DateTimeInterface
+    {
+        return $this->agreedTermsAt;
+    }
+
+    public function setagreedTermsAt(\DateTimeInterface $agreedTermsAt): self
+    {
+        $this->agreedTermsAt = $agreedTermsAt;
 
         return $this;
     }
