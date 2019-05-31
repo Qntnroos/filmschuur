@@ -28,19 +28,27 @@
       }
   
       .errorfirstname,.errorlastname, .errorEmail,.errorEmail2, .errorPassword, .errorPassword2, .errorPasswordCompare, .errorpostalnumber, .erroradress, .errorphone{
-        color: red;
+        color: #dc3545;
+        font-size: 0.8rem;
         float: right;
         display: inline;
         margin-top: 0.25rem;
       }
 
+      .invalid-feedback{
+        display:block;
+        float: right;
+        font-size: 0.8rem;
+        margin-top: -0.15rem !important;
+      }
+
       .errorCompare{
-        color:red;
+        color:#dc3545;
         float:right;
       }
 
       .errorReset{
-        color: red !important;
+        color: #dc3545 !important;
         margin-right: -1.6rem;
         float: right !important;
         position: relative !important;
