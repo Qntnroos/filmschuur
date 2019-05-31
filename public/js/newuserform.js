@@ -21,8 +21,8 @@ let adresserrorText = document.querySelector(".erroradress");
 /* let postalnumberinput = document.querySelector("#postalnumber");
 let postalnumbererrorText = document.querySelector(".errorpostalnumber"); */
 
-let phoneinput = document.querySelector("#user_registration_form_phone");
-let phoneerrorText = document.querySelector(".errorphone");
+/* let phoneinput = document.querySelector("#user_registration_form_phone");
+let phoneerrorText = document.querySelector(".errorphone"); */
 
 let logbutton = document.querySelector("#regbutton");
 
@@ -403,6 +403,6 @@ passwordCompareErrorText. addEventListener('click',removeErrorTextPasswordCompar
 postalnumbererrorText.addEventListener('click',removeErrorTextPostalnumber); */
 adressinput.addEventListener('blur',adressVerify);
 adresserrorText.addEventListener('click',removeErrorTextAdress);
-phoneinput.addEventListener('blur',phoneVerify);
-phoneerrorText.addEventListener('click',removeErrorTextPhone);
+/* phoneinput.addEventListener('blur',phoneVerify);
+phoneerrorText.addEventListener('click',removeErrorTextPhone); */
 logbutton.addEventListener('click', CheckAll);
