@@ -23,34 +23,30 @@
                 <div class ="row mb-2">
                     <!-- First name -->
                     <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
-                        <label class ="errorfirstname"></label>
-                        {{ form_row(userRegistrationForm.user_firstname, {
-                            'label': 'Voornaam:'
-                        }) }}
+                        <label>Voornaam:</label>
+                        <label class ="errorfirstname">{{ form_errors(userRegistrationForm.user_firstname) }}</label>
+                        {{ form_widget(userRegistrationForm.user_firstname) }}
                     </div>
                     <!-- Last name -->
                     <div class ="col-12 col-sm-6 text-left">
-                        <label class ="errorlastname"></label>
-                        {{ form_row(userRegistrationForm.user_lastname, {
-                                'label': 'Naam:'
-                            }) }}
+                        <label>Naam:</label>
+                        <label class ="errorlastname">{{ form_errors(userRegistrationForm.user_lastname) }}</label>
+                        {{ form_widget(userRegistrationForm.user_lastname) }}
                     </div>
                 </div>
 
                 <div class ="row">      
                     <!-- E-mail -->
                     <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
-                        <label class="errorEmail"></label>
-                        {{ form_row(userRegistrationForm.email.first, {
-                                'label': 'E-mail:'
-                            }) }}
+                        <label>E-mail:</label>
+                        <label class="errorEmail">{{ form_errors(userRegistrationForm.email.first) }}</label>
+                        {{ form_widget(userRegistrationForm.email.first) }}
                     </div>
                     <!-- Repeat E-mail -->
                     <div class ="col-12 col-sm-6 text-left">
-                        <label class ="errorEmail2"></label> 
-                        {{ form_row(userRegistrationForm.email.second, {
-                                'label': 'Herhaal E-mail:',
-                            }) }}
+                        <label>Herhaal E-mail:</label>
+                        <label class ="errorEmail2">{{ form_errors(userRegistrationForm.email.second) }}</label> 
+                        {{ form_widget(userRegistrationForm.email.second) }}
                     </div>  
                 </div>
                 <!-- Comment text -->
@@ -62,29 +58,26 @@
                 <div class ="row">
                     <div class ="col-12 col-sm-6 text-left">
                         <!-- Password -->   
-                        <label class ="errorPassword"></label>
-                        {# <div class="input-group" id="show_hide_password"> #}
-                            
-                            {{ form_row(userRegistrationForm.plainPassword.first, {
-                            'label': 'Paswoord:',
-                                }) }}
-                            {# <div class="input-group-addon pl-auto ml-auto mt-3">
-                                <a href=""><i class="fa fa-eye-slash mt-2" aria-hidden="true"></i></a>
-                            </div> #}
-                        {# </div>  #}                             
+                        <label>Paswoord:</label>
+                        <label class ="errorPassword">{{ form_errors(userRegistrationForm.plainPassword.first) }}</label>
+                        <div class="input-group" id="show_hide_password">  
+                            {{ form_widget(userRegistrationForm.plainPassword.first) }}
+                            <div class="input-group-addon pl-auto ml-auto">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>
+                        </div>                            
                     </div>
 
                     <div class ="col-12 col-sm-6 text-left">
                         <!-- Repeat Password -->
-                        {# <div class="d-flex input-group" id="show_hide_password" > #}
-                            <label class ="errorPassword2"></label>
-                            {{ form_row(userRegistrationForm.plainPassword.second, {
-                                'label': 'Herhaal paswoord:'
-                            }) }}
-                            {# <div class="input-group-addon ml-auto mt-3">
-                                <a href=""><i class="fa fa-eye-slash mt-2" aria-hidden="true"></i></a>
-                            </div>      #}    
-                        {# </div> #}
+                        <label>Herhaal paswoord:</label>
+                        <label class ="errorPassword2">{{ form_errors(userRegistrationForm.plainPassword.second) }} </label>
+                        <div class="input-group" id="show_hide_password" >
+                            {{ form_widget(userRegistrationForm.plainPassword.second) }}
+                            <div class="input-group-addon ml-auto">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>   
+                        </div>
                     </div>
 
                     <div class ="col-12 mb-1 text-left">
@@ -99,37 +92,40 @@
                 <div class ="row mb-2">
                     <div class ="col-12 text-left">
                         <!-- Adress -->
-                        <label class ="erroradress"></label>
-                        {{ form_row(userRegistrationForm.user_adress, {
-                                'label': 'Adres:'
-                            }) }}
+                        <label>Adres:</label>
+                        <label class ="erroradress">{{ form_errors(userRegistrationForm.user_adress) }}  </label>
+                        {{ form_widget(userRegistrationForm.user_adress) }}
                     </div>
                 </div>
 
                 <div class ="row mb-2">
                     <div class ="col-12 col-sm-6 text-left">
                         <!-- Phone number -->
-                        <label class ="errorphone"></label>
-                        {{ form_row(userRegistrationForm.phone, {
-                                'label': 'GSM/Telefoon:'
-                        }) }}
+                        <label>GSM/Telefoon:</label>
+                        <label class ="errorphone">{{ form_errors(userRegistrationForm.phone) }} </label>
+                        {{ form_widget(userRegistrationForm.phone) }}
                     </div>
                     
                     {# <div class ="col-12 col-sm-6 text-left">
                     <!-- Gender -->
-                    {{ form_row(userRegistrationForm.gender_abbreviation, {
-                            'label': 'Geslacht:'
-                        }) }}
+                        <label>Geslacht:</label>
+                        <label class ="errorgender">{{ form_errors(userRegistrationForm.phone) }} </label>
+                        {{ form_row(userRegistrationForm.gender_abbreviation}}
                     </div> #}
                 </div>
                     
                 <div class ="row mb-3">
-                    <div class ="col-12 col-sm-6 text-left datepicker mb-0">
+                    {# <div class ="col-12 col-sm-6 text-left datepicker mb-0">
+                        <label>Geboortedatum</label>
                         <!-- Birthdate -->
-                        {{ form_row(userRegistrationForm.birthday, {
-                            'label': 'Geboortedatum:'
-                        }) }}
+                        {{ form_widget(userRegistrationForm.birthday}}
 
+                    </div> #}
+                    
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_terms" required> 
+                        </label>
                     </div>
             
                     <div class ="col-12 col-sm-6 text-right mb-2 mb-sm-0 ">
