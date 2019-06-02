@@ -33,10 +33,10 @@ class User implements UserInterface
      */
     private $email;
 
-    /**
-     * @ORM\Column(type="json")
-     */
-    private $roles = [];
+    // /**
+    //  * @ORM\Column(type="json")
+    //  */
+    // private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=60)
@@ -71,6 +71,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="integer")
      */
+    
     private $gender_id;
 
     /**
@@ -80,14 +81,20 @@ class User implements UserInterface
     private $gender;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $birthday;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $agreedTermsAt;
+    private $agreedtermsat;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Cities", inversedBy="users")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $city;
 
     public function getId(): ?int
     {
@@ -253,12 +260,24 @@ class User implements UserInterface
 
     public function getagreedTermsAt(): ?\DateTimeInterface
     {
-        return $this->agreedTermsAt;
+        return $this->agreedtermsat;
     }
 
-    public function setagreedTermsAt(\DateTimeInterface $agreedTermsAt): self
+    public function agreeTerms()
     {
-        $this->agreedTermsAt = $agreedTermsAt;
+        $this->agreedtermsat = new \DateTime();
+
+        return $this;
+    }
+
+    public function getCity(): ?Cities
+    {
+        return $this->city;
+    }
+
+    public function setCity(?Cities $city): self
+    {
+        $this->city = $city;
 
         return $this;
     }
