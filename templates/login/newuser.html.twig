@@ -87,15 +87,22 @@
                         </label>
                         <label class="errorPasswordCompare"></label>
                     </div>
-            </div>
+                </div>
 
                 <div class ="row mb-2">
-                    <div class ="col-12 text-left">
+                    <div class ="col-12 col-sm-6 text-left">
                         <!-- Adress -->
                         <label>Adres:</label>
                         <label class ="erroradress">{{ form_errors(userRegistrationForm.user_adress) }}  </label>
                         {{ form_widget(userRegistrationForm.user_adress) }}
                     </div>
+                    <div class ="col-12 col-sm-6 text-left">
+                    <!-- Postalnumber -->
+                        <label>Postnumber:</label>
+                        <label class ="errorgender">{{ form_errors(userRegistrationForm.phone) }} </label>
+                        {{ form_widget(userRegistrationForm.city) }}
+                    </div>
+
                 </div>
 
                 <div class ="row mb-2">
@@ -106,26 +113,33 @@
                         {{ form_widget(userRegistrationForm.phone) }}
                     </div>
                     
-                    {# <div class ="col-12 col-sm-6 text-left">
+                    <div class ="col-12 col-sm-6 text-left">
                     <!-- Gender -->
                         <label>Geslacht:</label>
                         <label class ="errorgender">{{ form_errors(userRegistrationForm.phone) }} </label>
-                        {{ form_row(userRegistrationForm.gender_abbreviation}}
-                    </div> #}
+                        {{ form_widget(userRegistrationForm.gender) }}
+                    </div>
                 </div>
                     
-                <div class ="row mb-3">
-                    {# <div class ="col-12 col-sm-6 text-left datepicker mb-0">
-                        <label>Geboortedatum</label>
-                        <!-- Birthdate -->
-                        {{ form_widget(userRegistrationForm.birthday}}
-
-                    </div> #}
+                <div class ="row mb-2">
+                    <div class ="col-12 col-sm-6 text-left datepicker mb-0">
                     
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" name="_terms" required> 
-                        </label>
+                <!-- Birthdate -->
+                {# <label for="date-picker">Geboortedatum</label>
+                <label class ="error"></label>
+                <input placeholder="selecteer datum" type="text" name="date-picker" data-value="1970/01/01" class="form-control datepicker mb-0" required>
+             #}
+                        <!-- Birthdate -->
+                        <label>Geboortedatum</label>
+                        {{ form_widget(userRegistrationForm.birthday)}}
+                    </div>
+
+                </div> 
+                    
+                <div class=" row mb-3">
+                    <div class ="col-12 col-sm-6 custom-control custom-checkbox text-left mb-2 ">
+
+                        {{ form_widget(userRegistrationForm.agreeTerms) }}
                     </div>
             
                     <div class ="col-12 col-sm-6 text-right mb-2 mb-sm-0 ">
@@ -133,7 +147,6 @@
                     </div>
                 </div>
     </div>
-    {{ form_end(userRegistrationForm) }}
    
 </main>
 <footer>
