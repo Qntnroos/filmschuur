@@ -78,7 +78,7 @@ class UserRegistrationFormType extends AbstractType
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'Ik ben akkoord met de algemene voorwaarden, cookie- en privacybeleid.'
+                        'message' => 'je dient akkoord te gaan met onze algemene voorwaarden, cookie- en privacybeleid.'
                     ])
                 ]
             ])
