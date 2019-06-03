@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\User;
 use App\Entity\Genders;
+use App\Entity\Cities;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -44,7 +45,6 @@ class UserRegistrationFormType extends AbstractType
                 'mapped' => false,
                 'first_options' => ['attr' => ['placeholder' => 'paswoord']],
                 'second_options' => ['attr' => ['placeholder' => 'herhaal paswoord']],
-                /* 'attr'=> ['class' => 'js-datepicker'], */
                 'attr' => ['style' => 'width: 100%'],
                 'constraints' => [
                     new NotBlank([
@@ -52,38 +52,45 @@ class UserRegistrationFormType extends AbstractType
                     ]),
                     new Length([
                         'min' => 8,
-                        'minMessage' => 'Come on, you can think of a password longer than that!'
+                        'minMessage' => 'Minimaal acht karakters'
                     ])
                 ]
             ])
             ->add('user_adress', TextType::class, [
                 'attr'=> ['placeholder' => 'straat nr (gescheiden door spatie)'],
             ])
+            ->add('city',  EntityType::class, [
+                'placeholder' => 'Selecteer jouw woonplaats', 
+                'class' => Cities::class,
+            ])
+            
             ->add('phone', TelType::class, [
                 'attr'=> ['placeholder' => '0999 99 99 99 (respecteer spaties)'],
             ])
-            /* ->add('gender_abbreviation', EntityType:: class, [
-                'class' => User::class,
-                'attr'=> ['placeholder' => 'Selecteer jouw geslacht'],
-            ]) */
-            /* ->add('birthday', DateType::class, [
-                'data' => '1965-04-02 21:30:45',
-                'widget' => 'single_text',
 
-                'attr'=> ['placeholder' => '1965-04-02 21:30:45'],
-                'html5' => false, 
-                ])    */
+           ->add('gender' , EntityType::class, [
+                'placeholder' => 'Selecteer jouw geslacht',
+                'class' => Genders::class,
+             ])
+
+            ->add('birthday', DateType::class, [
+                'widget' => 'choice',
+                // 'attr' => ['class' => 'js-datepicker'], 
+                'html5' => false,
+                'years' => range(date('Y')-18, date('Y')-100),
+              
+                ])
 
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
+                'label'    => 'Ik ga akkoord met de algemene voorwaarden, cookie- en privacybeleid.',
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'je dient akkoord te gaan met onze algemene voorwaarden, cookie- en privacybeleid.'
+                        'message' => 'Je dient akkoord te gaan met onze voorwaarden.'
                     ])
                 ]
             ])
     ;
-
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -92,4 +99,5 @@ class UserRegistrationFormType extends AbstractType
             'data_class' => User::class,
         ]);
     }
+
 }
