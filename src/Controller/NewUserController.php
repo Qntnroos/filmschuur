@@ -24,33 +24,29 @@ class NewUserController extends AbstractController
     {
         $form = $this->createForm(UserRegistrationFormType::class);
         $form->handleRequest($request);
-        /*if ($form->isSubmitted() && $form->isValid() ) {
-            dd($form['plainPassword']->getData());
+        if ($form->isSubmitted() && $form->isValid() ) {  
             $data = $form->getData();
-
-           
-            /* $user = new User();
-            $user->setUserFirstname($data['user_firstname'])
-            $user->setUserLastname($data['user_lastname'])
-            $user->setEmail($data['email'])
+            $user = new User();
+            $user->setUserFirstname($data['user_firstname']);
+            $user->setUserLastname($data['user_lastname']);
+            $user->setEmail($data['email']);
             $user->setPassword($passwordEncoder->encodePassword(
                 $user,
                 $form['plainPassword']->getData()
             ));
-            $user->setUserAdress($data['user_adress'])
+            $user->setUserAdress($data['user_adress']);
             $user->setPhone($data['phone']);
-            $user->setGenderID($data['gender_id'])
-            $user->setBirthday($data['birthday'])
+            $user->setGenderID($data['gender_id']);
+            $user->setBirthday($data['birthday']);
             $user->setAuthor($this->getUser());
             $em->persist($user);
             $em->flush();
 
             $this->addFlash('success', 'Je bent succesvol geregistreerd');
             return $this->redirectToRoute('login');
-        } */
+        }
 
-        
-            /* $em = $this->getDoctrine()->getManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
             return $guardHandler->authenticateUserAndHandleSuccess(
@@ -58,7 +54,7 @@ class NewUserController extends AbstractController
                 $request,
                 $formAuthenticator,
                 'main'
-            ); */
+            );
        
 
         return $this->render('login/newuser.html.twig', [
