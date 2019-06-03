@@ -27,7 +27,7 @@
         font-size: 0.8rem;
       }
   
-      .errorfirstname,.errorlastname, .errorEmail,.errorEmail2, .errorPassword, .errorPassword2, .errorPasswordCompare, .errorpostalnumber, .erroradress, .errorphone{
+      .errorfirstname,.errorlastname, .errorEmail,.errorEmail2, .errorPassword, .errorPassword2, .errorPasswordCompare, .errorpostalnumber,.errorcity, .erroradress, .errorphone, .errorgender{
         color: #dc3545;
         font-size: 0.8rem;
         float: right;
@@ -105,7 +105,7 @@
       .form-control{
         /* margin-bottom: 1.5rem; */
         color: #532406;
-        background-color: #f7f7f7;
+        background-color: white;
         border-bottom: 1px solid #D17133;
         border-top: none;
         border-left: none;
@@ -156,6 +156,16 @@
       .dropdown-content li span{
         color: #532406;
         padding: 0.25rem;
+      }
+
+      .custom-control{
+        padding-left: 0;
+      }
+      .form-check-input[type="checkbox"]+label {
+        padding-left: 1.5rem !important;
+      }
+      .form-check{
+        padding-left: 1rem !important;
       }
   
       .test {
@@ -224,6 +234,10 @@
       textarea {
         outline: none;
         box-shadow: none !important;
+      }
+
+      select{
+        display: block !important;
       }
   
   /*phone portrait*/
