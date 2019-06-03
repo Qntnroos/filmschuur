@@ -94,7 +94,6 @@ class Genders
                 $user->setGender(null);
             }
         }
-
         return $this;
     }
 

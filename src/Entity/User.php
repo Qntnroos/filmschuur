@@ -34,9 +34,9 @@ class User implements UserInterface
     private $email;
 
     // /**
-    //  * @ORM\Column(type="json")
-    //  */
-    // private $roles = [];
+    // * @ORM\Column(type="json")
+    // */
+    //  private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=60)
@@ -46,7 +46,6 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Paswoord is vereist") 
      */
     private $password;
 
@@ -68,15 +67,16 @@ class User implements UserInterface
      */
     private $phone;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
+    // /**
+    //  * @ORM\Column(type="integer")
+    //  */
     
-    private $gender_id;
+    // private $gender_id;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Genders", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank(message="Gender is vereist") 
      */
     private $gender;
 
@@ -93,6 +93,7 @@ class User implements UserInterface
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Cities", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank(message="Woonplaats is vereist") 
      */
     private $city;
 
