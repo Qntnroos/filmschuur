@@ -100,7 +100,8 @@ class Cities
 
     public function __toString() {
         // to show the postalcode of the City in the select
-        return $this->city_name;
+       
+        return $this->postal_code . ' ' . $this->city_name;
         // to show the postalcode of the City in the select
     }
 }
