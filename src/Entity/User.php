@@ -33,10 +33,10 @@ class User implements UserInterface
      */
     private $email;
 
-    // /**
-    // * @ORM\Column(type="json")
-    // */
-    //  private $roles = [];
+    /**
+    * @ORM\Column(name="`roles `", type="json")
+     */
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=60)
