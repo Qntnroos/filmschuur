@@ -10,7 +10,7 @@ use App\utils\database;
 class TicketOrder extends AbstractController
 {
     /**
-     * @Route("/tickets/order", name="film")
+     * @Route("/tickets/order", name="ticketsorder")
      */
     public function renderFilm(Request $request)
     {
