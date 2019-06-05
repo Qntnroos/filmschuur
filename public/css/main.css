@@ -83,8 +83,7 @@ p {
     .card-film-body:hover {
       background-color: #D17133; }
     .card-film-body h5 {
-      color: #D17133;
-      height: 50px; }
+      color: #D17133; }
 
 .overview {
   padding-top: 100px; }
@@ -284,7 +283,7 @@ tr:first-child {
     padding-left: 8%; } }
 
 .card-body-info {
-  background-color: #F7F7F7 !important;
+  background-color: #F7F7F7;
   height: auto;
   padding-left: 1.6rem; }
 

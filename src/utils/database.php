@@ -5,26 +5,26 @@ class database extends SQlite3
 {
     public function __construct()
     {
-        $path = '../public/db/DFS.db';
+        $path = '../var/data.db';
         $this->open($path);
     }
     public function getMovieDetails($id) {
         $seperateMovie = $this->prepare(
             "SELECT M.trailer_link, M.movie_title,
-            GROUP_CONCAT (DISTINCT strftime('%d-%m-%Y %H:%M', play_times_and_dates) ) AS playList,
+            GROUP_CONCAT (DISTINCT strftime('%d-%m-%Y %H:%M', play_times_and_dates)) AS playList,
             AR.rateID,
             GROUP_CONCAT (DISTINCT CC.classification_componentID) AS classificationList,
             GROUP_CONCAT (DISTINCT G.genre_name) AS genreList,
             M.movie_length,
             M.release_year,
             M.synopsis,
-            GROUP_CONCAT ( DISTINCT ' ' || L.language_name) AS spokenlanguageList,
-            GROUP_CONCAT ( DISTINCT ' ' || LA.language_name) AS undertitlelanguageList,
+            GROUP_CONCAT (DISTINCT ' ' || L.language_name) AS spokenlanguageList,
+            GROUP_CONCAT (DISTINCT ' ' || LA.language_name) AS undertitlelanguageList,
             (D.director_firstname || ' ' || D.director_lastname) AS directors,
-            GROUP_CONCAT ( DISTINCT ' ' || A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
-            FROM Movies AS M, Movies AS X, Movies AS Y
+            GROUP_CONCAT (DISTINCT ' ' || A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
+            FROM Movies AS M, Movies AS X
             JOIN MovieShows AS MS
-            ON Y.movieID = MS.movieID
+            ON M.movieID = MS.movieID
             JOIN AgeRates AS AR
             ON M.rating_ageID = AR.rateID
             JOIN MovieClassificationComponents as MCC
