@@ -71,6 +71,13 @@
 
     {% endblock %}
     <!--/.Navbar -->
+    {% block flash %}
+        {% for message in app.flashes('success') %}
+            <div class="text-center text-uppercase w-75 bg-light mx auto my-2 p-2">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endblock flash %} Volgende code $this->addFlash('success', 'Je bent succesvol geregistreerd'); 
     {% block body %}
     {% endblock %}
 
