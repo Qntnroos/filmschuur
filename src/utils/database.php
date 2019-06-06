@@ -277,9 +277,9 @@ class database extends SQlite3
         M.movie_title
         FROM Directors AS D
         LEFT JOIN Cities AS C1 ON
-        D.place_of_birth = C1.cityID 
+        D.place_of_birth = C1.id 
         LEFT JOIN Cities AS C2 ON
-        D.place_of_death = C2.cityID 
+        D.place_of_death = C2.id
         LEFT JOIN States_Provinces_Departments AS ST1 ON
         C1.stateID = ST1.StateID
         LEFT JOIN  States_Provinces_Departments AS ST2 ON
