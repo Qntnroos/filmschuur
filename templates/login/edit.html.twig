@@ -1,0 +1,178 @@
+{% extends 'base.html.twig' %}
+{% block title %}De filmschuur{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{{ asset('js/datepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/passwordviewer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/newuserform.js') }}"></script>     
+{% endblock %}
+{% block body %}
+<body class="orangebody">
+<main class="container-fluid">
+    {{ form_start(userRegistrationForm, {'attr': {'novalidate': 'novalidate'}}) }}
+   
+    <div class="text-center border border-light p-4 p-ms-5 max-vw-75">
+        <div class="mt-4 mb-4 text-center">
+            <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
+        </div>
+        <div class ="col-12 mt-2">
+                <h4 class=" text-center mb-4 ">UPDATE JOUW GEGEVENS</h4>
+        </div>
+
+                <div class ="row mb-2">
+                    <!-- First name -->
+                    <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
+                        <label>Voornaam:</label>
+                        <label class ="errorfirstname">{{ form_errors(userRegistrationForm.user_firstname) }}</label>
+                        {{ form_widget(userRegistrationForm.user_firstname) }}
+                    </div>
+                    <!-- Last name -->
+                    <div class ="col-12 col-sm-6 text-left">
+                        <label>Naam:</label>
+                        <label class ="errorlastname">{{ form_errors(userRegistrationForm.user_lastname) }}</label>
+                        {{ form_widget(userRegistrationForm.user_lastname) }}
+                    </div>
+                </div>
+
+                <div class ="row">      
+                    <!-- E-mail -->
+                    <div class ="col-12 mb-2 col-sm-6 mb-sm-0 text-left">
+                        <label>E-mail:</label>
+                        <label class="errorEmail">{{ form_errors(userRegistrationForm.email.first) }}</label>
+                        {{ form_widget(userRegistrationForm.email.first) }}
+                    </div>
+                    <!-- Repeat E-mail -->
+                    <div class ="col-12 col-sm-6 text-left">
+                        <label>Herhaal E-mail:</label>
+                        <label class ="errorEmail2">{{ form_errors(userRegistrationForm.email.second) }}</label> 
+                        {{ form_widget(userRegistrationForm.email.second) }}
+                    </div>  
+                </div>
+                <!-- Comment text -->
+                <div class ="col-12 mb-1 text-left px-0">
+                    <label class="text-muted mb-1 mb-sm-0">We zullen je e-mail <u> nooit</u> met iemand delen.</label>
+                    <label class="errorCompare mb-1 mb-sm-0"></label>
+                </div>
+
+                <div class ="row">
+                    <div class ="col-12 col-sm-6 text-left">
+                        <!-- Password -->   
+                        <label>Paswoord:</label>
+                        <label class ="errorPassword">{{ form_errors(userRegistrationForm.plainPassword.first) }}</label>
+                        <div class="input-group" id="show_hide_password">  
+                            {{ form_widget(userRegistrationForm.plainPassword.first) }}
+                            <div class="input-group-addon pl-auto ml-auto">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>
+                        </div>                            
+                    </div>
+
+                    <div class ="col-12 col-sm-6 text-left">
+                        <!-- Repeat Password -->
+                        <label>Herhaal paswoord:</label>
+                        <label class ="errorPassword2">{{ form_errors(userRegistrationForm.plainPassword.second) }} </label>
+                        <div class="input-group" id="show_hide_password" >
+                            {{ form_widget(userRegistrationForm.plainPassword.second) }}
+                            <div class="input-group-addon ml-auto">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>   
+                        </div>
+                    </div>
+
+                    <div class ="col-12 mb-1 text-left">
+                    <!-- Aanwijzingstekst -->
+                        <label class="text-muted mb-1 mb-sm-0">
+                            Tenminste 8 karakters waarvan minimum 1 hoofdletter, 1 kleine letter, 1 cijfer, geen opeenvolgende spaties.
+                        </label>
+                        <label class="errorPasswordCompare"></label>
+                    </div>
+                </div>
+
+                <div class ="row mb-2">
+                    <div class ="col-12 col-sm-6 text-left">
+                        <!-- Adress -->
+                        <label>Adres:</label>
+                        <label class ="erroradress">{{ form_errors(userRegistrationForm.user_adress) }}  </label>
+                        {{ form_widget(userRegistrationForm.user_adress) }}
+                    </div>
+                    <div class ="col-12 col-sm-6 text-left">
+                    <!-- Postalnumber -->
+                        <label>Postnumber:</label>
+                        <label class ="errorcity">{{ form_errors(userRegistrationForm.city) }} </label>
+                        {{ form_widget(userRegistrationForm.city) }}
+                    </div>
+
+                </div>
+
+                <div class ="row mb-2">
+                    <div class ="col-12 col-sm-6 text-left">
+                        <!-- Phone number -->
+                        <label>GSM/Telefoon:</label>
+                        <label class ="errorphone">{{ form_errors(userRegistrationForm.phone) }} </label>
+                        {{ form_widget(userRegistrationForm.phone) }}
+                    </div>
+                    
+                    <div class ="col-12 col-sm-6 text-left">
+                    <!-- Gender -->
+                        <label>Geslacht:</label>
+                        <label class ="errorgender">{{ form_errors(userRegistrationForm.gender) }} </label>
+                        {{ form_widget(userRegistrationForm.gender) }}
+                    </div>
+                </div>
+                    
+                <div class ="row mb-2">
+                    <div class ="col-12 col-sm-6 text-left  mb-0">
+                    
+                <!-- Birthdate -->
+                {# <label for="date-picker">Geboortedatum</label>
+                <label class ="error"></label>
+                <input placeholder="selecteer datum" type="text" name="date-picker" data-value="1970/01/01" class="form-control datepicker mb-0" required>
+             #}
+                        <!-- Birthdate -->
+                        <label>Geboortedatum:</label>
+                        {{ form_widget(userRegistrationForm.birthday)}}
+                    </div>
+
+                </div> 
+                    
+                <div class=" row mb-3">
+                    <div class ="col-12 col-sm-6 custom-control custom-checkbox text-left mb-2 ">
+
+                        {{ form_widget(userRegistrationForm.agreeTerms) }}
+                    </div>
+            
+                    <div class ="col-12 col-sm-6 text-right mt-n4 mb-2 mb-sm-0 ">
+                        <button id ="regbutton" class ="btn" type="submit">UPDATE</button>
+                    </div>
+                </div>
+    </div>
+   {{ form_end(userRegistrationForm) }}
+
+</main>
+<footer>
+    <div class="d-flex flex-row-reverse">
+        <div class="triangle"></div>
+        <div class= "d-flex" id = "triangle-bottomright">
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Terms of service -->
+            <div class="right-corner col-12 text-right mb-2 mr-2">
+                <div class ="col-6 text-right mb-0">
+                </div>
+                <!-- Sign up button -->
+                    <br>
+                    <a href="/algemene_voorwaarden" target="_blank">Algemene Voorwaarden -</a>
+                    <a href="/privacybeleid" target="_blank">Privacybeleid -</a>
+                    <a href="/cookiebeleid" target="_blank">Cookiebeleid</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+{% endblock %}
