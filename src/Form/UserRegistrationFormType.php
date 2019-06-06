@@ -81,6 +81,12 @@ class UserRegistrationFormType extends AbstractType
               
                 ])
 
+            /* ->add('birthday', DateType::class, [
+                'widget' => 'single_text',
+                'attr' => ['class' => 'js-datepicker'],
+                'html5' => false,
+                ]) */
+
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'label'    => 'Ik ga akkoord met de algemene voorwaarden, cookie- en privacybeleid.',
