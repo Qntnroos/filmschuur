@@ -5,8 +5,18 @@
     {% endblock %}
 {% block body %}
 <body class="orangebody">
+
 <main class="container-fluid">
+ 
 <form method="POST" action="" name="inlogForm" class="text-center border border-light p-5  max-vw-75" autocomplete="off" novalidate>
+
+    {% block flash %}
+        {% for message in app.flashes('notice') %}
+            <div class="message text-center text-uppercase mx-auto mb-3  p-2">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endblock flash %}
 
       <div class="mb-4">
          <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
@@ -58,7 +68,7 @@
       <div class ="row">
           <div class ="col-6 text-left mt-2 mb-1">
             <!-- Lose password -->
-            <p class="text-muted"><a href="" data-toggle="modal" data-target="#modalLoginForm">Wachtwoord vergeten?</a></p>
+            <p class="text-muted"><a href="/resetpassword">Wachtwoord vergeten?</a></p>
           </div>
           {#
               If you want to control the URL the user
@@ -66,7 +76,7 @@
               <input type="hidden" name="_target_path" value="/account" />
           #}
 
-          <div class ="col-6 text-right mb-1">
+          <div class ="col-6 text-right mt-n4 mb-1">
                 <!-- Inlog button -->
                 <button id="inlogbtn" class="btn" type="submit">INLOGGEN</button>
           </div>
@@ -74,36 +84,6 @@
 
   </form>
 
-   <!-- Modal -->
-
-  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-       aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <button type="button" class="text-right close mt-2 mr-4" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="mt-2 text-center">
-          <img src ="{{ asset('img/lock.svg') }}"  alt ="slot"/>
-        </div>
-        <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold">RESET PASWOORD</h4>
-        </div>
-        <div class="modal-body mx-3">
-          <div class="coll-12 md-form p-0">
-            <label class="label-model mt-5 mb-n2" for="ResetFormEmail">E-mail:</label>
-            <label class="errorReset mt-5 "></label>
-            <input id="resetPasswordEmail" type="email" name="ResetFormEmail" value ="" class="form-control mb-0" placeholder="voorbeeld@email.be" autocomplete="off">
-            <span id="helpResetPasswordEmail" class="text-center small text-muted">
-            Instructies voor paswoord-reset worden verzonden naar bovenstaand e-mailadres. </span>
-          </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center mt-0 mb-3">
-          <a href="Reset.php"><button class="btn2" type="submit">VERSTUREN</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
 </main>
 <footer>
   <div class="d-flex flex-row-reverse">
@@ -121,9 +101,9 @@
               <!-- Sign up button -->
                <a href="/registreer"><button class="btn2" type="submit">MAAK EEN NIEUWE ACCOUNT AAN</button></a>
                <br>
-               <a href="/algemene_voorwaarden" target="_blank">Algemene Voorwaarden -</a>
-               <a href="/privacybeleid" target="_blank">Privacybeleid -</a>
-               <a href="/cookiebeleid" target="_blank">Cookiebeleid</a>
+               <a href="/algemene_voorwaarden">Algemene Voorwaarden -</a>
+               <a href="/privacybeleid">Privacybeleid -</a>
+               <a href="/cookiebeleid">Cookiebeleid</a>
           </div>
       </div>
   </div>
