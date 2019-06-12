@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+{% block title %}Reset Paswoord De filmschuur{% endblock %}
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+    {% endblock %}
+{% block body %}
+<body class="orangebody">
+    <main class="container-fluid">
+     
+        <form method="POST" action="" name="restForm" class="text-center border border-light p-5  max-vw-75" autocomplete="off" novalidate>
+
+            {% block flash %}
+                {% for message in app.flashes('notice') %}
+                    <div class="message text-center text-uppercase mx-auto mb-3  p-2">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endblock flash %}
+            
+            <div class="mb-4">
+                <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
+            </div>
+
+            <div class ="col-12 mt-2">
+                <h4 class=" text-center mb-2 ">RESET PASWOORD?</h4>
+            </div>
+
+           {#  {% if error %}
+                <div class= "alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %} #}
+
+            <div class ="row">
+                <div class="col-12 text-left mt-5 p-0">
+                    <div class="form-group">
+                    <label>Paswoord:</label>
+                    <label class ="errorPassword"></label>
+                    <div class="input-group mb-4" id="show_hide_password">
+                        <input id="resetPassword1" name="plainPassword" class="form-control mb-0 " value="" type="password" placeholder ="paswoord">
+                        <div class="input-group-addon">
+                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-left mb-0 p-0">
+                    <div class="form-group">
+                        <label>Herhaal paswoord:</label>
+                        <label class ="errorPassword2"></label>
+                        <div class="input-group" id="show_hide_password">
+                            <input id="resetPassword2" class="form-control mb-0 " value="" type="password" placeholder ="herhaal paswoord">
+                            <div class="input-group-addon">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-12 mb-3 px-0 text-left">
+                    <!-- Aanwijzingstekst -->
+                        <label class="text-muted mb-1 mb-sm-0">
+                            Tenminste 8 karakters waarvan minimum 1 hoofdletter, 1 kleine letter, 1 cijfer, geen opeenvolgende spaties.
+                        </label>
+                        <label class="errorPasswordCompare"></label>
+                </div>
+           
+                <div class="col-12  d-flex justify-content-center mt-0 mb-3">
+                    <a href="Reset.php"><button id="resetbutton" class="btn2" type="submit">VERSTUREN</button></a>
+                </div>
+            </div>
+
+            <div>
+                <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+            </div>
+        </form>
+        
+    </main>
+
+    <footer>
+        <div class="d-flex flex-row-reverse">
+            <div class="triangle"></div>
+            <div class= "d-flex" id = "triangle-bottomright">
+            </div>
+        </div>
+            <!-- Default form register-->
+        <div class="container-fluid">
+            <div class="row">
+            <!-- Terms of service -->
+                <div class="right-corner col-12 text-right mb-2 mr-2">
+                    <div class ="col-6 text-right mb-0">
+                    </div>
+                    <!-- Sign up button -->
+                    <a href="/registreer"><button class="btn2" type="submit">MAAK EEN NIEUWE ACCOUNT AAN</button></a>
+                    <br>
+                    <a href="/algemene_voorwaarden">Algemene Voorwaarden -</a>
+                    <a href="/privacybeleid">Privacybeleid -</a>
+                    <a href="/cookiebeleid">Cookiebeleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block scripts %}
+        <script type="text/javascript" src="{{ asset('js/resetpassword.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/passwordviewer.js') }}"></script>
+    {% endblock %}
+</body>
+{% endblock %}
+    
