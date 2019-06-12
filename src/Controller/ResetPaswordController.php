@@ -16,6 +16,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\Validator\Constraints\DateTime;
+
 
 class ResetPaswordController extends AbstractController
 {
@@ -24,23 +26,40 @@ class ResetPaswordController extends AbstractController
      * @Route("/resetpassword", name="resetpassword")
      */
 
-    
-
     public function resetpasswordmail(Request $request, \Swift_Mailer $mailer, UserRepository $userRepository, CsrfTokenManagerInterface $csrfTokenManager)
     {
 
         $this->userRepository = $userRepository;
         $this->csrfTokenManager = $csrfTokenManager;
-
-        if ($request->isMethod('post')) {
+        
+        if ($request->isMethod('post')){
             $email= $request->request->get('ResetFormEmail');
+           
             $token= $request->request->get('_csrf_token');
+            // 'authenticate' is the same value used in the template to generate the token
+    
+            if (!$this->isCsrfTokenValid('authenticate', $token)) 
+            {
+                return $this->redirectToRoute('error403');
+            }
+            // check user exist?
+            $user = $userRepository->findOneBy(['email' => $email]);
 
-            $tester ="test mail";
-            
-            $exist = $userRepository->findOneBy(['email' => $email]);
+            if ($user)
+            {
+                $resettoken = $this->generateResetToken();
+                $expire_date = $this->expireDate();
+                
+                $em = $this->getDoctrine()->getManager();
+                $user->setResetToken($resettoken);
+                $user->setTokenExpireTime($expire_date);         
+                $em->persist($user);
+                $em->flush();
 
-            if ($exist){
+                $send =[];
+
+                $token = $user->getResetToken();
+
                 // Create the Transport
                 $transport = (new \Swift_SmtpTransport('relay.proximus.be', 25))
                 ->setUsername('danny.eeraerts@proximus.be')
@@ -51,59 +70,53 @@ class ResetPaswordController extends AbstractController
                 ->setFrom($email)
                 ->setTo('danny.eeraerts@proximus.be')
                 ->setBody( $this->renderView(
-                        'login/resetmail.html.twig'
+                        'login/resetmail.html.twig',array('token'=> $token)
                     ),
                     'text/html'
-                )
-                ->attach(
-                    Swift_Attachment::fromPath('/public/img')->setFilename('logo.png')
-                  );
-            ;
-            $mailer->send($message);
-            dd($mailer);
-           
-            $message->attach(
-                Swift_Attachment::fromPath('/path/to/image.jpg')->setFilename('cool.jpg')
-              );
-
-            $this->addFlash(
-                'notice',
-                'Raadpleeg je mail. Er is een e-mail met instructies voor het herstellen van
-                 je wachtwoord naar je e-mailadres gestuurd.'); 
-                
-            }
+                );
+                $mailer->send($message);
+            
+                $this->addFlash(
+                    'notice',
+                    'Raadpleeg je mail. Er is een e-mail met instructies voor het herstellen van
+                    je wachtwoord naar je e-mailadres gestuurd.'); 
+                }
             else {
                 $this->addFlash(
                     'notice',
                     'Dit e-mailadres komt niet voor in ons systeem. Maak een nieuwe account');
-                    return $this->redirectToRoute('resetpassword'); 
-                    
-
+                    return $this->redirectToRoute('resetpassword');      
             }
-           
-
-
-        
-
+ 
             return $this->redirectToRoute('login');     
 
-            return $guardHandler->authenticateUserAndHandleSuccess(
+            /* return $guardHandler->authenticateUserAndHandleSuccess(
                 $user,
                 $request,
                 $formAuthenticator,
                 'main'
-            );
+            ); */
         }
 
         return $this->render('login/resetpassword.html.twig');
         
 
-        return $this->render('login/edit.html.twig', [
+        /* return $this->render('login/edit.html.twig', [
             'userRegistrationForm' => $form->createView(),
-        ]);
-
-
+        ]); */
 
 
     }
+    public function generateResetToken()
+    {
+        return rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+    }
+    public function expireDate()
+    {
+        $datetime = new \DateTime();
+        $datetime->format('H:i:s \O\n Y-m-d');
+        $datetime->modify('+3 hours');
+        return ($datetime);
+    }
 }
+
