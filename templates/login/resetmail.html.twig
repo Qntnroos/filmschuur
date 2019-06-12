@@ -6,10 +6,10 @@
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/mdb.min.css')) }}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/main.css')) }}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/login/login.css')) }}">
             <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body class="orangebody">
@@ -17,13 +17,13 @@
         <div class="container">
             <div class="row text-center mt-5 mb-5">
                 <div class="col-4 offset-4">
-                    <img src="{{ asset('img/logo.png') }}" class="img-fluid" alt="logo">
+                    <img src="{{absolute_url( asset('img/logo.png')) }}" class="img-fluid" alt="logo">
                     <div><h3>De Filmschuur</h3></div>
                 </div>
             </div>
             <div class="row text-center mt-5 mb-4">
                 <div class="col-12">
-                    <img src ="{{ asset('img/lock.svg') }}" alt ="slot"/>
+                    <img src ="{{ absolute_url(asset('img/lock.svg')) }}" alt ="slot"/>
                 </div>
             </div>
             <div class="row text-center">
@@ -31,7 +31,7 @@
                     <p>Reset jouw paswoord hieronder. 
                     Indien het niet de bedoeling is dat je wachtwoord gereset wordt, negeer deze email en je paswoord wordt behouden.
                     Deze paswoord reset vervalt binnen de 3 uur.</p>
-                    <a href="/resetpaswoord"><button id="mailbutton" class ="btn mb-4 mt-4" type="submit">RESET PASWOORD</button></a>
+                    <a href="{{ url('realreset',{'token':token}) }}"><button id="mailbutton" class ="btn mb-4 mt-4" type="submit">RESET PASWOORD</button></a>
                 </div>
                 <div class="col-8 offset-2 mb-5">
                     <hr>
@@ -45,13 +45,13 @@
 
             <!-- SCRIPTS -->
             <!-- JQuery -->
-            <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/jquery-3.3.1.min.js')) }}"></script>
             <!-- Bootstrap tooltips -->
-            <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/popper.min.js')) }}"></script>
             <!-- Bootstrap core JavaScript -->
-            <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/bootstrap.min.js')) }}"></script>
             <!-- MDB core JavaScript -->
-            <script type="text/javascript" src="{{ asset('js/mdb.js') }}"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/mdb.js')) }}"></script>
     {% block scripts %}
     {% endblock %}
     </body>
