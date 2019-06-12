@@ -97,6 +97,16 @@ class User implements UserInterface
      */
     private $city;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $reset_token;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $token_expire_time;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -279,6 +289,30 @@ class User implements UserInterface
     public function setCity(?Cities $city): self
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function getResetToken(): ?string
+    {
+        return $this->reset_token;
+    }
+
+    public function setResetToken(?string $reset_token): self
+    {
+        $this->reset_token = $reset_token;
+
+        return $this;
+    }
+
+    public function getTokenExpireTime(): ?\DateTimeInterface
+    {
+        return $this->token_expire_time;
+    }
+
+    public function setTokenExpireTime(?\DateTimeInterface $token_expire_time): self
+    {
+        $this->token_expire_time = $token_expire_time;
 
         return $this;
     }
