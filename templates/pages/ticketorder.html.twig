@@ -1,31 +1,130 @@
 {% extends 'base.html.twig' %}
 {% block title %}Kies uw tickets!{% endblock %}
 {% block body %}
-    <section class="lightbody homepage overview">
-        <div class="container-fluid">
+    <section class="overview mt-5">
+        <div class="container-fluid mt-5">
+        <form action="">
             <div class="row">
-                <div class="col-3 offset-1">
-                    <div class="card slider-element">
-                    <h5 class="card-title font-weight-bold text-center py-1">Godfather</h5>
+                <div class="col-8 col-lg-3 offset-2 offset-lg-1 ticket-card">
+                    <div class="card">
                         <img class="card-img-top" src="{{ asset('img/poster.jpg') }}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold text-center">Zaal</h5>
-                            <h5 class="card-title font-weight-bold text-center">Uur</h5>
-                        </div>
                     </div>
                 </div>
-                <div class="col-7">
-                <div class="row">
-                <div class="col-4">Selecteer je Tickets</div>
-                <div class="col-4">Stoelen selecteren</div>
-                <div class="col-4">Ticket</div>
-                
-                </div>
-                <form action="">
-                
-                </form>
+                <div class="col-12 col-lg-7 offset-1">
+                    <div class="ticket-info">
+                        <h2 class="card-title card-title-ticket font-weight-bold">Godfather</h2>
+                        <h5 class="card-title card-title-ticket font-weight-bold">Zaal -- Uur</h5>
+                    </div>
+                    <div class="row text-center mt-5">
+                    
+                        <div class="col-2 current breadcrumb-link py-1">Selecteer je Tickets</div>
+                        <div class="col-2 breadcrumb-link py-1">Stoelen selecteren</div>
+                        <div class="col-2 breadcrumb-link py-1">Ticket</div>
+                    </div>
+                    <div class="row">
+                        <h3 class="mt-5">
+                        Selecteer je tickets:
+                        </h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-10">
+                        <form action="">
+                            <div class="row table-head">
+                                <div class="col-7">
+                                    <h5>Tickettype:</h5>
+                                </div>
+                                <div class="col-3">
+                                    <h5>Prijs:</h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5>Aantal:</h5>
+                                </div>
+                            </div>
+                            <div class="row table-head">
+                                <div class="col-7">
+                                    <h3>Normaal</h3>
+                                </div>
+                                <div class="col-3">
+                                    <h3>€10,00</h3>
+                                </div>
+                                <div class="col-2">
+                                    <select class="ticket">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row table-head">
+                                <div class="col-7">
+                                    <h3>Kortingstarief</h3>
+                                    <ul class="custom_list ticket-list">
+                                    <li>Kinderen en jongeren tot 18 jaar</h6>
+                                    <li>Studenten tot 26 jaar (op vertoon van een geldige studentenkaart)</h6>
+                                    <li>Senioren vanaf 60 jaar</h6>
+                                    <li>Mensen met een handicap</h6>
+                                    <li>Werklozen (op vertoon van een geldige controlekaart)</>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <h3>€9,00</h3>
+                                </div>
+                                <div class="col-2">
+                                    <select class="ticket">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row table-head parking">
+                                <div class="col-7">
+                                    <h3>Parking</h3>
+                                </div>
+                                <div class="col-3">
+                                    <h3>€2,00</h3>
+                                </div>
+                                <div class="col-2">
+                                    <select class="ticket">
+                                        <option value="no"selected>Nee</option>
+                                        <option value="yes">Ja</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <h3>Totaal:</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 id="totalPrice" name="totalPrice">€ 0,00</h3>
+                                    <button class="btn order-button btn-md mt-5">Volgende</button>
+                                </div>
+                            </div>
+                    
+                        <div>
+                            <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+                        </div>
+                        </div>
+                                     
                 </div>
             </div>
+           
+        </form>
         </div>
     </section>
+{% endblock %}
+{% block scripts %}
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+    </script>
 {% endblock %}

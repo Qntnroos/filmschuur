@@ -1,0 +1,39 @@
+@media screen and (max-width: 748px){
+    .ticket-card{
+        display: none;
+    }
+}
+
+.ticket-info{
+    margin-left: -1rem;
+}
+.card-title-ticket{
+    color: $c-orange;
+}
+.breadcrumb-link{
+    background-color: $c-black;
+    color: $c-white;
+    margin: 0 15px;
+    &:first-child{
+        margin-left: 0px;
+    }
+}
+.current{
+    background-color: $c-orange;
+}
+.table-head{
+    border-bottom: 1px solid black;
+    padding: 0 0 15px 0;
+}
+.ticket{
+    display: block !important;
+    width: 4rem;
+    height: 2rem;
+    margin-top: 9px;
+}
+.parking{
+    display: none;
+}
+.ticket-list{
+    color: $c-gray
+}
