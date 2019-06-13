@@ -3,9 +3,7 @@
         let passwordinput = document.querySelector("#loginPassword");
         let passworderrorText = document.querySelector(".errorPassword");
         let logbutton = document.querySelector("#inlogbtn");
-        let emailresetinput = document.querySelector("#resetPasswordEmail");
-        let emailreseterrorText = document.querySelector(".errorReset");
-
+        
         /*regex mail*/
         function regmailCheck(mailCheck) {
           let emailRegex = /^(([\-\w]+)\.?)+@(([\-\w]+)\.?)+\.[a-zA-Z]{2,6}$/;
@@ -19,10 +17,6 @@
 
         function removeErrorTextPassword() {
           passworderrorText.style.display="none"
-        }
-
-        function removeErrorTextResetMail() {
-          emailreseterrorText.style.display="none"
         }
 
         /*regex password*/
@@ -46,23 +40,6 @@
               emailerrorText.innerHTML = "Email is vereist&nbsp;&#x274C;";
               emailerrorText.style.display ="block";
              }
-        }
-
-        /*check resetmail on blur*/
-        function emailresetVerify() {
-          if (emailresetinput.value !== "") {
-              if (regmailCheck(emailresetinput.value)) {
-                emailreseterrorText.innerHTML = "";
-                emailinput.value = cleanemail(emailresetinput.value);
-              } else {
-                emailreseterrorText.innerHTML = "Email heeft verkeerd formaat&nbsp;&#x274C";
-                emailreseterrorText.style.display ="block";
-              }
-          }
-          else {
-            emailreseterrorText.innerHTML = "Email is vereist&nbsp;&#x274C;";
-            emailreseterrorText.style.display ="block";
-           }
         }
 
         /*check password on blur*/
@@ -100,7 +77,5 @@
         passwordinput.addEventListener('blur',passwordVerify);
         emailerrorText.addEventListener('click',removeErrorTextMail);
         passworderrorText.addEventListener('click',removeErrorTextPassword);
-        emailresetinput.addEventListener('blur',emailresetVerify);
-        emailreseterrorText.addEventListener('click',removeErrorTextResetMail);
 
         logbutton.addEventListener('click', CheckAll);

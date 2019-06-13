@@ -6,21 +6,20 @@
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/bootstrap.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/mdb.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/sass/tickets/ticketreservering.css
-            ">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css'))}}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/mdb.min.css'))}}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/main.css'))}}">
         {% block stylesheets %}
         {% endblock %}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}" />
     </head>
   
     <body class="container p-5">
 
       <header class="row text-center">
         <div class="col-6">
-          <img src="http://127.0.0.1:8001/img/logo.png" class="img-fluid p-4" alt="logo Filmschuur">
+          <img src="{{ absolute_url(asset('img/logo.png'))}}" class="img-fluid p-4" alt="logo Filmschuur">
         </div>
         <div class="col-6">
           <img src="" class="img-fluid px-5 pt-5 pb-3" alt="barcode">
@@ -108,7 +107,7 @@
             <div class="blueborder pt-2">
               <!--Jouw email-->
               <p >Jouw email:</p>
-              <h3 class="text-truncate">koen.michiels@telenet.betttttttttttttttttttttttttttttttttttttttttttttttttttttt</h3>
+              <h3 class="text-truncate">koen.michiels@telenet.be</h3>
             </div>
           </div>
           <div class="col-1 pt-2 pl-0">
@@ -139,9 +138,9 @@
 
             <!-- SCRIPTS -->
             <!-- JQuery -->
-            <script type="text/javascript" src="http://127.0.0.1:8001/js/jquery-3.3.1.min.js"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/jquery-3.3.1.min.js'))}}"></script>
                       <!-- Bootstrap core JavaScript -->
-            <script type="text/javascript" src="http://127.0.0.1:8001/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset('js/bootstrap.min.js'))}}"></script>
         {% block scripts %}
         {% endblock %}
     </body>
