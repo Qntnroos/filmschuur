@@ -3,7 +3,7 @@
   line-height: 1rem;
 }
 header{
-  background-color: var(--main-orange-color);
+  background-color: $c-orange;
 }
 header h3{
   color: white;
@@ -11,29 +11,29 @@ header h3{
 .emphezise{
   font-size: 1.75rem;
   text-decoration: underline;
-  color: var(--nog-een-kleur);
+  color: $c-wine;
 }
 .title{
-  color: var(--nog-een-kleur);
-  border: 4px solid var(--nog-een-kleur);
+  color: $c-wine;
+  border: 4px solid $c-wine;
 }
 .blueborder{
-  color: var(--nog-een-kleur);
-  border: 2px solid #0056b3;;
+  color: $c-wine;
+  border: 2px solid $c-blue;
 }
 .zaal{
-  color: var(--main-orange-color);
-  background: var(--nog-een-kleur);
-  border: 2px solid var(--main-orange-color);
+  color: $c-orange;
+  background: $c-wine;
+  border: 2px solid $c-orange;
 }
 .rij{
   color: white;
-  background: var(--nog-een-kleur);
+  background: $c-wine;
 }
 .zetel{
   color: white;
-  background: var(--main-orange-color);
+  background: $c-orange;
 }
 .fa-check{
-  color: var(--main-orange-color);
+  color: $c-orange;
 }
