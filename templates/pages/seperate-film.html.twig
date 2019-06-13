@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-8 date-picker">
                                     <div class="form-check form-check-inline">
-                                        <select class="mdb-select md-form">
+                                        <select class="mdb-select md-form overview-form">
                                             <option value="" disabled selected>Kies datum:</option>
                                             {% for date in dates %}
                                                 <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
@@ -58,9 +58,12 @@
                 <h1>Regisseur(s):</h1>
                 <div class="row">
                     <div class="col-8">
-                        {% for director in directorInfo %}
-                            <a href="#" data-toggle="modal" data-target="testModal">{{director.Directors}}</a>
-                        {% endfor %}
+                    {% if directorInfo|length > 1 %}
+                        <a href="#" data-toggle="modal" data-target="#director1">{{directorInfo[0].Directors}}</a>
+                        <a href="#" data-toggle="modal" data-target="#director2">{{directorInfo[1].Directors}}</a>
+                        {% else %}
+                        <a href="#" data-toggle="modal" data-target="#director1">{{directorInfo[0].Directors}}</a>
+                    {% endif %}
                     </div>
                 </div>
             </div>
@@ -75,16 +78,20 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {% if directorInfo|length > 1 %}
+    <div class="modal fade" id="director1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">{{directorInfo[0].Directors}}</h5>
                 </div>
                 <div class="modal-body">
-                {% for directors in directorInfo %}
-                    <p>Name: {{directors.Directors}}</p>
-                {% endfor %}
+                    <p>Name: <span>{{directorInfo[0].Directors}}</span></p>
+                    <p>Geboortedatum: <span>{{directorInfo[0].DateOfBirth}}</span></p>
+                    <p>Geboorteplaats: <span>{{directorInfo[0].PlaceOfBirth}}</span></p>
+                    <p>Sterfdatum: <span>{{directorInfo[0].DateOfDeath}}</span></p>
+                    <p>Sterfplaats: <span>{{directorInfo[0].PlaceOfDeath}}</span></p>
+                    <p>Andere films door deze regisseur: <span>{{directorInfo[0].MovieTitles}}</span></p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="close text" data-dismiss="modal" aria-label="Close">
@@ -94,6 +101,53 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="director2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{directorInfo[1].Directors}}</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Name: <span>{{directorInfo[1].Directors}}</span></p>
+                    <p>Geboortedatum: <span>{{directorInfo[1].DateOfBirth}}</span></p>
+                    <p>Geboorteplaats: <span>{{directorInfo[1].PlaceOfBirth}}</span></p>
+                    <p>Sterfdatum: <span>{{directorInfo[1].DateOfDeath}}</span></p>
+                    <p>Sterfplaats: <span>{{directorInfo[1].PlaceOfDeath}}</span></p>
+                    <p>Andere films door deze regisseur: <span>{{directorInfo[1].MovieTitles}}</span></p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="close text" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="modal fade" id="director1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{directorInfo[0].Directors}}</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Name: <span>{{directorInfo[0].Directors}}</span></p>
+                    <p>Geboortedatum: <span>{{directorInfo[0].DateOfBirth}}</span></p>
+                    <p>Geboorteplaats: <span>{{directorInfo[0].PlaceOfBirth}}</span></p>
+                    <p>Sterfdatum: <span>{{directorInfo[0].DateOfDeath}}</span></p>
+                    <p>Sterfplaats: <span>{{directorInfo[0].PlaceOfDeath}}</span></p>
+                    <p>Andere films door deze regisseur: <span>{{directorInfo[0].MovieTitles}}</span></p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="close text" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
     
 </div>
 

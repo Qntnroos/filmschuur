@@ -4,7 +4,7 @@
     <section class="darkbody overview">
     <div class="container">
         <div class="row">
-            <div class="col-12 mt-4">
+            <div class="col-8 offset-2 col-md-12 offset-md-0 mt-4">
                 <form action="" class="formOverview">
                     <!-- Material inline 1 -->
                     <div class="form-check form-check-inline">
@@ -18,7 +18,7 @@
                         <label class="form-check-label" for="materialInline2">Vandaag</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label">Kies Datum:</label>
+                        <label class="form-check-label">Kies op:</label>
                         <select class="mdb-select md-form">
                             <option value="" disabled selected>Datum</option>
                             {% for date in dates %}
@@ -27,7 +27,7 @@
                         </select>
                     </div>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label">Kies Genre:</label>
+                        <label class="form-check-label">Kies op:</label>
                         <select class="mdb-select md-form">
                             <option value="" disabled selected>Genre</option>
                             {% for genre in genres %}
@@ -36,9 +36,9 @@
                         </select>
                     </div>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label">Leeftijd:</label>
+                        <label class="form-check-label">Kies op:</label>
                         <select class="mdb-select md-form">
-                            <option value="" disabled selected>Kies leeftijd:</option>
+                            <option value="" disabled selected>leeftijd:</option>
                             <option value="AL">Alle leeftijden</option>
                             <option value="6">Vanaf 6 jaar</option>
                             <option value="9">Vanaf 9 jaar</option>
