@@ -6,10 +6,9 @@
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/bootstrap.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/mdb.min.css">
-            <link rel="stylesheet" href="http://127.0.0.1:8001/css/sass/tickets/ticketreservering.css
-            ">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css'))}}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/mdb.min.css'))}}">
+            <link rel="stylesheet" href="{{ absolute_url(asset('css/sass/tickets/ticketreservering.css'))}}">
         {% block stylesheets %}
         {% endblock %}
 
