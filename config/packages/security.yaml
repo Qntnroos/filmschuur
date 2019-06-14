@@ -44,4 +44,4 @@ security:
     access_control:
         # - { path: ^/programma, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
-         - { path: ^/tickets/order, roles: ROLE_USER }
+        # - { path: ^/tickets/order, roles: ROLE_USER }

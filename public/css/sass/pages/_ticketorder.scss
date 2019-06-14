@@ -31,7 +31,10 @@
     height: 2rem;
     margin-top: 9px;
 }
-.parking{
+.showDiv{
+    display: flex;
+}
+.hideDiv{
     display: none;
 }
 .ticket-list{

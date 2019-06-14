@@ -55,3 +55,23 @@
         padding: 0.5rem;
     }
   }
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.info-tekst{
+    margin-top: -20px;
+    margin-left: 10px;
+    color: $c-gray;
+}
+.modal-header{
+    background-color: $c-orange;
+    color: $c-white;
+}
+.modal-body{
+    & span{
+        color:$c-orange;
+    }
+}

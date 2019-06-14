@@ -33,16 +33,21 @@
                                 <div class="col-8 date-picker">
                                     <div class="form-check form-check-inline">
                                         <select class="mdb-select md-form overview-form">
-                                            <option value="" disabled selected>Kies datum:</option>
+                                            <option value="0" selected>Kies datum:</option>
                                             {% for date in dates %}
                                                 <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
                                             {% endfor %}
                                         </select>
+                                        
                                     </div>
+                                    <p class="font-small info-tekst">Kies een datum om verder te gaan</p>
                                 </div>
                                 
-                        <div class="col-2 clearfix">
-                        <a href="/tickets/order" class="btn order-button btn-lg">Bestellen</a>
+                        <div class="col-2 clearfix orderbutton hide">
+                        <a href="/tickets/order" class="btn order-button btn-lg" type="submit">Bestellen</a>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
                         </div>
                         </form>
                     </div>
@@ -89,8 +94,8 @@
                     <p>Name: <span>{{directorInfo[0].Directors}}</span></p>
                     <p>Geboortedatum: <span>{{directorInfo[0].DateOfBirth}}</span></p>
                     <p>Geboorteplaats: <span>{{directorInfo[0].PlaceOfBirth}}</span></p>
-                    <p>Sterfdatum: <span>{{directorInfo[0].DateOfDeath}}</span></p>
-                    <p>Sterfplaats: <span>{{directorInfo[0].PlaceOfDeath}}</span></p>
+                    <p class="dateOfDeathDiv">Sterfdatum: <span class="dateOfDeath">{{directorInfo[0].DateOfDeath}}</span></p>
+                    <p class="placeOfDeathDiv">Sterfplaats: <span class="placeOfDeath">{{directorInfo[0].PlaceOfDeath}}</span></p>
                     <p>Andere films door deze regisseur: <span>{{directorInfo[0].MovieTitles}}</span></p>
                 </div>
                 <div class="modal-footer justify-content-center">
@@ -111,8 +116,8 @@
                     <p>Name: <span>{{directorInfo[1].Directors}}</span></p>
                     <p>Geboortedatum: <span>{{directorInfo[1].DateOfBirth}}</span></p>
                     <p>Geboorteplaats: <span>{{directorInfo[1].PlaceOfBirth}}</span></p>
-                    <p>Sterfdatum: <span>{{directorInfo[1].DateOfDeath}}</span></p>
-                    <p>Sterfplaats: <span>{{directorInfo[1].PlaceOfDeath}}</span></p>
+                    <p class="dateOfDeathDiv">Sterfdatum: <span class="dateOfDeath">{{directorInfo[1].DateOfDeath}}</span></p>
+                    <p class="placeOfDeathDiv">Sterfplaats: <span class="placeOfDeath">{{directorInfo[1].PlaceOfDeath}}</span></p>
                     <p>Andere films door deze regisseur: <span>{{directorInfo[1].MovieTitles}}</span></p>
                 </div>
                 <div class="modal-footer justify-content-center">
@@ -134,8 +139,8 @@
                     <p>Name: <span>{{directorInfo[0].Directors}}</span></p>
                     <p>Geboortedatum: <span>{{directorInfo[0].DateOfBirth}}</span></p>
                     <p>Geboorteplaats: <span>{{directorInfo[0].PlaceOfBirth}}</span></p>
-                    <p>Sterfdatum: <span>{{directorInfo[0].DateOfDeath}}</span></p>
-                    <p>Sterfplaats: <span>{{directorInfo[0].PlaceOfDeath}}</span></p>
+                    <p class="dateOfDeathDiv">Sterfdatum: <span class="dateOfDeath">{{directorInfo[0].DateOfDeath}}</span></p>
+                    <p class="placeOfDeathDiv">Sterfplaats: <span class="placeOfDeath">{{directorInfo[0].PlaceOfDeath}}</span></p>
                     <p>Andere films door deze regisseur: <span>{{directorInfo[0].MovieTitles}}</span></p>
                 </div>
                 <div class="modal-footer justify-content-center">
@@ -154,6 +159,9 @@
 </main>
 {% endblock %}
 {% block scripts %}
+
+    <script src="{{ asset('js/filmscript.js') }}"></script>
+
     <script>
       // Material Select Initialization
       $(document).ready(function() {
