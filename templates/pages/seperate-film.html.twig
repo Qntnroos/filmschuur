@@ -44,7 +44,10 @@
                                 </div>
                                 
                         <div class="col-2 clearfix orderbutton hide">
-                        <a href="/tickets/order" class="btn order-button btn-lg">Bestellen</a>
+                        <a href="/tickets/order" class="btn order-button btn-lg" type="submit">Bestellen</a>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
                         </div>
                         </form>
                     </div>
