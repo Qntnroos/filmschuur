@@ -1,10 +1,12 @@
-let dateOfDeath = document.querySelectorAll('.dateOfDeath');
-let placeOfDeath = document.querySelectorAll('.placeOfDeath');
-let dateOfDeathDiv = document.querySelectorAll('.dateOfDeathDiv');
-let placeOfDeathDiv = document.querySelectorAll('.placeOfDeathDiv');
+const orderButton = document.querySelector('.orderbutton');
+const form = document.querySelector('.overview-form');
 
-dateOfDeath.forEach((date) => {
-    if(date.innerHTML = ''){
-        dateOfDeathDiv.innerHTML = '';
+form.addEventListener("change", function() {
+    if(form.value != 0){
+        orderButton.classList.remove('hide');
+        orderButton.classList.add('show');
+    } else{
+        orderButton.classList.remove('show');
+        orderButton.classList.add('hide');       
     }
-})
+});

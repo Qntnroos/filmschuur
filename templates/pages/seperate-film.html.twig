@@ -33,15 +33,17 @@
                                 <div class="col-8 date-picker">
                                     <div class="form-check form-check-inline">
                                         <select class="mdb-select md-form overview-form">
-                                            <option value="" disabled selected>Kies datum:</option>
+                                            <option value="0" selected>Kies datum:</option>
                                             {% for date in dates %}
                                                 <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
                                             {% endfor %}
                                         </select>
+                                        
                                     </div>
+                                    <p class="font-small info-tekst">Kies een datum om verder te gaan</p>
                                 </div>
                                 
-                        <div class="col-2 clearfix">
+                        <div class="col-2 clearfix orderbutton hide">
                         <a href="/tickets/order" class="btn order-button btn-lg">Bestellen</a>
                         </div>
                         </form>

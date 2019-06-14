@@ -198,6 +198,24 @@ p {
   .overview-form option {
     padding: 0.5rem; }
 
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.info-tekst {
+  margin-top: -20px;
+  margin-left: 10px;
+  color: #707070; }
+
+.modal-header {
+  background-color: #D17133;
+  color: #F7F7F7; }
+
+.modal-body span {
+  color: #D17133; }
+
 .subnavbar {
   width: 90%;
   margin-top: 8rem !important;
