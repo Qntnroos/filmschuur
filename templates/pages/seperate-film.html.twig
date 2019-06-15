@@ -12,6 +12,7 @@
             <a class="pijl" href="#movie-details"><i class="fas fa-angle-down"></i></a>
         </div>
     </div>
+    
     <div class="row py-5">
         <div class="col-8 offset-2 movie-details" id="movie-details">
             <div class="row">
@@ -28,28 +29,29 @@
                 </div>
                 <div class="col-5 offset-1">
                     <div class="bestellen mt-3">
-                        <form>
+                        <form method="POST" name="choose_date" action="" autocomplete="off" novalidate>
                             <div class="row">
                                 <div class="col-8 date-picker">
                                     <div class="form-check form-check-inline">
-                                        <select class="mdb-select md-form overview-form">
+                                        <select class= "mdb-select md-form overview-form" name="datum">
                                             <option value="0" selected>Kies datum:</option>
-                                            {% for date in dates %}
-                                                <option value="{{ date.vertoningsdata }}">{{ date.vertoningsdata }}</option>
-                                            {% endfor %}
-                                        </select>
-                                        
+                                                {% for date in dates %}
+                                                    <option value="{{ date.vertoningsdata }}">{{date.vertoningsdata }}</option>
+                                                {% endfor %}
+                                        </select>   
                                     </div>
                                     <p class="font-small info-tekst">Kies een datum om verder te gaan</p>
                                 </div>
-                                
-                        <div class="col-2 clearfix orderbutton hide">
-                        <a href="/tickets/order" class="btn order-button btn-lg" type="submit">Bestellen</a>
-                        </div>
-                        <div>
-                            <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
-                        </div>
+                          
+                                <div class="col-2 orderbutton hide">
+                                    <button type="submit" formaction="http://127.0.0.1:8000/tickets/order">BESTELLEN</button></a>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+                            </div>
                         </form>
+
                     </div>
                     <div class="inhoud mt-5">
                         <h1>Korte inhoud:</h1>
@@ -66,7 +68,7 @@
                     {% if directorInfo|length > 1 %}
                         <a href="#" data-toggle="modal" data-target="#director1">{{directorInfo[0].Directors}}</a>
                         <a href="#" data-toggle="modal" data-target="#director2">{{directorInfo[1].Directors}}</a>
-                        {% else %}
+                    {% else %}
                         <a href="#" data-toggle="modal" data-target="#director1">{{directorInfo[0].Directors}}</a>
                     {% endif %}
                     </div>
@@ -79,10 +81,10 @@
                         <p>{{ info[0].actorsList }}</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+    
     {% if directorInfo|length > 1 %}
     <div class="modal fade" id="director1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
