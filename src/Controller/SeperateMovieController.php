@@ -16,8 +16,13 @@ class SeperateMovieController extends AbstractController
     {
         $db = new database();
         $movieDetails = $db->getMovieDetails($id);
+        $movieTitle = $movieDetails[0]["movie_title"]; 
         $movieDates = $db->getMovieDates($id);
         $directorInfoArray= array();
+        $session = $request->getSession();
+        $session->set('filmId', $id);
+        $session->set('filmTitle', $movieTitle);
+
         foreach ($movieDetails as $movieDetail){
             $director = $movieDetail['directors'];
             $directorInfo = $db->getDirectorInfo($director);
