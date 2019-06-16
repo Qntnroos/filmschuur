@@ -4,7 +4,11 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use App\utils\database;
 
 class SeperateMovieController extends AbstractController
@@ -28,6 +32,11 @@ class SeperateMovieController extends AbstractController
             $directorInfo = $db->getDirectorInfo($director);
             array_push($directorInfoArray,$directorInfo);
         }
+
+        if ($request->isMethod('post')){
+            return $this->redirectToRoute('ticketsorder');  
+        }
+
         $val = ['info' => $movieDetails, 'dates' => $movieDates, 'directorInfo' => $directorInfoArray];
         // replace this example code with whatever you need
         return $this->render('pages/seperate-film.html.twig', $val);
