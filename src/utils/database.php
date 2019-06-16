@@ -291,7 +291,14 @@ class database extends SQlite3
         $resDirectorQuery = $directorQuery->execute();
         return $resDirectorQuery->fetchArray(SQLITE3_ASSOC);
     }
-    public function getMoviesToday(){
-
+    public function getSeats($id){
+            $seatsQuery =$this->prepare(
+                "SELECT A.Auditorium_name, seat_row, seat_number FROM Auditoriums AS A JOIN Seats AS S
+                on A.auditoriumID = S.auditoriumID WHERE A.auditoriumiD = :id;
+                "
+            );
+            $seatsQuery->bindParam('id',$id);
+        $resSeatsQuery = $seatsQuery->execute();
+        return $resSeatsQuery->fetchArray(SQLITE3_ASSOC);
     }
 }
