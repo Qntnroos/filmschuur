@@ -34,6 +34,8 @@ class SeperateMovieController extends AbstractController
         }
 
         if ($request->isMethod('post')){
+            /* $choosenMovieShowtime = $movieDates[0]['vertoningsdata'];
+            $session->set('playTime', $choosenMovieShowtime); */
             return $this->redirectToRoute('ticketsorder');  
         }
 

@@ -44,11 +44,11 @@
                                 </div>
                           
                                 <div class="col-2 orderbutton hide">
-                                    <a href="url('ticketsorder')"><button type="submit">BESTELLEN</button></a>
+                                    <button class="btn order-button btn-lg" type="submit" formaction="/ticketsorder">BESTELLEN</button>
                                 </div>
                             </div>
                             <div>
-                                <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                             </div>
                         </form>
 
