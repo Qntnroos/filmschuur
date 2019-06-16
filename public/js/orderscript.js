@@ -31,3 +31,9 @@ selector.forEach((select) => {
         }
         totalPrice.innerHTML = '€ ' + result;
 })});
+parking.addEventListener('change',function(){
+    if(parking.value == 0){
+        result -= parkingPrice;
+    }
+    totalPrice.innerHTML = '€ ' + result;
+})
