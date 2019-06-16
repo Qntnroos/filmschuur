@@ -294,4 +294,17 @@ class database extends SQlite3
     public function getMoviesToday(){
 
     }
+    public function getAuditoriumInfo($id,$datetime){
+        $movieAuditoriumQuery = $this->prepare(
+        "SELECT DISTINCT MS.movieID, MS.movie_showID, MS.play_times_and_dates AS moviedatetime, A.auditorium_name 
+        FROM Auditoriums AS A
+        JOIN MovieShows AS MS
+        ON MS.auditoriumID = A.auditoriumID
+        where MS.movieID = :id AND strftime('%d-%m-%Y %Hu%M',MS.play_times_and_dates) = :datetime;"
+        );
+        $movieAuditoriumQuery->bindParam('id',$id);
+        $movieAuditoriumQuery->bindParam('datetime',$datetime);
+        $resMovieAuditoriumQuery = $movieAuditoriumQuery->execute();
+        return $resMovieAuditoriumQuery->fetchArray(SQLITE3_ASSOC);
+    }
 }
