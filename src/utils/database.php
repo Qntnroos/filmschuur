@@ -10,40 +10,49 @@ class database extends SQlite3
     }
     public function getMovieDetails($id) {
         $seperateMovie = $this->prepare(
-            "SELECT M.trailer_link, M.movie_title, 
-            strftime('%d-%m-%Y %H:%M', play_times_and_dates) AS playList, 
-            A.auditorium_name,
-            AR.rateID, 
-            GROUP_CONCAT (DISTINCT CC.classification_componentID) AS classificationList, 
-            GROUP_CONCAT (DISTINCT G.genre_name) AS genreList, 
-            M.movie_length, 
-            M.release_year, 
-            M.synopsis, 
-            GROUP_CONCAT (DISTINCT ' ' || L.language_name) AS spokenlanguageList, 
-            GROUP_CONCAT (DISTINCT ' ' || LA.language_name) AS undertitlelanguageList, 
-            (D.director_firstname || ' ' || D.director_lastname) AS directors, 
-            GROUP_CONCAT (DISTINCT ' ' || A.actor_firstname || ' ' || A.actor_lastname) AS actorsList 
-            FROM Movies AS M, Movies AS X 
-            JOIN MovieShows AS MS ON M.movieID = MS.movieID
-            JOIN Auditoriums AS A
-            ON MS.auditoriumID = A.auditoriumID
-            JOIN AgeRates AS AR ON M.rating_ageID = AR.rateID 
-            JOIN MovieClassificationComponents as MCC ON M.movieID = MCC.movieID 
-            JOIN ClassificationComponents as CC ON CC.classification_componentID = MCC.classification_componentID 
-            JOIN MovieGenres as MG ON M.movieID = MG.movieID 
-            JOIN Genres as G ON G.genreID = MG.genreID 
-            LEFT JOIN MovieSpokenLanguages as ML ON M.movieID = ML.movieID 
-            LEFT JOIN Languages as L ON L.languageID = ML.languageID 
-            LEFT JOIN MovieUndertitleLanguages as MUL ON X.movieID = MUL.movieID 
-            LEFT JOIN Languages as LA ON LA.languageID = MUL.languageID 
-            JOIN MovieDirectors as MD ON M.movieID = MD.movieID JOIN Directors as D ON D.directorID = MD.directorID 
-            LEFT JOIN MovieActors as MA ON M.movieID = MA.movieID 
-            LEFT JOIN Actors as A ON A.actorID = MA.actorID 
-            WHERE M.movieID = :id and datetime(MS.play_times_and_dates)
-            BETWEEN datetime('now','localtime', '2 hours')
-            AND date('now','localtime','7 days')
-            GROUP BY Directors, playList
-            ORDER BY strftime('%Y-%m-%d%H:%M', play_times_and_dates);
+            "SELECT M.trailer_link, M.movie_title,	           
+            GROUP_CONCAT (DISTINCT strftime('%d-%m-%Y %H:%M', play_times_and_dates)) AS playList,
+            AR.rateID,
+            GROUP_CONCAT (DISTINCT CC.classification_componentID) AS classificationList,	
+            GROUP_CONCAT (DISTINCT G.genre_name) AS genreList,
+            M.movie_length,	
+            M.release_year,
+            M.synopsis,
+            GROUP_CONCAT (DISTINCT ' ' || L.language_name) AS spokenlanguageList,
+            GROUP_CONCAT (DISTINCT ' ' || LA.language_name) AS undertitlelanguageList,
+            (D.director_firstname || ' ' || D.director_lastname) AS directors,
+            GROUP_CONCAT (DISTINCT ' ' || A.actor_firstname || ' ' || A.actor_lastname) AS actorsList
+            FROM Movies AS M, Movies AS X
+            JOIN MovieShows AS MS
+            ON M.movieID = MS.movieID
+            JOIN AgeRates AS AR
+            ON M.rating_ageID = AR.rateID
+            JOIN MovieClassificationComponents as MCC
+            ON M.movieID = MCC.movieID
+            JOIN ClassificationComponents as CC
+            ON CC.classification_componentID = MCC.classification_componentID
+            JOIN MovieGenres as MG
+            ON M.movieID = MG.movieID
+            JOIN Genres as G
+            ON G.genreID = MG.genreID
+            LEFT JOIN MovieSpokenLanguages as ML
+            ON M.movieID = ML.movieID
+            LEFT JOIN Languages as L
+            ON L.languageID = ML.languageID
+            LEFT JOIN MovieUndertitleLanguages as MUL
+            ON X.movieID = MUL.movieID
+            LEFT JOIN Languages as LA	
+            ON LA.languageID = MUL.languageID
+            JOIN MovieDirectors as MD
+            ON M.movieID = MD.movieID
+            JOIN Directors as D	
+            ON D.directorID = MD.directorID	
+            LEFT JOIN MovieActors as MA	
+            ON M.movieID = MA.movieID	
+            LEFT JOIN Actors as A	
+            ON A.actorID = MA.actorID	
+            WHERE M.movieID = 5
+            GROUP BY Directors;
             "
         );
         $seperateMovie->bindParam('id',$id);
