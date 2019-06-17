@@ -1,0 +1,16 @@
+.square{
+    width: 50px;
+    height: 50px;
+    background-color: $c-orange;
+    margin: 5px;
+    &.square2{
+        width: 30px;
+        height: 30px;
+    }
+    &:hover{
+        background-color: $c-wine;
+    }
+    &:active{
+        background-color: $c-focus;
+    }
+}
