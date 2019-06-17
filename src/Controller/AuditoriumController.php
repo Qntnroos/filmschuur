@@ -10,12 +10,24 @@ use App\utils\database;
 class AuditoriumController extends AbstractController
 {
     /**
-     * @Route("/auditorium/{auditoriumId}", name="auditorium")
+     * @Route("/auditorium/Edison", name="Edison")
      */
-    public function renderFilm(Request $request, $auditoriumId)
+    public function Edison(Request $request)
     {
-        $db = new database();
-        $values = $db->getSeats($auditoriumId);
-        return $this->render('pages/seats.html.twig', ["values" => $values]);
+        return $this->render('pages/edison.html.twig');
+    }
+    /**
+     * @Route("/auditorium/Lumière", name="Lumière")
+     */
+    public function Lumière(Request $request)
+    {
+        return $this->render('pages/lumiere.html.twig');
+    }
+    /**
+     * @Route("/auditorium/Muybridge", name="Muybridge")
+     */
+    public function Muybridge(Request $request)
+    {
+        return $this->render('pages/muybridge.html.twig');
     }
 }
