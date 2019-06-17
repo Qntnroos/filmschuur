@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\utils\database;
 
-class Auditoriumcontroller extends AbstractController
+class AuditoriumController extends AbstractController
 {
     /**
      * @Route("/auditorium/{auditoriumId}", name="auditorium")
