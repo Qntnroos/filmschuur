@@ -8,6 +8,7 @@ const selector = document.querySelectorAll('select');
 const selectorTickets = document.querySelectorAll('.price');
 const parkingDiv = document.querySelector('.parking');
 const parking = document.querySelector('#parking');
+const ticketAmount = document.querySelector('#ticketAmount');
 let result;
 
 
@@ -20,12 +21,13 @@ select.addEventListener("change",  function() {
         parkingDiv.classList.remove('showDiv');
         parkingDiv.classList.add('hideDiv');
     }
+    ticketAmount.innerHTML = parseInt(normalCount.value) + parseInt(reducedCount.value);
     result = normalCount.value * normalPrice + reducedCount.value * reducedPrice;
     totalPrice.innerHTML = '€ ' + result;
 })});
 
 selector.forEach((select) => {
-    select.addEventListener("change",  function() {
+    select.addEventListener('change',  function() {
         if(parking.value != 0){
             result += parkingPrice;
         }
