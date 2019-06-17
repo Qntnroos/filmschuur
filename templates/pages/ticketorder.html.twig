@@ -104,15 +104,18 @@
                                 </div>
                                 <div class="col-2">
                                     <h3 id="totalPrice" name="totalPrice">€0,00 </h3>
-                                    <button class="btn order-button btn-md mt-5">Volgende</button>
+                                    <button class="btn order-button btn-md mt-5" formaction="/auditorium/{{getAuditName}}">Volgende</button>
                                 </div>
+                            </div>
+                            <div>
+                            <h6 class="d-none" id="ticketAmount">tickets</h6>
                             </div>
                         <div>
                             <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
                         </div>
                         </div>
                                      
-                </div>
+                    </div>
             </div>
            
         </form>
