@@ -470,6 +470,9 @@ header h3 {
 .ticket-list {
   color: #707070; }
 
+#normalPrice:before, #reducedPrice:before, #parkingPrice:before {
+  content: '\20AC'; }
+
 footer {
   background-color: #D17133;
   text-align: center; }

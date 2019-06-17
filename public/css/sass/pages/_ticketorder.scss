@@ -40,3 +40,6 @@
 .ticket-list{
     color: $c-gray
 }
+#normalPrice:before,#reducedPrice:before,#parkingPrice:before{
+    content: '\20AC';
+}
