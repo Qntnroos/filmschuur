@@ -42,7 +42,8 @@ class TicketsOrderController extends AbstractController
             $db = new database();
             $playtime = $db->getAuditoriumInfo($filmID, $showDateTime);
             $auditoriumname = $playtime["auditorium_name"];
-            
+            $IdForAuditName = $db->getIdForAudit($auditoriumname);
+            $session->set('auditname', $auditoriumname);
             $client = new Client(['base_uri' => 'http://fullstacksyntra.be/cockpitdfs/api/', 'timeout' => 2.0, ]);
 
                 $req = $client->request(
@@ -52,12 +53,11 @@ class TicketsOrderController extends AbstractController
                         'json' => ['filter' => [ 'Id' => $filmID]]
                     ]
                 );
+                $getAuditName = $session->get('auditname');
                 $answer = json_decode($req->getBody()->getContents());
                 $val = $answer->entries[0]->Image->path;
-            
-            
             return $this->render('pages/ticketorder.html.twig', array(
-                'filmTitle' => $filmTitle, 'moviePoster' => $val, 'showDateTime' => $showDateTime, 'auditorium' => $auditoriumname));
+                'filmTitle' => $filmTitle, 'moviePoster' => $val, 'showDateTime' => $showDateTime, 'auditorium' => $auditoriumname,'getAuditName'=> $getAuditName));
             }
 
     }
