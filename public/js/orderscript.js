@@ -9,6 +9,7 @@ const selectorTickets = document.querySelectorAll('.price');
 const parkingDiv = document.querySelector('.parking');
 const parking = document.querySelector('#parking');
 const ticketAmount = document.querySelector('#ticketAmount');
+const nextButton = document.querySelector('.order-button')
 let result;
 
 
@@ -17,11 +18,17 @@ select.addEventListener("change",  function() {
     if(normalCount.value != 0 || reducedCount.value != 0){
         parkingDiv.classList.remove('hideDiv');
         parkingDiv.classList.add('showDiv');
+
+        nextButton.classList.remove('hideDiv');
+        nextButton.classList.add('showDiv');
     } else{
         parkingDiv.classList.remove('showDiv');
         parkingDiv.classList.add('hideDiv');
+
+        nextButton.classList.remove('showDiv');
+        nextButton.classList.add('hideDiv');
     }
-    ticketAmount.innerHTML = parseInt(normalCount.value) + parseInt(reducedCount.value);
+    ticketAmount.value = parseInt(normalCount.value) + parseInt(reducedCount.value);
     result = normalCount.value * normalPrice + reducedCount.value * reducedPrice;
     totalPrice.innerHTML = '€ ' + result;
 })});
