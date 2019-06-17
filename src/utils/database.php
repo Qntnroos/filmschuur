@@ -51,7 +51,7 @@ class database extends SQlite3
             ON M.movieID = MA.movieID	
             LEFT JOIN Actors as A	
             ON A.actorID = MA.actorID	
-            WHERE M.movieID = 5
+            WHERE M.movieID = :id
             GROUP BY Directors;
             "
         );
@@ -301,14 +301,17 @@ class database extends SQlite3
         return $resDirectorQuery->fetchArray(SQLITE3_ASSOC);
     }
     public function getSeats($id){
-            $seatsQuery =$this->prepare(
+            $seatsQuery = $this->prepare(
                 "SELECT A.Auditorium_name, seat_row, seat_number FROM Auditoriums AS A JOIN Seats AS S
                 on A.auditoriumID = S.auditoriumID WHERE A.auditoriumiD = :id;
-                "
-            );
+                " );
             $seatsQuery->bindParam('id',$id);
-        $resSeatsQuery = $seatsQuery->execute();
-        return $resSeatsQuery->fetchArray(SQLITE3_ASSOC);
+            $resSeatsQuery = $seatsQuery->execute();
+            $multiArray = array();
+            while($row = $resSeatsQuery->fetchArray(SQLITE3_ASSOC)){
+            array_push($multiArray,$row);
+        }
+        return $multiArray;
     }
     public function getAuditoriumInfo($id,$datetime){
         $movieAuditoriumQuery = $this->prepare(
@@ -322,5 +325,16 @@ class database extends SQlite3
         $movieAuditoriumQuery->bindParam('datetime',$datetime);
         $resMovieAuditoriumQuery = $movieAuditoriumQuery->execute();
         return $resMovieAuditoriumQuery->fetchArray(SQLITE3_ASSOC);
+    }
+    public function getIdForAudit($auditname){
+        $auditName = $this->prepare(
+        "SELECT auditoriumID
+        FROM Auditoriums
+        WHERE auditorium_name = :auditname
+        "
+        );
+        $auditName->bindParam('auditname',$auditname);
+        $resauditName = $auditName->execute();
+        return $resauditName->fetchArray(SQLITE3_ASSOC);
     }
 }
