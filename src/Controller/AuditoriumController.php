@@ -42,7 +42,6 @@ class AuditoriumController extends AbstractController
                     'json' => ['filter' => [ 'Id' => $filmID]]
                 ]
             );
-            $getAuditName = $session->get('auditname');
             $filmTitle = $session->get('filmTitle');
             $showDateTime = $session->get('showDateTime');
             $auditoriumname = $session->get('auditname');
