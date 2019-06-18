@@ -2,16 +2,19 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Response;
+use App\utils\database;
+use GuzzleHttp\Client;
 
 // Include Dompdf required namespaces
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-class PDFController extends Controller
+class PDFController extends AbstractController
 {
 
     /**
@@ -19,7 +22,19 @@ class PDFController extends Controller
      */
 
     public function generate_pdf(Request $request){
-       
-        return $this->render('components/ticketreservering.html.twig');
+        $session = $request->getSession();
+        $filmTitle = $session->get('filmTitle');
+        $showDateTime = $session->get('showDateTime');
+        $auditoriumname = $session->get('auditname');
+        $normalAmount =$session->get('normalAmount');
+        $reducedAmount =$session->get('reducedAmount');
+        $totalAmount = $session->get('totalAmount');
+        $parking = $session->get('parking');
+        $totalPrice = $normalAmount* 10 + $reducedAmount * 9;
+        if($parking != 0){
+            $totalPrice += 2.5;
+        }
+        $splitdate = explode(" ", $showDateTime);
+        return $this->render('components/ticketreservering.html.twig',['totalprice'=> $totalPrice,'filmTitle' => $filmTitle, 'showDateTime' => $splitdate,'auditorium' => $auditoriumname,'totalAmount'=>$totalAmount ]);
     }
 }
