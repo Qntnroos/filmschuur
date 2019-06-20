@@ -30,11 +30,12 @@ class PDFController extends AbstractController
         $reducedAmount =$session->get('reducedAmount');
         $totalAmount = $session->get('totalAmount');
         $parking = $session->get('parking');
+        $email = $session->get('_security.last_username');
         $totalPrice = $normalAmount* 9.5 + $reducedAmount * 7.5;
         if($parking != 0){
             $totalPrice += 2.5;
         }
         $splitdate = explode(" ", $showDateTime);
-        return $this->render('components/ticketreservering.html.twig',['totalprice'=> $totalPrice,'filmTitle' => $filmTitle, 'showDateTime' => $splitdate,'auditorium' => $auditoriumname,'totalAmount'=>$totalAmount, 'parking' => $parking ]);
+        return $this->render('components/ticketreservering.html.twig',['totalprice'=> $totalPrice,'filmTitle' => $filmTitle, 'showDateTime' => $splitdate,'auditorium' => $auditoriumname,'totalAmount'=>$totalAmount, 'parking' => $parking, 'email' => $email ]);
     }
 }
