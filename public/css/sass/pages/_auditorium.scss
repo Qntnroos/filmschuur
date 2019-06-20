@@ -3,6 +3,7 @@
     height: 50px;
     background-color: $c-orange;
     margin: 5px;
+    border-radius: 40% 40% 0 0;
     &.square2{
         width: 30px;
         height: 30px;
@@ -13,4 +14,11 @@
     &:active{
         background-color: $c-gray;
     }
+}
+.screen{
+    background-color: $c-wine;
+    width: 80%;
+    height: 20px;
+    color: $c-white;
+    font-family: $f-roboto;
 }

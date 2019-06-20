@@ -1,5 +1,5 @@
-const normalPrice = parseInt(document.querySelector('#normalPrice').innerHTML);
-const reducedPrice = parseInt(document.querySelector('#reducedPrice').innerHTML);
+const normalPrice = parseFloat(document.querySelector('#normalPrice').innerHTML);
+const reducedPrice = parseFloat(document.querySelector('#reducedPrice').innerHTML);
 const parkingPrice = parseFloat(document.querySelector('#parkingPrice').innerHTML);
 const totalPrice = document.querySelector('#totalPrice');
 const normalCount = document.querySelector('#normalCount');

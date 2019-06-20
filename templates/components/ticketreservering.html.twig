@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}ReserveringsTicket{% endblock %}</title>
+        <title>{% block title %}Ticket - {{filmTitle}}{% endblock %}</title>
 
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -22,7 +22,7 @@
           <img src="{{ absolute_url(asset('img/logo.png'))}}" class="img-fluid p-4" alt="logo Filmschuur">
         </div>
         <div class="col-6">
-          <img src="" class="img-fluid px-5 pt-5 pb-3" alt="barcode">
+          <img src="{{ absolute_url(asset('img/barcode.png'))}}" class="img-fluid px-5 pt-5 pb-3" alt="barcode">
         </div>
         <div class="col-12 pb-4 text-center">
           <h3>"In de filmschuur kan je niet alleen films bekijken maar ze ook beleven"</h3>
@@ -113,8 +113,8 @@
           <div class="col-1 pt-2 pl-0">
             <div class="blueborder pt-2">
               <!--Parking-->
-              <p >Parking:</p>
-              <h3><i class="fas fa-check"></i></h3>
+              <p>Parking:</p>
+              <h3 id="haveParking">{{parking}}</h3>
             </div>
           </div>
           <div class="col-2 pt-2 px-0">
@@ -142,6 +142,7 @@
                       <!-- Bootstrap core JavaScript -->
             <script type="text/javascript" src="{{ absolute_url(asset('js/bootstrap.min.js'))}}"></script>
         {% block scripts %}
+        <script src="{{ absolute_url(asset('js/ticket.js')) }}"></script>
         {% endblock %}
     </body>
 </html>
